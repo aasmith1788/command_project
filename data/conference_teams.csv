@@ -1,0 +1,34 @@
+school_name,conference,trackman_code,verified,n_pitches_in_db,notes
+Alabama,SEC,ALA_CRI,true,57656,Confirmed from DB query
+Arkansas,SEC,ARK_RAZ,true,61878,Confirmed from DB query
+Auburn,SEC,AUB_TIG,true,53094,Confirmed from DB query
+Florida,SEC,FLA_GAT,true,36773,Confirmed from DB query
+Georgia,SEC,GEO_BUL,true,58908,Confirmed from DB query
+Kentucky,SEC,KEN_WIL,true,55043,Confirmed from DB query
+LSU,SEC,LSU_TIG,true,61796,Confirmed from DB query
+Mississippi State,SEC,MSU_BDG,true,52917,Confirmed from DB query
+Missouri,SEC,MIZ_TIG,true,49042,Confirmed from DB query
+Ole Miss,SEC,OLE_REB,true,57089,Confirmed from DB query
+Oklahoma,SEC,OKL_SOO,true,53523,Confirmed from DB query
+South Carolina,SEC,SOU_GAM,true,56043,Confirmed from DB query
+Tennessee,SEC,TEN_VOL,true,52850,Confirmed from DB query
+Texas,SEC,TEX_LON,true,54071,Confirmed from DB query
+Texas A&M,SEC,TEX_AGG,true,59293,Confirmed from DB query
+Vanderbilt,SEC,VAN_COM,true,57641,Confirmed from DB query
+Arizona,Big12,ARI_WIL,true,53138,Confirmed from DB query
+Arizona State,Big12,ASU_RED,true,44840,Confirmed from DB query and V5 leaderboard
+Baylor,Big12,BAY_BEA,true,55846,Confirmed from DB query
+BYU,Big12,BYU_COU,true,44559,Confirmed from DB query
+Cincinnati,Big12,CIN_BEA,true,49991,Confirmed from DB query
+Colorado,Big12,,false,0,NOT IN DB — CCU has never played them; excluded from model
+Houston,Big12,HOU_COU,true,50427,Confirmed from DB query
+Iowa State,Big12,,false,0,NOT IN DB — CCU has never played them; excluded from model
+Kansas,Big12,KAN_JAY,true,48185,Confirmed from DB query
+Kansas State,Big12,KAN_WIL,true,55124,Confirmed from DB query (note: KAN prefix same as Kansas; differentiated by _WIL vs _JAY)
+Oklahoma State,Big12,OKL_COW,true,53230,Confirmed from DB query
+TCU,Big12,TCU_HFG,true,57503,Confirmed from DB query (HFG = Horned Frogs)
+Texas Tech,Big12,TEX_RAI,true,50384,Confirmed from DB query
+UCF,Big12,UCF_KNI,true,30120,Confirmed from DB query
+Utah,Big12,UTA_UTE,true,29083,Confirmed from DB query
+West Virginia,Big12,WES_MOU,true,53808,Confirmed from DB query
+Coastal Carolina,Independent,COA_CHA,true,196444,Confirmed from DB query and V5 leaderboard

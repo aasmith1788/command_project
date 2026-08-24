@@ -1,0 +1,1534 @@
+Command+ V6 Pipeline
+Year:    2024
+Started: 2026-08-23 12:49:43
+============================================================
+Compiler: C:\Users\aasmi\AppData\Local\Microsoft\WinGet\Packages\BrechtSanders.WinLibs.POSIX.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe\mingw64\bin\g++.EXE
+Running steps [2, 3, 4] — skipping 1 (Cluster pitches)
+Skipped steps must already have written their outputs to output/, or the steps that follow will fail on load.
+
+
+========================================================================
+STEP 2/4  Stage 1 — population aim model
+Started: 2026-08-23 12:49:43   (pipeline elapsed 0s)
+Command: 'C:\Users\aasmi\Costal Carolina\command_plus_26\stage1\stage1.py' --year 2024
+========================================================================
+
+Stage 1 | year=2024
+  Sampler: draws=2000 tune=2000 chains=4 cores=auto target_accept=0.95 max_treedepth=10 init=adapt_diag seed=20260818
+  Dropped 1 pitches with untracked movement (0.00%); Stages 2-3 will still score them at the population mean.
+  Rows after pruning: 134,893
+  Rows after sampling cap (400/cell over pitch_type x matchup x count): 43,493
+
+--- Stage 1 model 1/2: height ---
+  [height] N=43,493  combos=2,018  type_x_matchup=14  count=12  type_x_count=83  matchup=2
+  [height] move: 56 cols over sp_hb[-22.7,24.0], sp_ivb[-17.7,25.6]  basis_scale=0.327
+  [height] velo: 7 cols over sp_velo[55.8,98.7]  basis_scale=0.336 _|_ move
+  [height] sigma: 23 cols over sp_hb[-22.7,24.0], sp_ivb[-17.7,25.6]  basis_scale=0.198
+  [height] surface prior rates: move=0.83 velo=0.85  (implied surface SD 0.394 z)
+Initializing NUTS using adapt_diag...
+Multiprocess sampling (4 chains in 4 jobs)
+NUTS: [tau_move, w_move_raw, tau_velo, w_velo_raw, tau_tps, tau_tc, u_tps_raw, u_tc_raw, alpha, sigma_intercept, beta_sigma_move, beta_sigma_typ, beta_sigma_cnt, beta_sigma_mu, nu]
+  [height]  1/16,000 draws ( 0.0%) | elapsed 0s | eta -- | 0.0 draws/s | warmup | div 0
+  [height]  49/16,000 draws ( 0.3%) | elapsed 15s | eta 1h 23m | 3.2 draws/s | warmup | div 0
+  [height]  85/16,000 draws ( 0.5%) | elapsed 30s | eta 1h 36m | 2.8 draws/s | warmup | div 0
+  [height]  121/16,000 draws ( 0.8%) | elapsed 46s | eta 1h 41m | 2.6 draws/s | warmup | div 0
+  [height]  157/16,000 draws ( 1.0%) | elapsed 1m 01s | eta 1h 43m | 2.5 draws/s | warmup | div 0
+  [height]  193/16,000 draws ( 1.2%) | elapsed 1m 16s | eta 1h 45m | 2.5 draws/s | warmup | div 0
+  [height]  229/16,000 draws ( 1.4%) | elapsed 1m 32s | eta 1h 45m | 2.5 draws/s | warmup | div 0
+  [height]  265/16,000 draws ( 1.7%) | elapsed 1m 47s | eta 1h 46m | 2.5 draws/s | warmup | div 0
+  [height]  301/16,000 draws ( 1.9%) | elapsed 2m 02s | eta 1h 46m | 2.5 draws/s | warmup | div 0
+  [height]  337/16,000 draws ( 2.1%) | elapsed 2m 17s | eta 1h 46m | 2.4 draws/s | warmup | div 0
+  [height]  372/16,000 draws ( 2.3%) | elapsed 2m 32s | eta 1h 47m | 2.4 draws/s | warmup | div 0
+  [height]  407/16,000 draws ( 2.5%) | elapsed 2m 48s | eta 1h 47m | 2.4 draws/s | warmup | div 0
+  [height]  443/16,000 draws ( 2.8%) | elapsed 3m 03s | eta 1h 47m | 2.4 draws/s | warmup | div 0
+  [height]  479/16,000 draws ( 3.0%) | elapsed 3m 18s | eta 1h 47m | 2.4 draws/s | warmup | div 0
+  [height]  521/16,000 draws ( 3.3%) | elapsed 3m 34s | eta 1h 45m | 2.4 draws/s | warmup | div 0
+  [height]  565/16,000 draws ( 3.5%) | elapsed 3m 49s | eta 1h 44m | 2.5 draws/s | warmup | div 0
+  [height]  605/16,000 draws ( 3.8%) | elapsed 4m 04s | eta 1h 43m | 2.5 draws/s | warmup | div 0
+  [height]  647/16,000 draws ( 4.0%) | elapsed 4m 19s | eta 1h 42m | 2.5 draws/s | warmup | div 0
+  [height]  689/16,000 draws ( 4.3%) | elapsed 4m 35s | eta 1h 41m | 2.5 draws/s | warmup | div 0
+  [height]  733/16,000 draws ( 4.6%) | elapsed 4m 50s | eta 1h 40m | 2.5 draws/s | warmup | div 0
+  [height]  777/16,000 draws ( 4.9%) | elapsed 5m 05s | eta 1h 39m | 2.5 draws/s | warmup | div 0
+  [height]  812/16,000 draws ( 5.1%) | elapsed 5m 21s | eta 1h 40m | 2.5 draws/s | warmup | div 0
+  [height]  848/16,000 draws ( 5.3%) | elapsed 5m 36s | eta 1h 40m | 2.5 draws/s | warmup | div 0
+  [height]  881/16,000 draws ( 5.5%) | elapsed 5m 51s | eta 1h 40m | 2.5 draws/s | warmup | div 0
+  [height]  911/16,000 draws ( 5.7%) | elapsed 6m 07s | eta 1h 41m | 2.5 draws/s | warmup | div 0
+  [height]  943/16,000 draws ( 5.9%) | elapsed 6m 23s | eta 1h 42m | 2.5 draws/s | warmup | div 0
+  [height]  972/16,000 draws ( 6.1%) | elapsed 6m 39s | eta 1h 42m | 2.4 draws/s | warmup | div 0
+  [height]  1,002/16,000 draws ( 6.3%) | elapsed 6m 55s | eta 1h 43m | 2.4 draws/s | warmup | div 0
+  [height]  1,036/16,000 draws ( 6.5%) | elapsed 7m 10s | eta 1h 43m | 2.4 draws/s | warmup | div 0
+  [height]  1,063/16,000 draws ( 6.6%) | elapsed 7m 25s | eta 1h 44m | 2.4 draws/s | warmup | div 0
+  [height]  1,095/16,000 draws ( 6.8%) | elapsed 7m 40s | eta 1h 44m | 2.4 draws/s | warmup | div 0
+  [height]  1,121/16,000 draws ( 7.0%) | elapsed 7m 56s | eta 1h 45m | 2.4 draws/s | warmup | div 0
+  [height]  1,151/16,000 draws ( 7.2%) | elapsed 8m 11s | eta 1h 45m | 2.3 draws/s | warmup | div 0
+  [height]  1,180/16,000 draws ( 7.4%) | elapsed 8m 26s | eta 1h 46m | 2.3 draws/s | warmup | div 0
+  [height]  1,212/16,000 draws ( 7.6%) | elapsed 8m 42s | eta 1h 46m | 2.3 draws/s | warmup | div 0
+  [height]  1,237/16,000 draws ( 7.7%) | elapsed 8m 57s | eta 1h 46m | 2.3 draws/s | warmup | div 0
+  [height]  1,264/16,000 draws ( 7.9%) | elapsed 9m 12s | eta 1h 47m | 2.3 draws/s | warmup | div 0
+  [height]  1,287/16,000 draws ( 8.0%) | elapsed 9m 27s | eta 1h 48m | 2.3 draws/s | warmup | div 0
+  [height]  1,311/16,000 draws ( 8.2%) | elapsed 9m 43s | eta 1h 48m | 2.2 draws/s | warmup | div 0
+  [height]  1,337/16,000 draws ( 8.4%) | elapsed 9m 58s | eta 1h 49m | 2.2 draws/s | warmup | div 0
+  [height]  1,365/16,000 draws ( 8.5%) | elapsed 10m 14s | eta 1h 49m | 2.2 draws/s | warmup | div 0
+  [height]  1,393/16,000 draws ( 8.7%) | elapsed 10m 29s | eta 1h 49m | 2.2 draws/s | warmup | div 0
+  [height]  1,423/16,000 draws ( 8.9%) | elapsed 10m 44s | eta 1h 50m | 2.2 draws/s | warmup | div 0
+  [height]  1,450/16,000 draws ( 9.1%) | elapsed 10m 59s | eta 1h 50m | 2.2 draws/s | warmup | div 0
+  [height]  1,474/16,000 draws ( 9.2%) | elapsed 11m 15s | eta 1h 50m | 2.2 draws/s | warmup | div 0
+  [height]  1,507/16,000 draws ( 9.4%) | elapsed 11m 30s | eta 1h 50m | 2.2 draws/s | warmup | div 0
+  [height]  1,539/16,000 draws ( 9.6%) | elapsed 11m 46s | eta 1h 50m | 2.2 draws/s | warmup | div 0
+  [height]  1,566/16,000 draws ( 9.8%) | elapsed 12m 02s | eta 1h 50m | 2.2 draws/s | warmup | div 0
+  [height]  1,593/16,000 draws (10.0%) | elapsed 12m 17s | eta 1h 51m | 2.2 draws/s | warmup | div 0
+  [height]  1,614/16,000 draws (10.1%) | elapsed 12m 33s | eta 1h 51m | 2.1 draws/s | warmup | div 0
+  [height]  1,639/16,000 draws (10.2%) | elapsed 12m 48s | eta 1h 52m | 2.1 draws/s | warmup | div 0
+  [height]  1,664/16,000 draws (10.4%) | elapsed 13m 03s | eta 1h 52m | 2.1 draws/s | warmup | div 0
+  [height]  1,697/16,000 draws (10.6%) | elapsed 13m 19s | eta 1h 52m | 2.1 draws/s | warmup | div 0
+  [height]  1,732/16,000 draws (10.8%) | elapsed 13m 34s | eta 1h 51m | 2.1 draws/s | warmup | div 0
+  [height]  1,757/16,000 draws (11.0%) | elapsed 13m 49s | eta 1h 52m | 2.1 draws/s | warmup | div 0
+  [height]  1,783/16,000 draws (11.1%) | elapsed 14m 05s | eta 1h 52m | 2.1 draws/s | warmup | div 0
+  [height]  1,806/16,000 draws (11.3%) | elapsed 14m 20s | eta 1h 52m | 2.1 draws/s | warmup | div 0
+  [height]  1,834/16,000 draws (11.5%) | elapsed 14m 36s | eta 1h 52m | 2.1 draws/s | warmup | div 0
+  [height]  1,860/16,000 draws (11.6%) | elapsed 14m 51s | eta 1h 52m | 2.1 draws/s | warmup | div 0
+  [height]  1,888/16,000 draws (11.8%) | elapsed 15m 06s | eta 1h 52m | 2.1 draws/s | warmup | div 0
+  [height]  1,913/16,000 draws (12.0%) | elapsed 15m 22s | eta 1h 53m | 2.1 draws/s | warmup | div 0
+  [height]  1,946/16,000 draws (12.2%) | elapsed 15m 37s | eta 1h 52m | 2.1 draws/s | warmup | div 0
+  [height]  1,979/16,000 draws (12.4%) | elapsed 15m 52s | eta 1h 52m | 2.1 draws/s | warmup | div 0
+  [height]  2,013/16,000 draws (12.6%) | elapsed 16m 08s | eta 1h 52m | 2.1 draws/s | warmup | div 0
+  [height]  2,042/16,000 draws (12.8%) | elapsed 16m 23s | eta 1h 52m | 2.1 draws/s | warmup | div 0
+  [height]  2,072/16,000 draws (13.0%) | elapsed 16m 38s | eta 1h 51m | 2.1 draws/s | warmup | div 0
+  [height]  2,104/16,000 draws (13.2%) | elapsed 16m 54s | eta 1h 51m | 2.1 draws/s | warmup | div 0
+  [height]  2,134/16,000 draws (13.3%) | elapsed 17m 09s | eta 1h 51m | 2.1 draws/s | warmup | div 0
+  [height]  2,161/16,000 draws (13.5%) | elapsed 17m 24s | eta 1h 51m | 2.1 draws/s | warmup | div 0
+  [height]  2,192/16,000 draws (13.7%) | elapsed 17m 39s | eta 1h 51m | 2.1 draws/s | warmup | div 0
+  [height]  2,224/16,000 draws (13.9%) | elapsed 17m 54s | eta 1h 50m | 2.1 draws/s | warmup | div 0
+  [height]  2,257/16,000 draws (14.1%) | elapsed 18m 09s | eta 1h 50m | 2.1 draws/s | warmup | div 0
+  [height]  2,290/16,000 draws (14.3%) | elapsed 18m 24s | eta 1h 50m | 2.1 draws/s | warmup | div 0
+  [height]  2,318/16,000 draws (14.5%) | elapsed 18m 40s | eta 1h 50m | 2.1 draws/s | warmup | div 0
+  [height]  2,349/16,000 draws (14.7%) | elapsed 18m 55s | eta 1h 49m | 2.1 draws/s | warmup | div 0
+  [height]  2,380/16,000 draws (14.9%) | elapsed 19m 10s | eta 1h 49m | 2.1 draws/s | warmup | div 0
+  [height]  2,414/16,000 draws (15.1%) | elapsed 19m 25s | eta 1h 49m | 2.1 draws/s | warmup | div 0
+  [height]  2,443/16,000 draws (15.3%) | elapsed 19m 41s | eta 1h 49m | 2.1 draws/s | warmup | div 0
+  [height]  2,474/16,000 draws (15.5%) | elapsed 19m 56s | eta 1h 49m | 2.1 draws/s | warmup | div 0
+  [height]  2,504/16,000 draws (15.7%) | elapsed 20m 11s | eta 1h 48m | 2.1 draws/s | warmup | div 0
+  [height]  2,538/16,000 draws (15.9%) | elapsed 20m 26s | eta 1h 48m | 2.1 draws/s | warmup | div 0
+  [height]  2,569/16,000 draws (16.1%) | elapsed 20m 42s | eta 1h 48m | 2.1 draws/s | warmup | div 0
+  [height]  2,604/16,000 draws (16.3%) | elapsed 20m 57s | eta 1h 47m | 2.1 draws/s | warmup | div 0
+  [height]  2,637/16,000 draws (16.5%) | elapsed 21m 12s | eta 1h 47m | 2.1 draws/s | warmup | div 0
+  [height]  2,668/16,000 draws (16.7%) | elapsed 21m 28s | eta 1h 47m | 2.1 draws/s | warmup | div 0
+  [height]  2,701/16,000 draws (16.9%) | elapsed 21m 43s | eta 1h 46m | 2.1 draws/s | warmup | div 0
+  [height]  2,737/16,000 draws (17.1%) | elapsed 21m 58s | eta 1h 46m | 2.1 draws/s | warmup | div 0
+  [height]  2,771/16,000 draws (17.3%) | elapsed 22m 14s | eta 1h 46m | 2.1 draws/s | warmup | div 0
+  [height]  2,807/16,000 draws (17.5%) | elapsed 22m 29s | eta 1h 45m | 2.1 draws/s | warmup | div 0
+  [height]  2,842/16,000 draws (17.8%) | elapsed 22m 44s | eta 1h 45m | 2.1 draws/s | warmup | div 0
+  [height]  2,876/16,000 draws (18.0%) | elapsed 22m 59s | eta 1h 44m | 2.1 draws/s | warmup | div 0
+  [height]  2,908/16,000 draws (18.2%) | elapsed 23m 15s | eta 1h 44m | 2.1 draws/s | warmup | div 0
+  [height]  2,947/16,000 draws (18.4%) | elapsed 23m 30s | eta 1h 44m | 2.1 draws/s | warmup | div 0
+  [height]  2,980/16,000 draws (18.6%) | elapsed 23m 45s | eta 1h 43m | 2.1 draws/s | warmup | div 0
+  [height]  3,017/16,000 draws (18.9%) | elapsed 24m 01s | eta 1h 43m | 2.1 draws/s | warmup | div 0
+  [height]  3,054/16,000 draws (19.1%) | elapsed 24m 16s | eta 1h 42m | 2.1 draws/s | warmup | div 0
+  [height]  3,087/16,000 draws (19.3%) | elapsed 24m 31s | eta 1h 42m | 2.1 draws/s | warmup | div 0
+  [height]  3,117/16,000 draws (19.5%) | elapsed 24m 46s | eta 1h 42m | 2.1 draws/s | warmup | div 0
+  [height]  3,145/16,000 draws (19.7%) | elapsed 25m 02s | eta 1h 42m | 2.1 draws/s | warmup | div 0
+  [height]  3,167/16,000 draws (19.8%) | elapsed 25m 17s | eta 1h 42m | 2.1 draws/s | warmup | div 0
+  [height]  3,190/16,000 draws (19.9%) | elapsed 25m 32s | eta 1h 42m | 2.1 draws/s | warmup | div 0
+  [height]  3,216/16,000 draws (20.1%) | elapsed 25m 48s | eta 1h 42m | 2.1 draws/s | warmup | div 0
+  [height]  3,245/16,000 draws (20.3%) | elapsed 26m 03s | eta 1h 42m | 2.1 draws/s | warmup | div 0
+  [height]  3,276/16,000 draws (20.5%) | elapsed 26m 18s | eta 1h 42m | 2.1 draws/s | warmup | div 0
+  [height]  3,307/16,000 draws (20.7%) | elapsed 26m 34s | eta 1h 42m | 2.1 draws/s | warmup | div 0
+  [height]  3,332/16,000 draws (20.8%) | elapsed 26m 49s | eta 1h 41m | 2.1 draws/s | warmup | div 0
+  [height]  3,358/16,000 draws (21.0%) | elapsed 27m 06s | eta 1h 42m | 2.1 draws/s | warmup | div 0
+  [height]  3,380/16,000 draws (21.1%) | elapsed 27m 22s | eta 1h 42m | 2.1 draws/s | warmup | div 0
+  [height]  3,408/16,000 draws (21.3%) | elapsed 27m 37s | eta 1h 42m | 2.1 draws/s | warmup | div 0
+  [height]  3,442/16,000 draws (21.5%) | elapsed 27m 52s | eta 1h 41m | 2.1 draws/s | warmup | div 0
+  [height]  3,471/16,000 draws (21.7%) | elapsed 28m 08s | eta 1h 41m | 2.1 draws/s | warmup | div 0
+  [height]  3,498/16,000 draws (21.9%) | elapsed 28m 24s | eta 1h 41m | 2.1 draws/s | warmup | div 0
+  [height]  3,531/16,000 draws (22.1%) | elapsed 28m 39s | eta 1h 41m | 2.1 draws/s | warmup | div 0
+  [height]  3,566/16,000 draws (22.3%) | elapsed 28m 54s | eta 1h 40m | 2.1 draws/s | warmup | div 0
+  [height]  3,601/16,000 draws (22.5%) | elapsed 29m 10s | eta 1h 40m | 2.1 draws/s | warmup | div 0
+  [height]  3,631/16,000 draws (22.7%) | elapsed 29m 25s | eta 1h 40m | 2.1 draws/s | warmup | div 0
+  [height]  3,662/16,000 draws (22.9%) | elapsed 29m 40s | eta 1h 40m | 2.1 draws/s | warmup | div 0
+  [height]  3,692/16,000 draws (23.1%) | elapsed 29m 56s | eta 1h 39m | 2.1 draws/s | warmup | div 0
+  [height]  3,722/16,000 draws (23.3%) | elapsed 30m 11s | eta 1h 39m | 2.1 draws/s | warmup | div 0
+  [height]  3,746/16,000 draws (23.4%) | elapsed 30m 27s | eta 1h 39m | 2.1 draws/s | warmup | div 0
+  [height]  3,770/16,000 draws (23.6%) | elapsed 30m 43s | eta 1h 39m | 2.0 draws/s | warmup | div 0
+  [height]  3,794/16,000 draws (23.7%) | elapsed 30m 58s | eta 1h 39m | 2.0 draws/s | warmup | div 0
+  [height]  3,823/16,000 draws (23.9%) | elapsed 31m 13s | eta 1h 39m | 2.0 draws/s | warmup | div 0
+  [height]  3,848/16,000 draws (24.1%) | elapsed 31m 28s | eta 1h 39m | 2.0 draws/s | warmup | div 0
+  [height]  3,874/16,000 draws (24.2%) | elapsed 31m 44s | eta 1h 39m | 2.0 draws/s | warmup | div 0
+  [height]  3,902/16,000 draws (24.4%) | elapsed 31m 59s | eta 1h 39m | 2.0 draws/s | warmup | div 0
+  [height]  3,933/16,000 draws (24.6%) | elapsed 32m 15s | eta 1h 38m | 2.0 draws/s | warmup | div 0
+  [height]  3,960/16,000 draws (24.8%) | elapsed 32m 30s | eta 1h 38m | 2.0 draws/s | warmup | div 0
+  [height]  3,987/16,000 draws (24.9%) | elapsed 32m 46s | eta 1h 38m | 2.0 draws/s | warmup | div 0
+  [height]  4,011/16,000 draws (25.1%) | elapsed 33m 02s | eta 1h 38m | 2.0 draws/s | warmup | div 0
+  [height]  4,038/16,000 draws (25.2%) | elapsed 33m 17s | eta 1h 38m | 2.0 draws/s | warmup | div 0
+  [height]  4,065/16,000 draws (25.4%) | elapsed 33m 33s | eta 1h 38m | 2.0 draws/s | warmup | div 0
+  [height]  4,091/16,000 draws (25.6%) | elapsed 33m 49s | eta 1h 38m | 2.0 draws/s | warmup | div 0
+  [height]  4,113/16,000 draws (25.7%) | elapsed 34m 04s | eta 1h 38m | 2.0 draws/s | warmup | div 0
+  [height]  4,134/16,000 draws (25.8%) | elapsed 34m 20s | eta 1h 38m | 2.0 draws/s | warmup | div 0
+  [height]  4,158/16,000 draws (26.0%) | elapsed 34m 35s | eta 1h 38m | 2.0 draws/s | warmup | div 0
+  [height]  4,184/16,000 draws (26.2%) | elapsed 34m 51s | eta 1h 38m | 2.0 draws/s | warmup | div 0
+  [height]  4,206/16,000 draws (26.3%) | elapsed 35m 06s | eta 1h 38m | 2.0 draws/s | warmup | div 0
+  [height]  4,223/16,000 draws (26.4%) | elapsed 35m 21s | eta 1h 38m | 2.0 draws/s | warmup | div 0
+  [height]  4,246/16,000 draws (26.5%) | elapsed 35m 37s | eta 1h 38m | 2.0 draws/s | warmup | div 0
+  [height]  4,271/16,000 draws (26.7%) | elapsed 35m 52s | eta 1h 38m | 2.0 draws/s | warmup | div 0
+  [height]  4,296/16,000 draws (26.9%) | elapsed 36m 07s | eta 1h 38m | 2.0 draws/s | warmup | div 0
+  [height]  4,323/16,000 draws (27.0%) | elapsed 36m 23s | eta 1h 38m | 2.0 draws/s | warmup | div 0
+  [height]  4,349/16,000 draws (27.2%) | elapsed 36m 38s | eta 1h 38m | 2.0 draws/s | warmup | div 0
+  [height]  4,375/16,000 draws (27.3%) | elapsed 36m 53s | eta 1h 38m | 2.0 draws/s | warmup | div 0
+  [height]  4,400/16,000 draws (27.5%) | elapsed 37m 08s | eta 1h 37m | 2.0 draws/s | warmup | div 0
+  [height]  4,423/16,000 draws (27.6%) | elapsed 37m 24s | eta 1h 37m | 2.0 draws/s | warmup | div 0
+  [height]  4,450/16,000 draws (27.8%) | elapsed 37m 39s | eta 1h 37m | 2.0 draws/s | warmup | div 0
+  [height]  4,478/16,000 draws (28.0%) | elapsed 37m 54s | eta 1h 37m | 2.0 draws/s | warmup | div 0
+  [height]  4,500/16,000 draws (28.1%) | elapsed 38m 09s | eta 1h 37m | 2.0 draws/s | warmup | div 0
+  [height]  4,529/16,000 draws (28.3%) | elapsed 38m 25s | eta 1h 37m | 2.0 draws/s | warmup | div 0
+  [height]  4,555/16,000 draws (28.5%) | elapsed 38m 41s | eta 1h 37m | 2.0 draws/s | warmup | div 0
+  [height]  4,580/16,000 draws (28.6%) | elapsed 38m 56s | eta 1h 37m | 2.0 draws/s | warmup | div 0
+  [height]  4,605/16,000 draws (28.8%) | elapsed 39m 11s | eta 1h 36m | 2.0 draws/s | warmup | div 0
+  [height]  4,632/16,000 draws (28.9%) | elapsed 39m 27s | eta 1h 36m | 2.0 draws/s | warmup | div 0
+  [height]  4,658/16,000 draws (29.1%) | elapsed 39m 42s | eta 1h 36m | 2.0 draws/s | warmup | div 0
+  [height]  4,680/16,000 draws (29.2%) | elapsed 39m 59s | eta 1h 36m | 2.0 draws/s | warmup | div 0
+  [height]  4,704/16,000 draws (29.4%) | elapsed 40m 14s | eta 1h 36m | 1.9 draws/s | warmup | div 0
+  [height]  4,726/16,000 draws (29.5%) | elapsed 40m 29s | eta 1h 36m | 1.9 draws/s | warmup | div 0
+  [height]  4,750/16,000 draws (29.7%) | elapsed 40m 45s | eta 1h 36m | 1.9 draws/s | warmup | div 0
+  [height]  4,777/16,000 draws (29.9%) | elapsed 41m 00s | eta 1h 36m | 1.9 draws/s | warmup | div 0
+  [height]  4,804/16,000 draws (30.0%) | elapsed 41m 15s | eta 1h 36m | 1.9 draws/s | warmup | div 0
+  [height]  4,830/16,000 draws (30.2%) | elapsed 41m 32s | eta 1h 36m | 1.9 draws/s | warmup | div 0
+  [height]  4,851/16,000 draws (30.3%) | elapsed 41m 47s | eta 1h 36m | 1.9 draws/s | warmup | div 0
+  [height]  4,875/16,000 draws (30.5%) | elapsed 42m 03s | eta 1h 35m | 1.9 draws/s | warmup | div 0
+  [height]  4,899/16,000 draws (30.6%) | elapsed 42m 19s | eta 1h 35m | 1.9 draws/s | warmup | div 0
+  [height]  4,926/16,000 draws (30.8%) | elapsed 42m 34s | eta 1h 35m | 1.9 draws/s | warmup | div 0
+  [height]  4,956/16,000 draws (31.0%) | elapsed 42m 49s | eta 1h 35m | 1.9 draws/s | warmup | div 0
+  [height]  4,986/16,000 draws (31.2%) | elapsed 43m 05s | eta 1h 35m | 1.9 draws/s | warmup | div 0
+  [height]  5,016/16,000 draws (31.4%) | elapsed 43m 21s | eta 1h 34m | 1.9 draws/s | warmup | div 0
+  [height]  5,043/16,000 draws (31.5%) | elapsed 43m 36s | eta 1h 34m | 1.9 draws/s | warmup | div 0
+  [height]  5,073/16,000 draws (31.7%) | elapsed 43m 51s | eta 1h 34m | 1.9 draws/s | warmup | div 0
+  [height]  5,101/16,000 draws (31.9%) | elapsed 44m 07s | eta 1h 34m | 1.9 draws/s | warmup | div 0
+  [height]  5,119/16,000 draws (32.0%) | elapsed 44m 22s | eta 1h 34m | 1.9 draws/s | warmup | div 0
+  [height]  5,138/16,000 draws (32.1%) | elapsed 44m 37s | eta 1h 34m | 1.9 draws/s | warmup | div 0
+  [height]  5,163/16,000 draws (32.3%) | elapsed 44m 52s | eta 1h 34m | 1.9 draws/s | warmup | div 0
+  [height]  5,190/16,000 draws (32.4%) | elapsed 45m 08s | eta 1h 34m | 1.9 draws/s | warmup | div 0
+  [height]  5,216/16,000 draws (32.6%) | elapsed 45m 23s | eta 1h 33m | 1.9 draws/s | warmup | div 0
+  [height]  5,237/16,000 draws (32.7%) | elapsed 45m 39s | eta 1h 33m | 1.9 draws/s | warmup | div 0
+  [height]  5,262/16,000 draws (32.9%) | elapsed 45m 54s | eta 1h 33m | 1.9 draws/s | warmup | div 0
+  [height]  5,287/16,000 draws (33.0%) | elapsed 46m 09s | eta 1h 33m | 1.9 draws/s | warmup | div 0
+  [height]  5,314/16,000 draws (33.2%) | elapsed 46m 25s | eta 1h 33m | 1.9 draws/s | warmup | div 0
+  [height]  5,341/16,000 draws (33.4%) | elapsed 46m 41s | eta 1h 33m | 1.9 draws/s | warmup | div 0
+  [height]  5,372/16,000 draws (33.6%) | elapsed 46m 56s | eta 1h 32m | 1.9 draws/s | warmup | div 0
+  [height]  5,401/16,000 draws (33.8%) | elapsed 47m 12s | eta 1h 32m | 1.9 draws/s | warmup | div 0
+  [height]  5,428/16,000 draws (33.9%) | elapsed 47m 27s | eta 1h 32m | 1.9 draws/s | warmup | div 0
+  [height]  5,459/16,000 draws (34.1%) | elapsed 47m 42s | eta 1h 32m | 1.9 draws/s | warmup | div 0
+  [height]  5,486/16,000 draws (34.3%) | elapsed 47m 58s | eta 1h 31m | 1.9 draws/s | warmup | div 0
+  [height]  5,508/16,000 draws (34.4%) | elapsed 48m 13s | eta 1h 31m | 1.9 draws/s | warmup | div 0
+  [height]  5,535/16,000 draws (34.6%) | elapsed 48m 28s | eta 1h 31m | 1.9 draws/s | warmup | div 0
+  [height]  5,570/16,000 draws (34.8%) | elapsed 48m 43s | eta 1h 31m | 1.9 draws/s | warmup | div 0
+  [height]  5,598/16,000 draws (35.0%) | elapsed 48m 59s | eta 1h 31m | 1.9 draws/s | warmup | div 0
+  [height]  5,623/16,000 draws (35.1%) | elapsed 49m 14s | eta 1h 30m | 1.9 draws/s | warmup | div 0
+  [height]  5,648/16,000 draws (35.3%) | elapsed 49m 29s | eta 1h 30m | 1.9 draws/s | warmup | div 0
+  [height]  5,675/16,000 draws (35.5%) | elapsed 49m 45s | eta 1h 30m | 1.9 draws/s | warmup | div 0
+  [height]  5,706/16,000 draws (35.7%) | elapsed 50m 00s | eta 1h 30m | 1.9 draws/s | warmup | div 0
+  [height]  5,737/16,000 draws (35.9%) | elapsed 50m 16s | eta 1h 29m | 1.9 draws/s | warmup | div 0
+  [height]  5,762/16,000 draws (36.0%) | elapsed 50m 31s | eta 1h 29m | 1.9 draws/s | warmup | div 0
+  [height]  5,789/16,000 draws (36.2%) | elapsed 50m 46s | eta 1h 29m | 1.9 draws/s | warmup | div 0
+  [height]  5,817/16,000 draws (36.4%) | elapsed 51m 01s | eta 1h 29m | 1.9 draws/s | warmup | div 0
+  [height]  5,847/16,000 draws (36.5%) | elapsed 51m 17s | eta 1h 29m | 1.9 draws/s | warmup | div 0
+  [height]  5,877/16,000 draws (36.7%) | elapsed 51m 32s | eta 1h 28m | 1.9 draws/s | warmup | div 0
+  [height]  5,908/16,000 draws (36.9%) | elapsed 51m 48s | eta 1h 28m | 1.9 draws/s | warmup | div 0
+  [height]  5,937/16,000 draws (37.1%) | elapsed 52m 03s | eta 1h 28m | 1.9 draws/s | warmup | div 0
+  [height]  5,966/16,000 draws (37.3%) | elapsed 52m 18s | eta 1h 27m | 1.9 draws/s | warmup | div 0
+  [height]  5,995/16,000 draws (37.5%) | elapsed 52m 34s | eta 1h 27m | 1.9 draws/s | warmup | div 0
+  [height]  6,022/16,000 draws (37.6%) | elapsed 52m 49s | eta 1h 27m | 1.9 draws/s | warmup | div 0
+  [height]  6,046/16,000 draws (37.8%) | elapsed 53m 04s | eta 1h 27m | 1.9 draws/s | warmup | div 0
+  [height]  6,075/16,000 draws (38.0%) | elapsed 53m 20s | eta 1h 27m | 1.9 draws/s | warmup | div 0
+  [height]  6,098/16,000 draws (38.1%) | elapsed 53m 35s | eta 1h 27m | 1.9 draws/s | warmup | div 0
+  [height]  6,124/16,000 draws (38.3%) | elapsed 53m 50s | eta 1h 26m | 1.9 draws/s | warmup | div 0
+  [height]  6,149/16,000 draws (38.4%) | elapsed 54m 06s | eta 1h 26m | 1.9 draws/s | warmup | div 0
+  [height]  6,173/16,000 draws (38.6%) | elapsed 54m 21s | eta 1h 26m | 1.9 draws/s | warmup | div 0
+  [height]  6,194/16,000 draws (38.7%) | elapsed 54m 37s | eta 1h 26m | 1.9 draws/s | warmup | div 0
+  [height]  6,224/16,000 draws (38.9%) | elapsed 54m 53s | eta 1h 26m | 1.9 draws/s | warmup | div 0
+  [height]  6,248/16,000 draws (39.1%) | elapsed 55m 08s | eta 1h 26m | 1.9 draws/s | warmup | div 0
+  [height]  6,273/16,000 draws (39.2%) | elapsed 55m 24s | eta 1h 25m | 1.9 draws/s | warmup | div 0
+  [height]  6,300/16,000 draws (39.4%) | elapsed 55m 39s | eta 1h 25m | 1.9 draws/s | warmup | div 0
+  [height]  6,325/16,000 draws (39.5%) | elapsed 55m 54s | eta 1h 25m | 1.9 draws/s | warmup | div 0
+  [height]  6,351/16,000 draws (39.7%) | elapsed 56m 10s | eta 1h 25m | 1.9 draws/s | warmup | div 0
+  [height]  6,379/16,000 draws (39.9%) | elapsed 56m 25s | eta 1h 25m | 1.9 draws/s | warmup | div 0
+  [height]  6,402/16,000 draws (40.0%) | elapsed 56m 41s | eta 1h 24m | 1.9 draws/s | warmup | div 0
+  [height]  6,432/16,000 draws (40.2%) | elapsed 56m 57s | eta 1h 24m | 1.9 draws/s | warmup | div 0
+  [height]  6,453/16,000 draws (40.3%) | elapsed 57m 12s | eta 1h 24m | 1.9 draws/s | warmup | div 0
+  [height]  6,477/16,000 draws (40.5%) | elapsed 57m 27s | eta 1h 24m | 1.9 draws/s | warmup | div 0
+  [height]  6,503/16,000 draws (40.6%) | elapsed 57m 42s | eta 1h 24m | 1.9 draws/s | warmup | div 0
+  [height]  6,527/16,000 draws (40.8%) | elapsed 57m 58s | eta 1h 24m | 1.9 draws/s | warmup | div 0
+  [height]  6,557/16,000 draws (41.0%) | elapsed 58m 13s | eta 1h 23m | 1.9 draws/s | warmup | div 0
+  [height]  6,585/16,000 draws (41.2%) | elapsed 58m 29s | eta 1h 23m | 1.9 draws/s | warmup | div 0
+  [height]  6,619/16,000 draws (41.4%) | elapsed 58m 44s | eta 1h 23m | 1.9 draws/s | warmup | div 0
+  [height]  6,641/16,000 draws (41.5%) | elapsed 58m 59s | eta 1h 23m | 1.9 draws/s | warmup | div 0
+  [height]  6,664/16,000 draws (41.6%) | elapsed 59m 15s | eta 1h 23m | 1.9 draws/s | warmup | div 0
+  [height]  6,692/16,000 draws (41.8%) | elapsed 59m 30s | eta 1h 22m | 1.9 draws/s | warmup | div 0
+  [height]  6,719/16,000 draws (42.0%) | elapsed 59m 46s | eta 1h 22m | 1.9 draws/s | warmup | div 0
+  [height]  6,744/16,000 draws (42.1%) | elapsed 1h 00m | eta 1h 22m | 1.9 draws/s | warmup | div 0
+  [height]  6,769/16,000 draws (42.3%) | elapsed 1h 00m | eta 1h 22m | 1.9 draws/s | warmup | div 0
+  [height]  6,791/16,000 draws (42.4%) | elapsed 1h 00m | eta 1h 22m | 1.9 draws/s | warmup | div 0
+  [height]  6,819/16,000 draws (42.6%) | elapsed 1h 00m | eta 1h 21m | 1.9 draws/s | warmup | div 0
+  [height]  6,845/16,000 draws (42.8%) | elapsed 1h 01m | eta 1h 21m | 1.9 draws/s | warmup | div 0
+  [height]  6,874/16,000 draws (43.0%) | elapsed 1h 01m | eta 1h 21m | 1.9 draws/s | warmup | div 0
+  [height]  6,904/16,000 draws (43.1%) | elapsed 1h 01m | eta 1h 21m | 1.9 draws/s | warmup | div 0
+  [height]  6,931/16,000 draws (43.3%) | elapsed 1h 01m | eta 1h 20m | 1.9 draws/s | warmup | div 0
+  [height]  6,956/16,000 draws (43.5%) | elapsed 1h 02m | eta 1h 20m | 1.9 draws/s | warmup | div 0
+  [height]  6,983/16,000 draws (43.6%) | elapsed 1h 02m | eta 1h 20m | 1.9 draws/s | warmup | div 0
+  [height]  7,005/16,000 draws (43.8%) | elapsed 1h 02m | eta 1h 20m | 1.9 draws/s | warmup | div 0
+  [height]  7,028/16,000 draws (43.9%) | elapsed 1h 02m | eta 1h 20m | 1.9 draws/s | warmup | div 0
+  [height]  7,054/16,000 draws (44.1%) | elapsed 1h 03m | eta 1h 19m | 1.9 draws/s | warmup | div 0
+  [height]  7,078/16,000 draws (44.2%) | elapsed 1h 03m | eta 1h 19m | 1.9 draws/s | warmup | div 0
+  [height]  7,101/16,000 draws (44.4%) | elapsed 1h 03m | eta 1h 19m | 1.9 draws/s | warmup | div 0
+  [height]  7,130/16,000 draws (44.6%) | elapsed 1h 03m | eta 1h 19m | 1.9 draws/s | warmup | div 0
+  [height]  7,157/16,000 draws (44.7%) | elapsed 1h 04m | eta 1h 19m | 1.9 draws/s | warmup | div 0
+  [height]  7,180/16,000 draws (44.9%) | elapsed 1h 04m | eta 1h 19m | 1.9 draws/s | warmup | div 0
+  [height]  7,207/16,000 draws (45.0%) | elapsed 1h 04m | eta 1h 18m | 1.9 draws/s | warmup | div 0
+  [height]  7,232/16,000 draws (45.2%) | elapsed 1h 04m | eta 1h 18m | 1.9 draws/s | warmup | div 0
+  [height]  7,259/16,000 draws (45.4%) | elapsed 1h 05m | eta 1h 18m | 1.9 draws/s | warmup | div 0
+  [height]  7,283/16,000 draws (45.5%) | elapsed 1h 05m | eta 1h 18m | 1.9 draws/s | warmup | div 0
+  [height]  7,307/16,000 draws (45.7%) | elapsed 1h 05m | eta 1h 18m | 1.9 draws/s | warmup | div 0
+  [height]  7,324/16,000 draws (45.8%) | elapsed 1h 05m | eta 1h 18m | 1.9 draws/s | warmup | div 0
+  [height]  7,345/16,000 draws (45.9%) | elapsed 1h 06m | eta 1h 17m | 1.8 draws/s | warmup | div 0
+  [height]  7,368/16,000 draws (46.1%) | elapsed 1h 06m | eta 1h 17m | 1.8 draws/s | warmup | div 0
+  [height]  7,393/16,000 draws (46.2%) | elapsed 1h 06m | eta 1h 17m | 1.8 draws/s | warmup | div 0
+  [height]  7,419/16,000 draws (46.4%) | elapsed 1h 06m | eta 1h 17m | 1.8 draws/s | warmup | div 0
+  [height]  7,441/16,000 draws (46.5%) | elapsed 1h 07m | eta 1h 17m | 1.8 draws/s | warmup | div 0
+  [height]  7,464/16,000 draws (46.7%) | elapsed 1h 07m | eta 1h 17m | 1.8 draws/s | warmup | div 0
+  [height]  7,484/16,000 draws (46.8%) | elapsed 1h 07m | eta 1h 17m | 1.8 draws/s | warmup | div 0
+  [height]  7,504/16,000 draws (46.9%) | elapsed 1h 07m | eta 1h 16m | 1.8 draws/s | warmup | div 0
+  [height]  7,526/16,000 draws (47.0%) | elapsed 1h 08m | eta 1h 16m | 1.8 draws/s | warmup | div 0
+  [height]  7,548/16,000 draws (47.2%) | elapsed 1h 08m | eta 1h 16m | 1.8 draws/s | warmup | div 0
+  [height]  7,572/16,000 draws (47.3%) | elapsed 1h 08m | eta 1h 16m | 1.8 draws/s | warmup | div 0
+  [height]  7,596/16,000 draws (47.5%) | elapsed 1h 09m | eta 1h 16m | 1.8 draws/s | warmup | div 0
+  [height]  7,621/16,000 draws (47.6%) | elapsed 1h 09m | eta 1h 16m | 1.8 draws/s | warmup | div 0
+  [height]  7,645/16,000 draws (47.8%) | elapsed 1h 09m | eta 1h 15m | 1.8 draws/s | warmup | div 0
+  [height]  7,672/16,000 draws (47.9%) | elapsed 1h 09m | eta 1h 15m | 1.8 draws/s | warmup | div 0
+  [height]  7,700/16,000 draws (48.1%) | elapsed 1h 10m | eta 1h 15m | 1.8 draws/s | warmup | div 0
+  [height]  7,725/16,000 draws (48.3%) | elapsed 1h 10m | eta 1h 15m | 1.8 draws/s | warmup | div 0
+  [height]  7,748/16,000 draws (48.4%) | elapsed 1h 10m | eta 1h 15m | 1.8 draws/s | warmup | div 0
+  [height]  7,771/16,000 draws (48.6%) | elapsed 1h 10m | eta 1h 14m | 1.8 draws/s | warmup | div 0
+  [height]  7,792/16,000 draws (48.7%) | elapsed 1h 11m | eta 1h 14m | 1.8 draws/s | warmup | div 0
+  [height]  7,822/16,000 draws (48.9%) | elapsed 1h 11m | eta 1h 14m | 1.8 draws/s | warmup | div 0
+  [height]  7,846/16,000 draws (49.0%) | elapsed 1h 11m | eta 1h 14m | 1.8 draws/s | warmup | div 0
+  [height]  7,870/16,000 draws (49.2%) | elapsed 1h 11m | eta 1h 14m | 1.8 draws/s | warmup | div 0
+  [height]  7,896/16,000 draws (49.4%) | elapsed 1h 12m | eta 1h 13m | 1.8 draws/s | warmup | div 0
+  [height]  7,924/16,000 draws (49.5%) | elapsed 1h 12m | eta 1h 13m | 1.8 draws/s | warmup | div 0
+  [height]  7,949/16,000 draws (49.7%) | elapsed 1h 12m | eta 1h 13m | 1.8 draws/s | warmup | div 0
+  [height]  7,976/16,000 draws (49.9%) | elapsed 1h 12m | eta 1h 13m | 1.8 draws/s | warmup | div 0
+  [height]  8,002/16,000 draws (50.0%) | elapsed 1h 13m | eta 1h 13m | 1.8 draws/s | warmup | div 0
+  [height]  8,028/16,000 draws (50.2%) | elapsed 1h 13m | eta 1h 12m | 1.8 draws/s | warmup | div 0
+  [height]  8,054/16,000 draws (50.3%) | elapsed 1h 13m | eta 1h 12m | 1.8 draws/s | warmup | div 0
+  [height]  8,082/16,000 draws (50.5%) | elapsed 1h 13m | eta 1h 12m | 1.8 draws/s | warmup | div 0
+  [height]  8,109/16,000 draws (50.7%) | elapsed 1h 14m | eta 1h 12m | 1.8 draws/s | warmup | div 0
+  [height]  8,135/16,000 draws (50.8%) | elapsed 1h 14m | eta 1h 11m | 1.8 draws/s | warmup | div 0
+  [height]  8,157/16,000 draws (51.0%) | elapsed 1h 14m | eta 1h 11m | 1.8 draws/s | warmup | div 0
+  [height]  8,183/16,000 draws (51.1%) | elapsed 1h 14m | eta 1h 11m | 1.8 draws/s | warmup | div 0
+  [height]  8,211/16,000 draws (51.3%) | elapsed 1h 15m | eta 1h 11m | 1.8 draws/s | warmup | div 0
+  [height]  8,238/16,000 draws (51.5%) | elapsed 1h 15m | eta 1h 11m | 1.8 draws/s | warmup | div 0
+  [height]  8,264/16,000 draws (51.6%) | elapsed 1h 15m | eta 1h 10m | 1.8 draws/s | warmup | div 0
+  [height]  8,287/16,000 draws (51.8%) | elapsed 1h 15m | eta 1h 10m | 1.8 draws/s | warmup | div 0
+  [height]  8,311/16,000 draws (51.9%) | elapsed 1h 16m | eta 1h 10m | 1.8 draws/s | warmup | div 0
+  [height]  8,342/16,000 draws (52.1%) | elapsed 1h 16m | eta 1h 10m | 1.8 draws/s | warmup | div 0
+  [height]  8,365/16,000 draws (52.3%) | elapsed 1h 16m | eta 1h 09m | 1.8 draws/s | warmup | div 0
+  [height]  8,392/16,000 draws (52.4%) | elapsed 1h 16m | eta 1h 09m | 1.8 draws/s | warmup | div 0
+  [height]  8,419/16,000 draws (52.6%) | elapsed 1h 17m | eta 1h 09m | 1.8 draws/s | warmup | div 0
+  [height]  8,445/16,000 draws (52.8%) | elapsed 1h 17m | eta 1h 09m | 1.8 draws/s | warmup | div 0
+  [height]  8,471/16,000 draws (52.9%) | elapsed 1h 17m | eta 1h 09m | 1.8 draws/s | warmup | div 0
+  [height]  8,499/16,000 draws (53.1%) | elapsed 1h 17m | eta 1h 08m | 1.8 draws/s | warmup | div 0
+  [height]  8,528/16,000 draws (53.3%) | elapsed 1h 18m | eta 1h 08m | 1.8 draws/s | warmup | div 0
+  [height]  8,558/16,000 draws (53.5%) | elapsed 1h 18m | eta 1h 08m | 1.8 draws/s | warmup | div 0
+  [height]  8,586/16,000 draws (53.7%) | elapsed 1h 18m | eta 1h 07m | 1.8 draws/s | warmup | div 0
+  [height]  8,612/16,000 draws (53.8%) | elapsed 1h 18m | eta 1h 07m | 1.8 draws/s | warmup | div 0
+  [height]  8,642/16,000 draws (54.0%) | elapsed 1h 19m | eta 1h 07m | 1.8 draws/s | warmup | div 0
+  [height]  8,668/16,000 draws (54.2%) | elapsed 1h 19m | eta 1h 07m | 1.8 draws/s | warmup | div 0
+  [height]  8,695/16,000 draws (54.3%) | elapsed 1h 19m | eta 1h 07m | 1.8 draws/s | warmup | div 0
+  [height]  warmup complete on all 4 chains, sampling...
+  [height]  8,726/16,000 draws (54.5%) | elapsed 1h 20m | eta 1h 06m | 1.8 draws/s | sampling | div 0
+  [height]  8,748/16,000 draws (54.7%) | elapsed 1h 20m | eta 1h 06m | 1.8 draws/s | sampling | div 0
+  [height]  8,772/16,000 draws (54.8%) | elapsed 1h 20m | eta 1h 06m | 1.8 draws/s | sampling | div 0
+  [height]  8,798/16,000 draws (55.0%) | elapsed 1h 20m | eta 1h 06m | 1.8 draws/s | sampling | div 0
+  [height]  8,822/16,000 draws (55.1%) | elapsed 1h 21m | eta 1h 05m | 1.8 draws/s | sampling | div 0
+  [height]  8,851/16,000 draws (55.3%) | elapsed 1h 21m | eta 1h 05m | 1.8 draws/s | sampling | div 0
+  [height]  8,877/16,000 draws (55.5%) | elapsed 1h 21m | eta 1h 05m | 1.8 draws/s | sampling | div 0
+  [height]  8,901/16,000 draws (55.6%) | elapsed 1h 21m | eta 1h 05m | 1.8 draws/s | sampling | div 0
+  [height]  8,927/16,000 draws (55.8%) | elapsed 1h 22m | eta 1h 05m | 1.8 draws/s | sampling | div 0
+  [height]  8,952/16,000 draws (56.0%) | elapsed 1h 22m | eta 1h 04m | 1.8 draws/s | sampling | div 0
+  [height]  8,981/16,000 draws (56.1%) | elapsed 1h 22m | eta 1h 04m | 1.8 draws/s | sampling | div 0
+  [height]  9,008/16,000 draws (56.3%) | elapsed 1h 22m | eta 1h 04m | 1.8 draws/s | sampling | div 0
+  [height]  9,037/16,000 draws (56.5%) | elapsed 1h 23m | eta 1h 04m | 1.8 draws/s | sampling | div 0
+  [height]  9,062/16,000 draws (56.6%) | elapsed 1h 23m | eta 1h 03m | 1.8 draws/s | sampling | div 0
+  [height]  9,083/16,000 draws (56.8%) | elapsed 1h 23m | eta 1h 03m | 1.8 draws/s | sampling | div 0
+  [height]  9,112/16,000 draws (57.0%) | elapsed 1h 23m | eta 1h 03m | 1.8 draws/s | sampling | div 0
+  [height]  9,140/16,000 draws (57.1%) | elapsed 1h 24m | eta 1h 03m | 1.8 draws/s | sampling | div 0
+  [height]  9,166/16,000 draws (57.3%) | elapsed 1h 24m | eta 1h 02m | 1.8 draws/s | sampling | div 0
+  [height]  9,194/16,000 draws (57.5%) | elapsed 1h 24m | eta 1h 02m | 1.8 draws/s | sampling | div 0
+  [height]  9,223/16,000 draws (57.6%) | elapsed 1h 24m | eta 1h 02m | 1.8 draws/s | sampling | div 0
+  [height]  9,249/16,000 draws (57.8%) | elapsed 1h 25m | eta 1h 02m | 1.8 draws/s | sampling | div 0
+  [height]  9,273/16,000 draws (58.0%) | elapsed 1h 25m | eta 1h 01m | 1.8 draws/s | sampling | div 0
+  [height]  9,299/16,000 draws (58.1%) | elapsed 1h 25m | eta 1h 01m | 1.8 draws/s | sampling | div 0
+  [height]  9,327/16,000 draws (58.3%) | elapsed 1h 25m | eta 1h 01m | 1.8 draws/s | sampling | div 0
+  [height]  9,353/16,000 draws (58.5%) | elapsed 1h 26m | eta 1h 01m | 1.8 draws/s | sampling | div 0
+  [height]  9,381/16,000 draws (58.6%) | elapsed 1h 26m | eta 1h 01m | 1.8 draws/s | sampling | div 0
+  [height]  9,403/16,000 draws (58.8%) | elapsed 1h 26m | eta 1h 00m | 1.8 draws/s | sampling | div 0
+  [height]  9,431/16,000 draws (58.9%) | elapsed 1h 26m | eta 1h 00m | 1.8 draws/s | sampling | div 0
+  [height]  9,461/16,000 draws (59.1%) | elapsed 1h 27m | eta 1h 00m | 1.8 draws/s | sampling | div 0
+  [height]  9,486/16,000 draws (59.3%) | elapsed 1h 27m | eta 1h 00m | 1.8 draws/s | sampling | div 0
+  [height]  9,512/16,000 draws (59.5%) | elapsed 1h 27m | eta 59m 51s | 1.8 draws/s | sampling | div 0
+  [height]  9,535/16,000 draws (59.6%) | elapsed 1h 28m | eta 59m 40s | 1.8 draws/s | sampling | div 0
+  [height]  9,561/16,000 draws (59.8%) | elapsed 1h 28m | eta 59m 26s | 1.8 draws/s | sampling | div 0
+  [height]  9,587/16,000 draws (59.9%) | elapsed 1h 28m | eta 59m 12s | 1.8 draws/s | sampling | div 0
+  [height]  9,614/16,000 draws (60.1%) | elapsed 1h 28m | eta 58m 58s | 1.8 draws/s | sampling | div 0
+  [height]  9,640/16,000 draws (60.2%) | elapsed 1h 29m | eta 58m 44s | 1.8 draws/s | sampling | div 0
+  [height]  9,665/16,000 draws (60.4%) | elapsed 1h 29m | eta 58m 31s | 1.8 draws/s | sampling | div 0
+  [height]  9,691/16,000 draws (60.6%) | elapsed 1h 29m | eta 58m 18s | 1.8 draws/s | sampling | div 0
+  [height]  9,720/16,000 draws (60.8%) | elapsed 1h 29m | eta 58m 01s | 1.8 draws/s | sampling | div 0
+  [height]  9,750/16,000 draws (60.9%) | elapsed 1h 30m | eta 57m 43s | 1.8 draws/s | sampling | div 0
+  [height]  9,777/16,000 draws (61.1%) | elapsed 1h 30m | eta 57m 29s | 1.8 draws/s | sampling | div 0
+  [height]  9,804/16,000 draws (61.3%) | elapsed 1h 30m | eta 57m 14s | 1.8 draws/s | sampling | div 0
+  [height]  9,830/16,000 draws (61.4%) | elapsed 1h 30m | eta 57m 00s | 1.8 draws/s | sampling | div 0
+  [height]  9,851/16,000 draws (61.6%) | elapsed 1h 31m | eta 56m 51s | 1.8 draws/s | sampling | div 0
+  [height]  9,876/16,000 draws (61.7%) | elapsed 1h 31m | eta 56m 38s | 1.8 draws/s | sampling | div 0
+  [height]  9,901/16,000 draws (61.9%) | elapsed 1h 31m | eta 56m 25s | 1.8 draws/s | sampling | div 0
+  [height]  9,929/16,000 draws (62.1%) | elapsed 1h 31m | eta 56m 10s | 1.8 draws/s | sampling | div 0
+  [height]  9,950/16,000 draws (62.2%) | elapsed 1h 32m | eta 56m 00s | 1.8 draws/s | sampling | div 0
+  [height]  9,975/16,000 draws (62.3%) | elapsed 1h 32m | eta 55m 47s | 1.8 draws/s | sampling | div 0
+  [height]  9,999/16,000 draws (62.5%) | elapsed 1h 32m | eta 55m 35s | 1.8 draws/s | sampling | div 0
+  [height]  10,023/16,000 draws (62.6%) | elapsed 1h 32m | eta 55m 23s | 1.8 draws/s | sampling | div 0
+  [height]  10,052/16,000 draws (62.8%) | elapsed 1h 33m | eta 55m 06s | 1.8 draws/s | sampling | div 0
+  [height]  10,078/16,000 draws (63.0%) | elapsed 1h 33m | eta 54m 52s | 1.8 draws/s | sampling | div 0
+  [height]  10,107/16,000 draws (63.2%) | elapsed 1h 33m | eta 54m 36s | 1.8 draws/s | sampling | div 0
+  [height]  10,131/16,000 draws (63.3%) | elapsed 1h 33m | eta 54m 23s | 1.8 draws/s | sampling | div 0
+  [height]  10,159/16,000 draws (63.5%) | elapsed 1h 34m | eta 54m 08s | 1.8 draws/s | sampling | div 0
+  [height]  10,186/16,000 draws (63.7%) | elapsed 1h 34m | eta 53m 53s | 1.8 draws/s | sampling | div 0
+  [height]  10,215/16,000 draws (63.8%) | elapsed 1h 34m | eta 53m 37s | 1.8 draws/s | sampling | div 0
+  [height]  10,240/16,000 draws (64.0%) | elapsed 1h 34m | eta 53m 23s | 1.8 draws/s | sampling | div 0
+  [height]  10,266/16,000 draws (64.2%) | elapsed 1h 35m | eta 53m 10s | 1.8 draws/s | sampling | div 0
+  [height]  10,291/16,000 draws (64.3%) | elapsed 1h 35m | eta 52m 56s | 1.8 draws/s | sampling | div 0
+  [height]  10,318/16,000 draws (64.5%) | elapsed 1h 35m | eta 52m 42s | 1.8 draws/s | sampling | div 0
+  [height]  10,341/16,000 draws (64.6%) | elapsed 1h 35m | eta 52m 30s | 1.8 draws/s | sampling | div 0
+  [height]  10,362/16,000 draws (64.8%) | elapsed 1h 36m | eta 52m 20s | 1.8 draws/s | sampling | div 0
+  [height]  10,387/16,000 draws (64.9%) | elapsed 1h 36m | eta 52m 07s | 1.8 draws/s | sampling | div 0
+  [height]  10,410/16,000 draws (65.1%) | elapsed 1h 36m | eta 51m 56s | 1.8 draws/s | sampling | div 0
+  [height]  10,433/16,000 draws (65.2%) | elapsed 1h 36m | eta 51m 45s | 1.8 draws/s | sampling | div 0
+  [height]  10,461/16,000 draws (65.4%) | elapsed 1h 37m | eta 51m 29s | 1.8 draws/s | sampling | div 0
+  [height]  10,489/16,000 draws (65.6%) | elapsed 1h 37m | eta 51m 13s | 1.8 draws/s | sampling | div 0
+  [height]  10,513/16,000 draws (65.7%) | elapsed 1h 37m | eta 51m 00s | 1.8 draws/s | sampling | div 0
+  [height]  10,538/16,000 draws (65.9%) | elapsed 1h 37m | eta 50m 47s | 1.8 draws/s | sampling | div 0
+  [height]  10,564/16,000 draws (66.0%) | elapsed 1h 38m | eta 50m 33s | 1.8 draws/s | sampling | div 0
+  [height]  10,592/16,000 draws (66.2%) | elapsed 1h 38m | eta 50m 17s | 1.8 draws/s | sampling | div 0
+  [height]  10,619/16,000 draws (66.4%) | elapsed 1h 38m | eta 50m 02s | 1.8 draws/s | sampling | div 0
+  [height]  10,643/16,000 draws (66.5%) | elapsed 1h 39m | eta 49m 50s | 1.8 draws/s | sampling | div 0
+  [height]  10,670/16,000 draws (66.7%) | elapsed 1h 39m | eta 49m 35s | 1.8 draws/s | sampling | div 0
+  [height]  10,700/16,000 draws (66.9%) | elapsed 1h 39m | eta 49m 17s | 1.8 draws/s | sampling | div 0
+  [height]  10,728/16,000 draws (67.0%) | elapsed 1h 39m | eta 49m 02s | 1.8 draws/s | sampling | div 0
+  [height]  10,752/16,000 draws (67.2%) | elapsed 1h 40m | eta 48m 49s | 1.8 draws/s | sampling | div 0
+  [height]  10,773/16,000 draws (67.3%) | elapsed 1h 40m | eta 48m 39s | 1.8 draws/s | sampling | div 0
+  [height]  10,800/16,000 draws (67.5%) | elapsed 1h 40m | eta 48m 24s | 1.8 draws/s | sampling | div 0
+  [height]  10,824/16,000 draws (67.7%) | elapsed 1h 40m | eta 48m 12s | 1.8 draws/s | sampling | div 0
+  [height]  10,848/16,000 draws (67.8%) | elapsed 1h 41m | eta 47m 59s | 1.8 draws/s | sampling | div 0
+  [height]  10,872/16,000 draws (68.0%) | elapsed 1h 41m | eta 47m 47s | 1.8 draws/s | sampling | div 0
+  [height]  10,896/16,000 draws (68.1%) | elapsed 1h 41m | eta 47m 34s | 1.8 draws/s | sampling | div 0
+  [height]  10,921/16,000 draws (68.3%) | elapsed 1h 41m | eta 47m 21s | 1.8 draws/s | sampling | div 0
+  [height]  10,947/16,000 draws (68.4%) | elapsed 1h 42m | eta 47m 07s | 1.8 draws/s | sampling | div 0
+  [height]  10,968/16,000 draws (68.5%) | elapsed 1h 42m | eta 46m 57s | 1.8 draws/s | sampling | div 0
+  [height]  10,994/16,000 draws (68.7%) | elapsed 1h 42m | eta 46m 43s | 1.8 draws/s | sampling | div 0
+  [height]  11,022/16,000 draws (68.9%) | elapsed 1h 42m | eta 46m 27s | 1.8 draws/s | sampling | div 0
+  [height]  11,049/16,000 draws (69.1%) | elapsed 1h 43m | eta 46m 12s | 1.8 draws/s | sampling | div 0
+  [height]  11,075/16,000 draws (69.2%) | elapsed 1h 43m | eta 45m 58s | 1.8 draws/s | sampling | div 0
+  [height]  11,099/16,000 draws (69.4%) | elapsed 1h 43m | eta 45m 45s | 1.8 draws/s | sampling | div 0
+  [height]  11,122/16,000 draws (69.5%) | elapsed 1h 43m | eta 45m 34s | 1.8 draws/s | sampling | div 0
+  [height]  11,147/16,000 draws (69.7%) | elapsed 1h 44m | eta 45m 20s | 1.8 draws/s | sampling | div 0
+  [height]  11,168/16,000 draws (69.8%) | elapsed 1h 44m | eta 45m 10s | 1.8 draws/s | sampling | div 0
+  [height]  11,192/16,000 draws (70.0%) | elapsed 1h 44m | eta 44m 57s | 1.8 draws/s | sampling | div 0
+  [height]  11,220/16,000 draws (70.1%) | elapsed 1h 44m | eta 44m 41s | 1.8 draws/s | sampling | div 0
+  [height]  11,243/16,000 draws (70.3%) | elapsed 1h 45m | eta 44m 30s | 1.8 draws/s | sampling | div 0
+  [height]  11,265/16,000 draws (70.4%) | elapsed 1h 45m | eta 44m 18s | 1.8 draws/s | sampling | div 0
+  [height]  11,287/16,000 draws (70.5%) | elapsed 1h 45m | eta 44m 07s | 1.8 draws/s | sampling | div 0
+  [height]  11,309/16,000 draws (70.7%) | elapsed 1h 45m | eta 43m 56s | 1.8 draws/s | sampling | div 0
+  [height]  11,336/16,000 draws (70.9%) | elapsed 1h 46m | eta 43m 41s | 1.8 draws/s | sampling | div 0
+  [height]  11,361/16,000 draws (71.0%) | elapsed 1h 46m | eta 43m 27s | 1.8 draws/s | sampling | div 0
+  [height]  11,387/16,000 draws (71.2%) | elapsed 1h 46m | eta 43m 13s | 1.8 draws/s | sampling | div 0
+  [height]  11,415/16,000 draws (71.3%) | elapsed 1h 46m | eta 42m 57s | 1.8 draws/s | sampling | div 0
+  [height]  11,440/16,000 draws (71.5%) | elapsed 1h 47m | eta 42m 44s | 1.8 draws/s | sampling | div 0
+  [height]  11,464/16,000 draws (71.7%) | elapsed 1h 47m | eta 42m 31s | 1.8 draws/s | sampling | div 0
+  [height]  11,492/16,000 draws (71.8%) | elapsed 1h 47m | eta 42m 16s | 1.8 draws/s | sampling | div 0
+  [height]  11,520/16,000 draws (72.0%) | elapsed 1h 48m | eta 42m 00s | 1.8 draws/s | sampling | div 0
+  [height]  11,546/16,000 draws (72.2%) | elapsed 1h 48m | eta 41m 45s | 1.8 draws/s | sampling | div 0
+  [height]  11,569/16,000 draws (72.3%) | elapsed 1h 48m | eta 41m 33s | 1.8 draws/s | sampling | div 0
+  [height]  11,596/16,000 draws (72.5%) | elapsed 1h 48m | eta 41m 18s | 1.8 draws/s | sampling | div 0
+  [height]  11,621/16,000 draws (72.6%) | elapsed 1h 49m | eta 41m 04s | 1.8 draws/s | sampling | div 0
+  [height]  11,642/16,000 draws (72.8%) | elapsed 1h 49m | eta 40m 54s | 1.8 draws/s | sampling | div 0
+  [height]  11,663/16,000 draws (72.9%) | elapsed 1h 49m | eta 40m 43s | 1.8 draws/s | sampling | div 0
+  [height]  11,687/16,000 draws (73.0%) | elapsed 1h 49m | eta 40m 30s | 1.8 draws/s | sampling | div 0
+  [height]  11,715/16,000 draws (73.2%) | elapsed 1h 50m | eta 40m 14s | 1.8 draws/s | sampling | div 0
+  [height]  11,739/16,000 draws (73.4%) | elapsed 1h 50m | eta 40m 01s | 1.8 draws/s | sampling | div 0
+  [height]  11,764/16,000 draws (73.5%) | elapsed 1h 50m | eta 39m 48s | 1.8 draws/s | sampling | div 0
+  [height]  11,785/16,000 draws (73.7%) | elapsed 1h 50m | eta 39m 38s | 1.8 draws/s | sampling | div 0
+  [height]  11,812/16,000 draws (73.8%) | elapsed 1h 51m | eta 39m 22s | 1.8 draws/s | sampling | div 0
+  [height]  11,842/16,000 draws (74.0%) | elapsed 1h 51m | eta 39m 05s | 1.8 draws/s | sampling | div 0
+  [height]  11,863/16,000 draws (74.1%) | elapsed 1h 51m | eta 38m 54s | 1.8 draws/s | sampling | div 0
+  [height]  11,890/16,000 draws (74.3%) | elapsed 1h 51m | eta 38m 39s | 1.8 draws/s | sampling | div 0
+  [height]  11,918/16,000 draws (74.5%) | elapsed 1h 52m | eta 38m 23s | 1.8 draws/s | sampling | div 0
+  [height]  11,940/16,000 draws (74.6%) | elapsed 1h 52m | eta 38m 12s | 1.8 draws/s | sampling | div 0
+  [height]  11,965/16,000 draws (74.8%) | elapsed 1h 52m | eta 37m 58s | 1.8 draws/s | sampling | div 0
+  [height]  11,988/16,000 draws (74.9%) | elapsed 1h 52m | eta 37m 46s | 1.8 draws/s | sampling | div 0
+  [height]  12,013/16,000 draws (75.1%) | elapsed 1h 53m | eta 37m 32s | 1.8 draws/s | sampling | div 0
+  [height]  12,039/16,000 draws (75.2%) | elapsed 1h 53m | eta 37m 18s | 1.8 draws/s | sampling | div 0
+  [height]  12,063/16,000 draws (75.4%) | elapsed 1h 53m | eta 37m 05s | 1.8 draws/s | sampling | div 0
+  [height]  12,086/16,000 draws (75.5%) | elapsed 1h 53m | eta 36m 52s | 1.8 draws/s | sampling | div 0
+  [height]  12,113/16,000 draws (75.7%) | elapsed 1h 54m | eta 36m 37s | 1.8 draws/s | sampling | div 0
+  [height]  12,141/16,000 draws (75.9%) | elapsed 1h 54m | eta 36m 21s | 1.8 draws/s | sampling | div 0
+  [height]  12,169/16,000 draws (76.1%) | elapsed 1h 54m | eta 36m 05s | 1.8 draws/s | sampling | div 0
+  [height]  12,199/16,000 draws (76.2%) | elapsed 1h 54m | eta 35m 48s | 1.8 draws/s | sampling | div 0
+  [height]  12,224/16,000 draws (76.4%) | elapsed 1h 55m | eta 35m 34s | 1.8 draws/s | sampling | div 0
+  [height]  12,249/16,000 draws (76.6%) | elapsed 1h 55m | eta 35m 20s | 1.8 draws/s | sampling | div 0
+  [height]  12,277/16,000 draws (76.7%) | elapsed 1h 55m | eta 35m 04s | 1.8 draws/s | sampling | div 0
+  [height]  12,306/16,000 draws (76.9%) | elapsed 1h 55m | eta 34m 48s | 1.8 draws/s | sampling | div 0
+  [height]  12,334/16,000 draws (77.1%) | elapsed 1h 56m | eta 34m 32s | 1.8 draws/s | sampling | div 0
+  [height]  12,362/16,000 draws (77.3%) | elapsed 1h 56m | eta 34m 16s | 1.8 draws/s | sampling | div 0
+  [height]  12,384/16,000 draws (77.4%) | elapsed 1h 56m | eta 34m 04s | 1.8 draws/s | sampling | div 0
+  [height]  12,410/16,000 draws (77.6%) | elapsed 1h 56m | eta 33m 49s | 1.8 draws/s | sampling | div 0
+  [height]  12,434/16,000 draws (77.7%) | elapsed 1h 57m | eta 33m 36s | 1.8 draws/s | sampling | div 0
+  [height]  12,461/16,000 draws (77.9%) | elapsed 1h 57m | eta 33m 21s | 1.8 draws/s | sampling | div 0
+  [height]  12,489/16,000 draws (78.1%) | elapsed 1h 57m | eta 33m 05s | 1.8 draws/s | sampling | div 0
+  [height]  12,516/16,000 draws (78.2%) | elapsed 1h 57m | eta 32m 50s | 1.8 draws/s | sampling | div 0
+  [height]  12,540/16,000 draws (78.4%) | elapsed 1h 58m | eta 32m 37s | 1.8 draws/s | sampling | div 0
+  [height]  12,568/16,000 draws (78.5%) | elapsed 1h 58m | eta 32m 21s | 1.8 draws/s | sampling | div 0
+  [height]  12,596/16,000 draws (78.7%) | elapsed 1h 58m | eta 32m 05s | 1.8 draws/s | sampling | div 0
+  [height]  12,623/16,000 draws (78.9%) | elapsed 1h 58m | eta 31m 50s | 1.8 draws/s | sampling | div 0
+  [height]  12,651/16,000 draws (79.1%) | elapsed 1h 59m | eta 31m 34s | 1.8 draws/s | sampling | div 0
+  [height]  12,676/16,000 draws (79.2%) | elapsed 1h 59m | eta 31m 20s | 1.8 draws/s | sampling | div 0
+  [height]  12,699/16,000 draws (79.4%) | elapsed 1h 59m | eta 31m 07s | 1.8 draws/s | sampling | div 0
+  [height]  12,722/16,000 draws (79.5%) | elapsed 2h 00m | eta 30m 55s | 1.8 draws/s | sampling | div 0
+  [height]  12,746/16,000 draws (79.7%) | elapsed 2h 00m | eta 30m 42s | 1.8 draws/s | sampling | div 0
+  [height]  12,771/16,000 draws (79.8%) | elapsed 2h 00m | eta 30m 28s | 1.8 draws/s | sampling | div 0
+  [height]  12,798/16,000 draws (80.0%) | elapsed 2h 00m | eta 30m 13s | 1.8 draws/s | sampling | div 0
+  [height]  12,824/16,000 draws (80.2%) | elapsed 2h 01m | eta 29m 58s | 1.8 draws/s | sampling | div 0
+  [height]  12,848/16,000 draws (80.3%) | elapsed 2h 01m | eta 29m 45s | 1.8 draws/s | sampling | div 0
+  [height]  12,873/16,000 draws (80.5%) | elapsed 2h 01m | eta 29m 31s | 1.8 draws/s | sampling | div 0
+  [height]  12,896/16,000 draws (80.6%) | elapsed 2h 01m | eta 29m 19s | 1.8 draws/s | sampling | div 0
+  [height]  12,920/16,000 draws (80.8%) | elapsed 2h 02m | eta 29m 06s | 1.8 draws/s | sampling | div 0
+  [height]  12,948/16,000 draws (80.9%) | elapsed 2h 02m | eta 28m 50s | 1.8 draws/s | sampling | div 0
+  [height]  12,975/16,000 draws (81.1%) | elapsed 2h 02m | eta 28m 34s | 1.8 draws/s | sampling | div 0
+  [height]  13,002/16,000 draws (81.3%) | elapsed 2h 02m | eta 28m 19s | 1.8 draws/s | sampling | div 0
+  [height]  13,031/16,000 draws (81.4%) | elapsed 2h 03m | eta 28m 02s | 1.8 draws/s | sampling | div 0
+  [height]  13,058/16,000 draws (81.6%) | elapsed 2h 03m | eta 27m 47s | 1.8 draws/s | sampling | div 0
+  [height]  13,085/16,000 draws (81.8%) | elapsed 2h 03m | eta 27m 32s | 1.8 draws/s | sampling | div 0
+  [height]  13,108/16,000 draws (81.9%) | elapsed 2h 03m | eta 27m 19s | 1.8 draws/s | sampling | div 0
+  [height]  13,134/16,000 draws (82.1%) | elapsed 2h 04m | eta 27m 05s | 1.8 draws/s | sampling | div 0
+  [height]  13,155/16,000 draws (82.2%) | elapsed 2h 04m | eta 26m 53s | 1.8 draws/s | sampling | div 0
+  [height]  13,179/16,000 draws (82.4%) | elapsed 2h 04m | eta 26m 40s | 1.8 draws/s | sampling | div 0
+  [height]  13,201/16,000 draws (82.5%) | elapsed 2h 04m | eta 26m 29s | 1.8 draws/s | sampling | div 0
+  [height]  13,224/16,000 draws (82.7%) | elapsed 2h 05m | eta 26m 16s | 1.8 draws/s | sampling | div 0
+  [height]  13,246/16,000 draws (82.8%) | elapsed 2h 05m | eta 26m 04s | 1.8 draws/s | sampling | div 0
+  [height]  13,269/16,000 draws (82.9%) | elapsed 2h 05m | eta 25m 52s | 1.8 draws/s | sampling | div 0
+  [height]  13,296/16,000 draws (83.1%) | elapsed 2h 05m | eta 25m 36s | 1.8 draws/s | sampling | div 0
+  [height]  13,320/16,000 draws (83.2%) | elapsed 2h 06m | eta 25m 23s | 1.8 draws/s | sampling | div 0
+  [height]  13,344/16,000 draws (83.4%) | elapsed 2h 06m | eta 25m 10s | 1.8 draws/s | sampling | div 0
+  [height]  13,367/16,000 draws (83.5%) | elapsed 2h 06m | eta 24m 57s | 1.8 draws/s | sampling | div 0
+  [height]  13,391/16,000 draws (83.7%) | elapsed 2h 06m | eta 24m 44s | 1.8 draws/s | sampling | div 0
+  [height]  13,417/16,000 draws (83.9%) | elapsed 2h 07m | eta 24m 29s | 1.8 draws/s | sampling | div 0
+  [height]  13,441/16,000 draws (84.0%) | elapsed 2h 07m | eta 24m 16s | 1.8 draws/s | sampling | div 0
+  [height]  13,465/16,000 draws (84.2%) | elapsed 2h 07m | eta 24m 02s | 1.8 draws/s | sampling | div 0
+  [height]  13,488/16,000 draws (84.3%) | elapsed 2h 07m | eta 23m 50s | 1.8 draws/s | sampling | div 0
+  [height]  13,511/16,000 draws (84.4%) | elapsed 2h 08m | eta 23m 37s | 1.8 draws/s | sampling | div 0
+  [height]  13,538/16,000 draws (84.6%) | elapsed 2h 08m | eta 23m 22s | 1.8 draws/s | sampling | div 0
+  [height]  13,564/16,000 draws (84.8%) | elapsed 2h 08m | eta 23m 07s | 1.8 draws/s | sampling | div 0
+  [height]  13,590/16,000 draws (84.9%) | elapsed 2h 09m | eta 22m 52s | 1.8 draws/s | sampling | div 0
+  [height]  13,617/16,000 draws (85.1%) | elapsed 2h 09m | eta 22m 37s | 1.8 draws/s | sampling | div 0
+  [height]  13,650/16,000 draws (85.3%) | elapsed 2h 09m | eta 22m 17s | 1.8 draws/s | sampling | div 0
+  [height]  13,672/16,000 draws (85.5%) | elapsed 2h 09m | eta 22m 05s | 1.8 draws/s | sampling | div 0
+  [height]  13,701/16,000 draws (85.6%) | elapsed 2h 10m | eta 21m 49s | 1.8 draws/s | sampling | div 0
+  [height]  13,729/16,000 draws (85.8%) | elapsed 2h 10m | eta 21m 33s | 1.8 draws/s | sampling | div 0
+  [height]  13,751/16,000 draws (85.9%) | elapsed 2h 10m | eta 21m 20s | 1.8 draws/s | sampling | div 0
+  [height]  13,773/16,000 draws (86.1%) | elapsed 2h 10m | eta 21m 08s | 1.8 draws/s | sampling | div 0
+  [height]  13,797/16,000 draws (86.2%) | elapsed 2h 11m | eta 20m 55s | 1.8 draws/s | sampling | div 0
+  [height]  13,821/16,000 draws (86.4%) | elapsed 2h 11m | eta 20m 42s | 1.8 draws/s | sampling | div 0
+  [height]  13,847/16,000 draws (86.5%) | elapsed 2h 11m | eta 20m 27s | 1.8 draws/s | sampling | div 0
+  [height]  13,872/16,000 draws (86.7%) | elapsed 2h 11m | eta 20m 13s | 1.8 draws/s | sampling | div 0
+  [height]  13,895/16,000 draws (86.8%) | elapsed 2h 12m | eta 20m 00s | 1.8 draws/s | sampling | div 0
+  [height]  13,920/16,000 draws (87.0%) | elapsed 2h 12m | eta 19m 46s | 1.8 draws/s | sampling | div 0
+  [height]  13,947/16,000 draws (87.2%) | elapsed 2h 12m | eta 19m 31s | 1.8 draws/s | sampling | div 0
+  [height]  13,973/16,000 draws (87.3%) | elapsed 2h 12m | eta 19m 16s | 1.8 draws/s | sampling | div 0
+  [height]  13,997/16,000 draws (87.5%) | elapsed 2h 13m | eta 19m 02s | 1.8 draws/s | sampling | div 0
+  [height]  14,023/16,000 draws (87.6%) | elapsed 2h 13m | eta 18m 48s | 1.8 draws/s | sampling | div 0
+  [height]  14,046/16,000 draws (87.8%) | elapsed 2h 13m | eta 18m 35s | 1.8 draws/s | sampling | div 0
+  [height]  14,071/16,000 draws (87.9%) | elapsed 2h 13m | eta 18m 21s | 1.8 draws/s | sampling | div 0
+  [height]  14,097/16,000 draws (88.1%) | elapsed 2h 14m | eta 18m 06s | 1.8 draws/s | sampling | div 0
+  [height]  14,124/16,000 draws (88.3%) | elapsed 2h 14m | eta 17m 50s | 1.8 draws/s | sampling | div 0
+  [height]  14,148/16,000 draws (88.4%) | elapsed 2h 14m | eta 17m 37s | 1.8 draws/s | sampling | div 0
+  [height]  14,174/16,000 draws (88.6%) | elapsed 2h 14m | eta 17m 22s | 1.8 draws/s | sampling | div 0
+  [height]  14,202/16,000 draws (88.8%) | elapsed 2h 15m | eta 17m 06s | 1.8 draws/s | sampling | div 0
+  [height]  14,230/16,000 draws (88.9%) | elapsed 2h 15m | eta 16m 50s | 1.8 draws/s | sampling | div 0
+  [height]  14,258/16,000 draws (89.1%) | elapsed 2h 15m | eta 16m 34s | 1.8 draws/s | sampling | div 0
+  [height]  14,286/16,000 draws (89.3%) | elapsed 2h 15m | eta 16m 18s | 1.8 draws/s | sampling | div 0
+  [height]  14,310/16,000 draws (89.4%) | elapsed 2h 16m | eta 16m 04s | 1.8 draws/s | sampling | div 0
+  [height]  14,336/16,000 draws (89.6%) | elapsed 2h 16m | eta 15m 50s | 1.8 draws/s | sampling | div 0
+  [height]  14,364/16,000 draws (89.8%) | elapsed 2h 16m | eta 15m 33s | 1.8 draws/s | sampling | div 0
+  [height]  14,390/16,000 draws (89.9%) | elapsed 2h 16m | eta 15m 19s | 1.8 draws/s | sampling | div 0
+  [height]  14,413/16,000 draws (90.1%) | elapsed 2h 17m | eta 15m 06s | 1.8 draws/s | sampling | div 0
+  [height]  14,442/16,000 draws (90.3%) | elapsed 2h 17m | eta 14m 49s | 1.8 draws/s | sampling | div 0
+  [height]  14,470/16,000 draws (90.4%) | elapsed 2h 17m | eta 14m 33s | 1.8 draws/s | sampling | div 0
+  [height]  14,499/16,000 draws (90.6%) | elapsed 2h 17m | eta 14m 16s | 1.8 draws/s | sampling | div 0
+  [height]  14,526/16,000 draws (90.8%) | elapsed 2h 18m | eta 14m 01s | 1.8 draws/s | sampling | div 0
+  [height]  14,551/16,000 draws (90.9%) | elapsed 2h 18m | eta 13m 47s | 1.8 draws/s | sampling | div 0
+  [height]  14,577/16,000 draws (91.1%) | elapsed 2h 18m | eta 13m 32s | 1.8 draws/s | sampling | div 0
+  [height]  14,601/16,000 draws (91.3%) | elapsed 2h 19m | eta 13m 19s | 1.8 draws/s | sampling | div 0
+  [height]  14,625/16,000 draws (91.4%) | elapsed 2h 19m | eta 13m 05s | 1.8 draws/s | sampling | div 0
+  [height]  14,652/16,000 draws (91.6%) | elapsed 2h 19m | eta 12m 50s | 1.8 draws/s | sampling | div 0
+  [height]  14,674/16,000 draws (91.7%) | elapsed 2h 19m | eta 12m 37s | 1.7 draws/s | sampling | div 0
+  [height]  14,699/16,000 draws (91.9%) | elapsed 2h 20m | eta 12m 23s | 1.7 draws/s | sampling | div 0
+  [height]  14,712/16,000 draws (92.0%) | elapsed 2h 20m | eta 12m 19s | 1.7 draws/s | sampling | div 0
+  [height]  14,736/16,000 draws (92.1%) | elapsed 2h 20m | eta 12m 05s | 1.7 draws/s | sampling | div 0
+  [height]  14,757/16,000 draws (92.2%) | elapsed 2h 21m | eta 11m 53s | 1.7 draws/s | sampling | div 0
+  [height]  14,776/16,000 draws (92.3%) | elapsed 2h 21m | eta 11m 43s | 1.7 draws/s | sampling | div 0
+  [height]  14,793/16,000 draws (92.5%) | elapsed 2h 21m | eta 11m 34s | 1.7 draws/s | sampling | div 0
+  [height]  14,808/16,000 draws (92.5%) | elapsed 2h 22m | eta 11m 25s | 1.7 draws/s | sampling | div 0
+  [height]  14,825/16,000 draws (92.7%) | elapsed 2h 22m | eta 11m 16s | 1.7 draws/s | sampling | div 0
+  [height]  14,845/16,000 draws (92.8%) | elapsed 2h 22m | eta 11m 05s | 1.7 draws/s | sampling | div 0
+  [height]  14,866/16,000 draws (92.9%) | elapsed 2h 22m | eta 10m 53s | 1.7 draws/s | sampling | div 0
+  [height]  14,882/16,000 draws (93.0%) | elapsed 2h 23m | eta 10m 45s | 1.7 draws/s | sampling | div 0
+  [height]  14,904/16,000 draws (93.2%) | elapsed 2h 23m | eta 10m 32s | 1.7 draws/s | sampling | div 0
+  [height]  14,926/16,000 draws (93.3%) | elapsed 2h 23m | eta 10m 20s | 1.7 draws/s | sampling | div 0
+  [height]  14,947/16,000 draws (93.4%) | elapsed 2h 23m | eta 10m 08s | 1.7 draws/s | sampling | div 0
+  [height]  14,971/16,000 draws (93.6%) | elapsed 2h 24m | eta 9m 54s | 1.7 draws/s | sampling | div 0
+  [height]  14,991/16,000 draws (93.7%) | elapsed 2h 24m | eta 9m 43s | 1.7 draws/s | sampling | div 0
+  [height]  15,004/16,000 draws (93.8%) | elapsed 2h 24m | eta 9m 36s | 1.7 draws/s | sampling | div 0
+  [height]  15,016/16,000 draws (93.8%) | elapsed 2h 24m | eta 9m 30s | 1.7 draws/s | sampling | div 0
+  [height]  15,029/16,000 draws (93.9%) | elapsed 2h 25m | eta 9m 23s | 1.7 draws/s | sampling | div 0
+  [height]  15,043/16,000 draws (94.0%) | elapsed 2h 25m | eta 9m 15s | 1.7 draws/s | sampling | div 0
+  [height]  15,057/16,000 draws (94.1%) | elapsed 2h 25m | eta 9m 07s | 1.7 draws/s | sampling | div 0
+  [height]  15,071/16,000 draws (94.2%) | elapsed 2h 26m | eta 9m 00s | 1.7 draws/s | sampling | div 0
+  [height]  15,084/16,000 draws (94.3%) | elapsed 2h 26m | eta 8m 52s | 1.7 draws/s | sampling | div 0
+  [height]  15,096/16,000 draws (94.3%) | elapsed 2h 26m | eta 8m 46s | 1.7 draws/s | sampling | div 0
+  [height]  15,107/16,000 draws (94.4%) | elapsed 2h 26m | eta 8m 40s | 1.7 draws/s | sampling | div 0
+  [height]  15,121/16,000 draws (94.5%) | elapsed 2h 27m | eta 8m 33s | 1.7 draws/s | sampling | div 0
+  [height]  15,133/16,000 draws (94.6%) | elapsed 2h 27m | eta 8m 26s | 1.7 draws/s | sampling | div 0
+  [height]  15,144/16,000 draws (94.7%) | elapsed 2h 27m | eta 8m 20s | 1.7 draws/s | sampling | div 0
+  [height]  15,159/16,000 draws (94.7%) | elapsed 2h 27m | eta 8m 12s | 1.7 draws/s | sampling | div 0
+  [height]  15,171/16,000 draws (94.8%) | elapsed 2h 28m | eta 8m 05s | 1.7 draws/s | sampling | div 0
+  [height]  15,183/16,000 draws (94.9%) | elapsed 2h 28m | eta 7m 59s | 1.7 draws/s | sampling | div 0
+  [height]  15,195/16,000 draws (95.0%) | elapsed 2h 28m | eta 7m 52s | 1.7 draws/s | sampling | div 0
+  [height]  15,207/16,000 draws (95.0%) | elapsed 2h 28m | eta 7m 46s | 1.7 draws/s | sampling | div 0
+  [height]  15,221/16,000 draws (95.1%) | elapsed 2h 29m | eta 7m 38s | 1.7 draws/s | sampling | div 0
+  [height]  15,235/16,000 draws (95.2%) | elapsed 2h 29m | eta 7m 30s | 1.7 draws/s | sampling | div 0
+  [height]  15,247/16,000 draws (95.3%) | elapsed 2h 29m | eta 7m 23s | 1.7 draws/s | sampling | div 0
+  [height]  15,261/16,000 draws (95.4%) | elapsed 2h 29m | eta 7m 15s | 1.7 draws/s | sampling | div 0
+  [height]  15,277/16,000 draws (95.5%) | elapsed 2h 30m | eta 7m 06s | 1.7 draws/s | sampling | div 0
+  [height]  15,291/16,000 draws (95.6%) | elapsed 2h 30m | eta 6m 58s | 1.7 draws/s | sampling | div 0
+  [height]  15,304/16,000 draws (95.7%) | elapsed 2h 30m | eta 6m 51s | 1.7 draws/s | sampling | div 0
+  [height]  15,318/16,000 draws (95.7%) | elapsed 2h 31m | eta 6m 43s | 1.7 draws/s | sampling | div 0
+  [height]  15,331/16,000 draws (95.8%) | elapsed 2h 31m | eta 6m 36s | 1.7 draws/s | sampling | div 0
+  [height]  15,346/16,000 draws (95.9%) | elapsed 2h 31m | eta 6m 27s | 1.7 draws/s | sampling | div 0
+  [height]  15,357/16,000 draws (96.0%) | elapsed 2h 31m | eta 6m 21s | 1.7 draws/s | sampling | div 0
+  [height]  15,369/16,000 draws (96.1%) | elapsed 2h 32m | eta 6m 14s | 1.7 draws/s | sampling | div 0
+  [height]  15,381/16,000 draws (96.1%) | elapsed 2h 32m | eta 6m 07s | 1.7 draws/s | sampling | div 0
+  [height]  15,392/16,000 draws (96.2%) | elapsed 2h 32m | eta 6m 01s | 1.7 draws/s | sampling | div 0
+  [height]  15,402/16,000 draws (96.3%) | elapsed 2h 32m | eta 5m 56s | 1.7 draws/s | sampling | div 0
+  [height]  15,413/16,000 draws (96.3%) | elapsed 2h 33m | eta 5m 49s | 1.7 draws/s | sampling | div 0
+  [height]  15,426/16,000 draws (96.4%) | elapsed 2h 33m | eta 5m 42s | 1.7 draws/s | sampling | div 0
+  [height]  15,440/16,000 draws (96.5%) | elapsed 2h 33m | eta 5m 34s | 1.7 draws/s | sampling | div 0
+  [height]  15,451/16,000 draws (96.6%) | elapsed 2h 33m | eta 5m 28s | 1.7 draws/s | sampling | div 0
+  [height]  15,463/16,000 draws (96.6%) | elapsed 2h 34m | eta 5m 21s | 1.7 draws/s | sampling | div 0
+  [height]  15,474/16,000 draws (96.7%) | elapsed 2h 34m | eta 5m 15s | 1.7 draws/s | sampling | div 0
+  [height]  15,486/16,000 draws (96.8%) | elapsed 2h 34m | eta 5m 08s | 1.7 draws/s | sampling | div 0
+  [height]  15,495/16,000 draws (96.8%) | elapsed 2h 35m | eta 5m 03s | 1.7 draws/s | sampling | div 0
+  [height]  15,502/16,000 draws (96.9%) | elapsed 2h 35m | eta 4m 59s | 1.7 draws/s | sampling | div 0
+  [height]  15,509/16,000 draws (96.9%) | elapsed 2h 35m | eta 4m 55s | 1.7 draws/s | sampling | div 0
+  [height]  15,514/16,000 draws (97.0%) | elapsed 2h 35m | eta 4m 53s | 1.7 draws/s | sampling | div 0
+  [height]  15,521/16,000 draws (97.0%) | elapsed 2h 36m | eta 4m 49s | 1.7 draws/s | sampling | div 0
+  [height]  15,528/16,000 draws (97.0%) | elapsed 2h 36m | eta 4m 45s | 1.7 draws/s | sampling | div 0
+  [height]  15,535/16,000 draws (97.1%) | elapsed 2h 36m | eta 4m 41s | 1.7 draws/s | sampling | div 0
+  [height]  15,542/16,000 draws (97.1%) | elapsed 2h 36m | eta 4m 37s | 1.7 draws/s | sampling | div 0
+  [height]  15,550/16,000 draws (97.2%) | elapsed 2h 37m | eta 4m 33s | 1.6 draws/s | sampling | div 0
+  [height]  15,558/16,000 draws (97.2%) | elapsed 2h 37m | eta 4m 28s | 1.6 draws/s | sampling | div 0
+  [height]  15,563/16,000 draws (97.3%) | elapsed 2h 37m | eta 4m 25s | 1.6 draws/s | sampling | div 0
+  [height]  15,569/16,000 draws (97.3%) | elapsed 2h 38m | eta 4m 22s | 1.6 draws/s | sampling | div 0
+  [height]  15,577/16,000 draws (97.4%) | elapsed 2h 38m | eta 4m 17s | 1.6 draws/s | sampling | div 0
+  [height]  15,584/16,000 draws (97.4%) | elapsed 2h 38m | eta 4m 14s | 1.6 draws/s | sampling | div 0
+  [height]  15,592/16,000 draws (97.5%) | elapsed 2h 38m | eta 4m 09s | 1.6 draws/s | sampling | div 0
+  [height]  15,599/16,000 draws (97.5%) | elapsed 2h 39m | eta 4m 05s | 1.6 draws/s | sampling | div 0
+  [height]  15,607/16,000 draws (97.5%) | elapsed 2h 39m | eta 4m 00s | 1.6 draws/s | sampling | div 0
+  [height]  15,615/16,000 draws (97.6%) | elapsed 2h 39m | eta 3m 56s | 1.6 draws/s | sampling | div 0
+  [height]  15,622/16,000 draws (97.6%) | elapsed 2h 39m | eta 3m 52s | 1.6 draws/s | sampling | div 0
+  [height]  15,629/16,000 draws (97.7%) | elapsed 2h 40m | eta 3m 48s | 1.6 draws/s | sampling | div 0
+  [height]  15,635/16,000 draws (97.7%) | elapsed 2h 40m | eta 3m 44s | 1.6 draws/s | sampling | div 0
+  [height]  15,643/16,000 draws (97.8%) | elapsed 2h 40m | eta 3m 40s | 1.6 draws/s | sampling | div 0
+  [height]  15,649/16,000 draws (97.8%) | elapsed 2h 41m | eta 3m 36s | 1.6 draws/s | sampling | div 0
+  [height]  15,656/16,000 draws (97.9%) | elapsed 2h 41m | eta 3m 32s | 1.6 draws/s | sampling | div 0
+  [height]  15,664/16,000 draws (97.9%) | elapsed 2h 41m | eta 3m 27s | 1.6 draws/s | sampling | div 0
+  [height]  15,670/16,000 draws (97.9%) | elapsed 2h 41m | eta 3m 24s | 1.6 draws/s | sampling | div 0
+  [height]  15,677/16,000 draws (98.0%) | elapsed 2h 42m | eta 3m 20s | 1.6 draws/s | sampling | div 0
+  [height]  15,684/16,000 draws (98.0%) | elapsed 2h 42m | eta 3m 16s | 1.6 draws/s | sampling | div 0
+  [height]  15,691/16,000 draws (98.1%) | elapsed 2h 42m | eta 3m 12s | 1.6 draws/s | sampling | div 0
+  [height]  15,698/16,000 draws (98.1%) | elapsed 2h 42m | eta 3m 07s | 1.6 draws/s | sampling | div 0
+  [height]  15,704/16,000 draws (98.2%) | elapsed 2h 43m | eta 3m 04s | 1.6 draws/s | sampling | div 0
+  [height]  15,711/16,000 draws (98.2%) | elapsed 2h 43m | eta 3m 00s | 1.6 draws/s | sampling | div 0
+  [height]  15,718/16,000 draws (98.2%) | elapsed 2h 43m | eta 2m 56s | 1.6 draws/s | sampling | div 0
+  [height]  15,726/16,000 draws (98.3%) | elapsed 2h 43m | eta 2m 51s | 1.6 draws/s | sampling | div 0
+  [height]  15,733/16,000 draws (98.3%) | elapsed 2h 44m | eta 2m 47s | 1.6 draws/s | sampling | div 0
+  [height]  15,741/16,000 draws (98.4%) | elapsed 2h 44m | eta 2m 42s | 1.6 draws/s | sampling | div 0
+  [height]  15,747/16,000 draws (98.4%) | elapsed 2h 44m | eta 2m 38s | 1.6 draws/s | sampling | div 0
+  [height]  15,753/16,000 draws (98.5%) | elapsed 2h 45m | eta 2m 35s | 1.6 draws/s | sampling | div 0
+  [height]  15,761/16,000 draws (98.5%) | elapsed 2h 45m | eta 2m 30s | 1.6 draws/s | sampling | div 0
+  [height]  15,767/16,000 draws (98.5%) | elapsed 2h 45m | eta 2m 26s | 1.6 draws/s | sampling | div 0
+  [height]  15,775/16,000 draws (98.6%) | elapsed 2h 45m | eta 2m 21s | 1.6 draws/s | sampling | div 0
+  [height]  15,782/16,000 draws (98.6%) | elapsed 2h 46m | eta 2m 17s | 1.6 draws/s | sampling | div 0
+  [height]  15,788/16,000 draws (98.7%) | elapsed 2h 46m | eta 2m 14s | 1.6 draws/s | sampling | div 0
+  [height]  15,796/16,000 draws (98.7%) | elapsed 2h 46m | eta 2m 09s | 1.6 draws/s | sampling | div 0
+  [height]  15,804/16,000 draws (98.8%) | elapsed 2h 46m | eta 2m 04s | 1.6 draws/s | sampling | div 0
+  [height]  15,810/16,000 draws (98.8%) | elapsed 2h 47m | eta 2m 00s | 1.6 draws/s | sampling | div 0
+  [height]  15,818/16,000 draws (98.9%) | elapsed 2h 47m | eta 1m 55s | 1.6 draws/s | sampling | div 0
+  [height]  15,825/16,000 draws (98.9%) | elapsed 2h 47m | eta 1m 51s | 1.6 draws/s | sampling | div 0
+  [height]  15,831/16,000 draws (98.9%) | elapsed 2h 48m | eta 1m 47s | 1.6 draws/s | sampling | div 0
+  [height]  15,837/16,000 draws (99.0%) | elapsed 2h 48m | eta 1m 43s | 1.6 draws/s | sampling | div 0
+  [height]  15,842/16,000 draws (99.0%) | elapsed 2h 48m | eta 1m 40s | 1.6 draws/s | sampling | div 0
+  [height]  15,849/16,000 draws (99.1%) | elapsed 2h 48m | eta 1m 36s | 1.6 draws/s | sampling | div 0
+  [height]  15,857/16,000 draws (99.1%) | elapsed 2h 49m | eta 1m 31s | 1.6 draws/s | sampling | div 0
+  [height]  15,864/16,000 draws (99.2%) | elapsed 2h 49m | eta 1m 27s | 1.6 draws/s | sampling | div 0
+  [height]  15,870/16,000 draws (99.2%) | elapsed 2h 49m | eta 1m 23s | 1.6 draws/s | sampling | div 0
+  [height]  15,877/16,000 draws (99.2%) | elapsed 2h 49m | eta 1m 18s | 1.6 draws/s | sampling | div 0
+  [height]  15,885/16,000 draws (99.3%) | elapsed 2h 50m | eta 1m 13s | 1.6 draws/s | sampling | div 0
+  [height]  15,892/16,000 draws (99.3%) | elapsed 2h 50m | eta 1m 09s | 1.6 draws/s | sampling | div 0
+  [height]  15,898/16,000 draws (99.4%) | elapsed 2h 50m | eta 1m 05s | 1.6 draws/s | sampling | div 0
+  [height]  15,905/16,000 draws (99.4%) | elapsed 2h 51m | eta 1m 01s | 1.5 draws/s | sampling | div 0
+  [height]  15,911/16,000 draws (99.4%) | elapsed 2h 51m | eta 57s | 1.5 draws/s | sampling | div 0
+  [height]  15,918/16,000 draws (99.5%) | elapsed 2h 51m | eta 53s | 1.5 draws/s | sampling | div 0
+  [height]  15,926/16,000 draws (99.5%) | elapsed 2h 51m | eta 47s | 1.5 draws/s | sampling | div 0
+  [height]  15,933/16,000 draws (99.6%) | elapsed 2h 52m | eta 43s | 1.5 draws/s | sampling | div 0
+  [height]  15,939/16,000 draws (99.6%) | elapsed 2h 52m | eta 39s | 1.5 draws/s | sampling | div 0
+  [height]  15,946/16,000 draws (99.7%) | elapsed 2h 52m | eta 35s | 1.5 draws/s | sampling | div 0
+  [height]  15,953/16,000 draws (99.7%) | elapsed 2h 53m | eta 30s | 1.5 draws/s | sampling | div 0
+  [height]  15,960/16,000 draws (99.8%) | elapsed 2h 53m | eta 26s | 1.5 draws/s | sampling | div 0
+  [height]  15,968/16,000 draws (99.8%) | elapsed 2h 53m | eta 20s | 1.5 draws/s | sampling | div 0
+  [height]  15,974/16,000 draws (99.8%) | elapsed 2h 53m | eta 16s | 1.5 draws/s | sampling | div 0
+  [height]  15,980/16,000 draws (99.9%) | elapsed 2h 54m | eta 13s | 1.5 draws/s | sampling | div 0
+  [height]  15,986/16,000 draws (99.9%) | elapsed 2h 54m | eta 9s | 1.5 draws/s | sampling | div 0
+  [height]  15,992/16,000 draws (100.0%) | elapsed 2h 54m | eta 5s | 1.5 draws/s | sampling | div 0
+  [height]  15,999/16,000 draws (100.0%) | elapsed 2h 54m | eta 0s | 1.5 draws/s | sampling | div 0
+Sampling 4 chains for 2_000 tune and 2_000 draw iterations (8_000 + 8_000 draws total) took 10518 seconds.
+  [height]  done — 16,000 draws in 2h 54m | divergences: 0
+
+  [height] Divergences : 0  OK
+  [height] Max R-hat   : 1.0100  *** WARNING ***
+  [height] Min ESS     : 1097  OK
+
+  [height] Saved -> C:\Users\aasmi\Costal Carolina\command_plus_26\output\stage1_height_2024.pkl  (nu=20.29)
+  [height] Surface SD=0.0737 ft  range=[-0.338, +0.368] ft
+  [height] Checkpoint -> C:\Users\aasmi\Costal Carolina\command_plus_26\output\checkpoints\stage1_height_2024.nc
+
+--- Stage 1 model 2/2: side ---
+  [side] N=43,493  combos=2,018  type_x_matchup=14  count=12  type_x_count=83  matchup=2
+  [side] move: 56 cols over sp_hb[-22.7,24.0], sp_ivb[-17.7,25.6]  basis_scale=0.327
+  [side] velo smooth: not fitted (height only)
+  [side] sigma: 23 cols over sp_hb[-22.7,24.0], sp_ivb[-17.7,25.6]  basis_scale=0.198
+  [side] surface prior rates: move=0.62 velo=n/a  (implied surface SD 0.529 z)
+Initializing NUTS using adapt_diag...
+Multiprocess sampling (4 chains in 4 jobs)
+NUTS: [tau_move, w_move_raw, tau_tps, tau_tc, u_tps_raw, u_tc_raw, alpha, sigma_intercept, beta_sigma_move, beta_sigma_typ, beta_sigma_cnt, beta_sigma_mu, nu]
+  [side]  1/16,000 draws ( 0.0%) | elapsed 0s | eta -- | 0.0 draws/s | warmup | div 0
+  [side]  52/16,000 draws ( 0.3%) | elapsed 15s | eta 1h 16m | 3.5 draws/s | warmup | div 0
+  [side]  90/16,000 draws ( 0.6%) | elapsed 30s | eta 1h 29m | 3.0 draws/s | warmup | div 0
+  [side]  129/16,000 draws ( 0.8%) | elapsed 45s | eta 1h 33m | 2.8 draws/s | warmup | div 0
+  [side]  167/16,000 draws ( 1.0%) | elapsed 1m 00s | eta 1h 35m | 2.8 draws/s | warmup | div 0
+  [side]  204/16,000 draws ( 1.3%) | elapsed 1m 15s | eta 1h 37m | 2.7 draws/s | warmup | div 0
+  [side]  241/16,000 draws ( 1.5%) | elapsed 1m 30s | eta 1h 39m | 2.7 draws/s | warmup | div 0
+  [side]  281/16,000 draws ( 1.8%) | elapsed 1m 46s | eta 1h 39m | 2.6 draws/s | warmup | div 0
+  [side]  319/16,000 draws ( 2.0%) | elapsed 2m 01s | eta 1h 39m | 2.6 draws/s | warmup | div 0
+  [side]  358/16,000 draws ( 2.2%) | elapsed 2m 17s | eta 1h 40m | 2.6 draws/s | warmup | div 0
+  [side]  395/16,000 draws ( 2.5%) | elapsed 2m 32s | eta 1h 40m | 2.6 draws/s | warmup | div 0
+  [side]  433/16,000 draws ( 2.7%) | elapsed 2m 48s | eta 1h 40m | 2.6 draws/s | warmup | div 0
+  [side]  471/16,000 draws ( 2.9%) | elapsed 3m 03s | eta 1h 40m | 2.6 draws/s | warmup | div 0
+  [side]  508/16,000 draws ( 3.2%) | elapsed 3m 18s | eta 1h 40m | 2.6 draws/s | warmup | div 0
+  [side]  545/16,000 draws ( 3.4%) | elapsed 3m 33s | eta 1h 41m | 2.5 draws/s | warmup | div 0
+  [side]  583/16,000 draws ( 3.6%) | elapsed 3m 49s | eta 1h 40m | 2.5 draws/s | warmup | div 0
+  [side]  618/16,000 draws ( 3.9%) | elapsed 4m 04s | eta 1h 41m | 2.5 draws/s | warmup | div 0
+  [side]  650/16,000 draws ( 4.1%) | elapsed 4m 20s | eta 1h 42m | 2.5 draws/s | warmup | div 0
+  [side]  684/16,000 draws ( 4.3%) | elapsed 4m 36s | eta 1h 43m | 2.5 draws/s | warmup | div 0
+  [side]  721/16,000 draws ( 4.5%) | elapsed 4m 51s | eta 1h 42m | 2.5 draws/s | warmup | div 0
+  [side]  760/16,000 draws ( 4.8%) | elapsed 5m 06s | eta 1h 42m | 2.5 draws/s | warmup | div 0
+  [side]  802/16,000 draws ( 5.0%) | elapsed 5m 22s | eta 1h 41m | 2.5 draws/s | warmup | div 0
+  [side]  831/16,000 draws ( 5.2%) | elapsed 5m 37s | eta 1h 42m | 2.5 draws/s | warmup | div 0
+  [side]  860/16,000 draws ( 5.4%) | elapsed 5m 53s | eta 1h 43m | 2.4 draws/s | warmup | div 0
+  [side]  889/16,000 draws ( 5.6%) | elapsed 6m 09s | eta 1h 44m | 2.4 draws/s | warmup | div 0
+  [side]  912/16,000 draws ( 5.7%) | elapsed 6m 25s | eta 1h 46m | 2.4 draws/s | warmup | div 0
+  [side]  938/16,000 draws ( 5.9%) | elapsed 6m 40s | eta 1h 47m | 2.3 draws/s | warmup | div 0
+  [side]  964/16,000 draws ( 6.0%) | elapsed 6m 55s | eta 1h 48m | 2.3 draws/s | warmup | div 0
+  [side]  991/16,000 draws ( 6.2%) | elapsed 7m 10s | eta 1h 48m | 2.3 draws/s | warmup | div 0
+  [side]  1,023/16,000 draws ( 6.4%) | elapsed 7m 26s | eta 1h 48m | 2.3 draws/s | warmup | div 0
+  [side]  1,061/16,000 draws ( 6.6%) | elapsed 7m 42s | eta 1h 48m | 2.3 draws/s | warmup | div 0
+  [side]  1,092/16,000 draws ( 6.8%) | elapsed 7m 57s | eta 1h 48m | 2.3 draws/s | warmup | div 0
+  [side]  1,120/16,000 draws ( 7.0%) | elapsed 8m 12s | eta 1h 49m | 2.3 draws/s | warmup | div 0
+  [side]  1,151/16,000 draws ( 7.2%) | elapsed 8m 28s | eta 1h 49m | 2.3 draws/s | warmup | div 0
+  [side]  1,187/16,000 draws ( 7.4%) | elapsed 8m 43s | eta 1h 48m | 2.3 draws/s | warmup | div 0
+  [side]  1,219/16,000 draws ( 7.6%) | elapsed 8m 59s | eta 1h 48m | 2.3 draws/s | warmup | div 0
+  [side]  1,256/16,000 draws ( 7.8%) | elapsed 9m 14s | eta 1h 48m | 2.3 draws/s | warmup | div 0
+  [side]  1,291/16,000 draws ( 8.1%) | elapsed 9m 29s | eta 1h 48m | 2.3 draws/s | warmup | div 0
+  [side]  1,322/16,000 draws ( 8.3%) | elapsed 9m 44s | eta 1h 48m | 2.3 draws/s | warmup | div 0
+  [side]  1,349/16,000 draws ( 8.4%) | elapsed 9m 59s | eta 1h 48m | 2.3 draws/s | warmup | div 0
+  [side]  1,376/16,000 draws ( 8.6%) | elapsed 10m 14s | eta 1h 48m | 2.2 draws/s | warmup | div 0
+  [side]  1,397/16,000 draws ( 8.7%) | elapsed 10m 29s | eta 1h 49m | 2.2 draws/s | warmup | div 0
+  [side]  1,422/16,000 draws ( 8.9%) | elapsed 10m 45s | eta 1h 50m | 2.2 draws/s | warmup | div 0
+  [side]  1,450/16,000 draws ( 9.1%) | elapsed 11m 01s | eta 1h 50m | 2.2 draws/s | warmup | div 0
+  [side]  1,476/16,000 draws ( 9.2%) | elapsed 11m 16s | eta 1h 50m | 2.2 draws/s | warmup | div 0
+  [side]  1,508/16,000 draws ( 9.4%) | elapsed 11m 32s | eta 1h 50m | 2.2 draws/s | warmup | div 0
+  [side]  1,537/16,000 draws ( 9.6%) | elapsed 11m 47s | eta 1h 51m | 2.2 draws/s | warmup | div 0
+  [side]  1,569/16,000 draws ( 9.8%) | elapsed 12m 03s | eta 1h 50m | 2.2 draws/s | warmup | div 0
+  [side]  1,599/16,000 draws (10.0%) | elapsed 12m 18s | eta 1h 50m | 2.2 draws/s | warmup | div 0
+  [side]  1,633/16,000 draws (10.2%) | elapsed 12m 33s | eta 1h 50m | 2.2 draws/s | warmup | div 0
+  [side]  1,668/16,000 draws (10.4%) | elapsed 12m 48s | eta 1h 50m | 2.2 draws/s | warmup | div 0
+  [side]  1,701/16,000 draws (10.6%) | elapsed 13m 04s | eta 1h 49m | 2.2 draws/s | warmup | div 0
+  [side]  1,731/16,000 draws (10.8%) | elapsed 13m 19s | eta 1h 49m | 2.2 draws/s | warmup | div 0
+  [side]  1,766/16,000 draws (11.0%) | elapsed 13m 35s | eta 1h 49m | 2.2 draws/s | warmup | div 0
+  [side]  1,797/16,000 draws (11.2%) | elapsed 13m 50s | eta 1h 49m | 2.2 draws/s | warmup | div 0
+  [side]  1,827/16,000 draws (11.4%) | elapsed 14m 05s | eta 1h 49m | 2.2 draws/s | warmup | div 0
+  [side]  1,856/16,000 draws (11.6%) | elapsed 14m 21s | eta 1h 49m | 2.2 draws/s | warmup | div 0
+  [side]  1,883/16,000 draws (11.8%) | elapsed 14m 37s | eta 1h 49m | 2.1 draws/s | warmup | div 0
+  [side]  1,910/16,000 draws (11.9%) | elapsed 14m 53s | eta 1h 49m | 2.1 draws/s | warmup | div 0
+  [side]  1,934/16,000 draws (12.1%) | elapsed 15m 09s | eta 1h 50m | 2.1 draws/s | warmup | div 0
+  [side]  1,966/16,000 draws (12.3%) | elapsed 15m 25s | eta 1h 50m | 2.1 draws/s | warmup | div 0
+  [side]  2,001/16,000 draws (12.5%) | elapsed 15m 41s | eta 1h 49m | 2.1 draws/s | warmup | div 0
+  [side]  2,033/16,000 draws (12.7%) | elapsed 15m 57s | eta 1h 49m | 2.1 draws/s | warmup | div 0
+  [side]  2,062/16,000 draws (12.9%) | elapsed 16m 13s | eta 1h 49m | 2.1 draws/s | warmup | div 0
+  [side]  2,093/16,000 draws (13.1%) | elapsed 16m 30s | eta 1h 49m | 2.1 draws/s | warmup | div 0
+  [side]  2,124/16,000 draws (13.3%) | elapsed 16m 46s | eta 1h 49m | 2.1 draws/s | warmup | div 0
+  [side]  2,158/16,000 draws (13.5%) | elapsed 17m 01s | eta 1h 49m | 2.1 draws/s | warmup | div 0
+  [side]  2,180/16,000 draws (13.6%) | elapsed 17m 16s | eta 1h 49m | 2.1 draws/s | warmup | div 0
+  [side]  2,205/16,000 draws (13.8%) | elapsed 17m 33s | eta 1h 49m | 2.1 draws/s | warmup | div 0
+  [side]  2,233/16,000 draws (14.0%) | elapsed 17m 48s | eta 1h 49m | 2.1 draws/s | warmup | div 0
+  [side]  2,266/16,000 draws (14.2%) | elapsed 18m 04s | eta 1h 49m | 2.1 draws/s | warmup | div 0
+  [side]  2,300/16,000 draws (14.4%) | elapsed 18m 20s | eta 1h 49m | 2.1 draws/s | warmup | div 0
+  [side]  2,332/16,000 draws (14.6%) | elapsed 18m 36s | eta 1h 49m | 2.1 draws/s | warmup | div 0
+  [side]  2,362/16,000 draws (14.8%) | elapsed 18m 52s | eta 1h 48m | 2.1 draws/s | warmup | div 0
+  [side]  2,387/16,000 draws (14.9%) | elapsed 19m 08s | eta 1h 49m | 2.1 draws/s | warmup | div 0
+  [side]  2,411/16,000 draws (15.1%) | elapsed 19m 24s | eta 1h 49m | 2.1 draws/s | warmup | div 0
+  [side]  2,438/16,000 draws (15.2%) | elapsed 19m 39s | eta 1h 49m | 2.1 draws/s | warmup | div 0
+  [side]  2,463/16,000 draws (15.4%) | elapsed 19m 55s | eta 1h 49m | 2.1 draws/s | warmup | div 0
+  [side]  2,494/16,000 draws (15.6%) | elapsed 20m 11s | eta 1h 49m | 2.1 draws/s | warmup | div 0
+  [side]  2,521/16,000 draws (15.8%) | elapsed 20m 27s | eta 1h 49m | 2.1 draws/s | warmup | div 0
+  [side]  2,552/16,000 draws (16.0%) | elapsed 20m 42s | eta 1h 49m | 2.1 draws/s | warmup | div 0
+  [side]  2,584/16,000 draws (16.2%) | elapsed 20m 57s | eta 1h 48m | 2.1 draws/s | warmup | div 0
+  [side]  2,616/16,000 draws (16.4%) | elapsed 21m 12s | eta 1h 48m | 2.1 draws/s | warmup | div 0
+  [side]  2,644/16,000 draws (16.5%) | elapsed 21m 28s | eta 1h 48m | 2.1 draws/s | warmup | div 0
+  [side]  2,671/16,000 draws (16.7%) | elapsed 21m 44s | eta 1h 48m | 2.0 draws/s | warmup | div 0
+  [side]  2,704/16,000 draws (16.9%) | elapsed 22m 00s | eta 1h 48m | 2.0 draws/s | warmup | div 0
+  [side]  2,730/16,000 draws (17.1%) | elapsed 22m 15s | eta 1h 48m | 2.0 draws/s | warmup | div 0
+  [side]  2,761/16,000 draws (17.3%) | elapsed 22m 30s | eta 1h 47m | 2.0 draws/s | warmup | div 0
+  [side]  2,787/16,000 draws (17.4%) | elapsed 22m 46s | eta 1h 47m | 2.0 draws/s | warmup | div 0
+  [side]  2,813/16,000 draws (17.6%) | elapsed 23m 01s | eta 1h 47m | 2.0 draws/s | warmup | div 0
+  [side]  2,843/16,000 draws (17.8%) | elapsed 23m 17s | eta 1h 47m | 2.0 draws/s | warmup | div 0
+  [side]  2,864/16,000 draws (17.9%) | elapsed 23m 33s | eta 1h 48m | 2.0 draws/s | warmup | div 0
+  [side]  2,894/16,000 draws (18.1%) | elapsed 23m 48s | eta 1h 47m | 2.0 draws/s | warmup | div 0
+  [side]  2,922/16,000 draws (18.3%) | elapsed 24m 03s | eta 1h 47m | 2.0 draws/s | warmup | div 0
+  [side]  2,956/16,000 draws (18.5%) | elapsed 24m 18s | eta 1h 47m | 2.0 draws/s | warmup | div 0
+  [side]  2,992/16,000 draws (18.7%) | elapsed 24m 33s | eta 1h 46m | 2.0 draws/s | warmup | div 0
+  [side]  3,024/16,000 draws (18.9%) | elapsed 24m 48s | eta 1h 46m | 2.0 draws/s | warmup | div 0
+  [side]  3,051/16,000 draws (19.1%) | elapsed 25m 04s | eta 1h 46m | 2.0 draws/s | warmup | div 0
+  [side]  3,078/16,000 draws (19.2%) | elapsed 25m 19s | eta 1h 46m | 2.0 draws/s | warmup | div 0
+  [side]  3,113/16,000 draws (19.5%) | elapsed 25m 34s | eta 1h 45m | 2.0 draws/s | warmup | div 0
+  [side]  3,146/16,000 draws (19.7%) | elapsed 25m 50s | eta 1h 45m | 2.0 draws/s | warmup | div 0
+  [side]  3,181/16,000 draws (19.9%) | elapsed 26m 06s | eta 1h 45m | 2.0 draws/s | warmup | div 0
+  [side]  3,214/16,000 draws (20.1%) | elapsed 26m 21s | eta 1h 44m | 2.0 draws/s | warmup | div 0
+  [side]  3,242/16,000 draws (20.3%) | elapsed 26m 37s | eta 1h 44m | 2.0 draws/s | warmup | div 0
+  [side]  3,268/16,000 draws (20.4%) | elapsed 26m 52s | eta 1h 44m | 2.0 draws/s | warmup | div 0
+  [side]  3,293/16,000 draws (20.6%) | elapsed 27m 07s | eta 1h 44m | 2.0 draws/s | warmup | div 0
+  [side]  3,320/16,000 draws (20.8%) | elapsed 27m 23s | eta 1h 44m | 2.0 draws/s | warmup | div 0
+  [side]  3,351/16,000 draws (20.9%) | elapsed 27m 39s | eta 1h 44m | 2.0 draws/s | warmup | div 0
+  [side]  3,384/16,000 draws (21.1%) | elapsed 27m 55s | eta 1h 44m | 2.0 draws/s | warmup | div 0
+  [side]  3,419/16,000 draws (21.4%) | elapsed 28m 11s | eta 1h 43m | 2.0 draws/s | warmup | div 0
+  [side]  3,455/16,000 draws (21.6%) | elapsed 28m 27s | eta 1h 43m | 2.0 draws/s | warmup | div 0
+  [side]  3,486/16,000 draws (21.8%) | elapsed 28m 42s | eta 1h 43m | 2.0 draws/s | warmup | div 0
+  [side]  3,516/16,000 draws (22.0%) | elapsed 28m 58s | eta 1h 42m | 2.0 draws/s | warmup | div 0
+  [side]  3,543/16,000 draws (22.1%) | elapsed 29m 14s | eta 1h 42m | 2.0 draws/s | warmup | div 0
+  [side]  3,571/16,000 draws (22.3%) | elapsed 29m 29s | eta 1h 42m | 2.0 draws/s | warmup | div 0
+  [side]  3,597/16,000 draws (22.5%) | elapsed 29m 44s | eta 1h 42m | 2.0 draws/s | warmup | div 0
+  [side]  3,624/16,000 draws (22.7%) | elapsed 30m 00s | eta 1h 42m | 2.0 draws/s | warmup | div 0
+  [side]  3,652/16,000 draws (22.8%) | elapsed 30m 15s | eta 1h 42m | 2.0 draws/s | warmup | div 0
+  [side]  3,678/16,000 draws (23.0%) | elapsed 30m 30s | eta 1h 42m | 2.0 draws/s | warmup | div 0
+  [side]  3,706/16,000 draws (23.2%) | elapsed 30m 46s | eta 1h 42m | 2.0 draws/s | warmup | div 0
+  [side]  3,736/16,000 draws (23.4%) | elapsed 31m 01s | eta 1h 41m | 2.0 draws/s | warmup | div 0
+  [side]  3,762/16,000 draws (23.5%) | elapsed 31m 16s | eta 1h 41m | 2.0 draws/s | warmup | div 0
+  [side]  3,791/16,000 draws (23.7%) | elapsed 31m 31s | eta 1h 41m | 2.0 draws/s | warmup | div 0
+  [side]  3,818/16,000 draws (23.9%) | elapsed 31m 47s | eta 1h 41m | 2.0 draws/s | warmup | div 0
+  [side]  3,849/16,000 draws (24.1%) | elapsed 32m 02s | eta 1h 41m | 2.0 draws/s | warmup | div 0
+  [side]  3,873/16,000 draws (24.2%) | elapsed 32m 17s | eta 1h 41m | 2.0 draws/s | warmup | div 0
+  [side]  3,907/16,000 draws (24.4%) | elapsed 32m 32s | eta 1h 40m | 2.0 draws/s | warmup | div 0
+  [side]  3,943/16,000 draws (24.6%) | elapsed 32m 48s | eta 1h 40m | 2.0 draws/s | warmup | div 0
+  [side]  3,978/16,000 draws (24.9%) | elapsed 33m 03s | eta 1h 39m | 2.0 draws/s | warmup | div 0
+  [side]  4,014/16,000 draws (25.1%) | elapsed 33m 19s | eta 1h 39m | 2.0 draws/s | warmup | div 0
+  [side]  4,048/16,000 draws (25.3%) | elapsed 33m 35s | eta 1h 39m | 2.0 draws/s | warmup | div 0
+  [side]  4,081/16,000 draws (25.5%) | elapsed 33m 51s | eta 1h 38m | 2.0 draws/s | warmup | div 0
+  [side]  4,113/16,000 draws (25.7%) | elapsed 34m 07s | eta 1h 38m | 2.0 draws/s | warmup | div 0
+  [side]  4,140/16,000 draws (25.9%) | elapsed 34m 22s | eta 1h 38m | 2.0 draws/s | warmup | div 0
+  [side]  4,164/16,000 draws (26.0%) | elapsed 34m 39s | eta 1h 38m | 2.0 draws/s | warmup | div 0
+  [side]  4,194/16,000 draws (26.2%) | elapsed 34m 54s | eta 1h 38m | 2.0 draws/s | warmup | div 0
+  [side]  4,223/16,000 draws (26.4%) | elapsed 35m 10s | eta 1h 38m | 2.0 draws/s | warmup | div 0
+  [side]  4,249/16,000 draws (26.6%) | elapsed 35m 25s | eta 1h 37m | 2.0 draws/s | warmup | div 0
+  [side]  4,276/16,000 draws (26.7%) | elapsed 35m 41s | eta 1h 37m | 2.0 draws/s | warmup | div 0
+  [side]  4,307/16,000 draws (26.9%) | elapsed 35m 56s | eta 1h 37m | 2.0 draws/s | warmup | div 0
+  [side]  4,334/16,000 draws (27.1%) | elapsed 36m 12s | eta 1h 37m | 2.0 draws/s | warmup | div 0
+  [side]  4,363/16,000 draws (27.3%) | elapsed 36m 27s | eta 1h 37m | 2.0 draws/s | warmup | div 0
+  [side]  4,398/16,000 draws (27.5%) | elapsed 36m 43s | eta 1h 36m | 2.0 draws/s | warmup | div 0
+  [side]  4,435/16,000 draws (27.7%) | elapsed 36m 58s | eta 1h 36m | 2.0 draws/s | warmup | div 0
+  [side]  4,470/16,000 draws (27.9%) | elapsed 37m 13s | eta 1h 36m | 2.0 draws/s | warmup | div 0
+  [side]  4,505/16,000 draws (28.2%) | elapsed 37m 29s | eta 1h 35m | 2.0 draws/s | warmup | div 0
+  [side]  4,540/16,000 draws (28.4%) | elapsed 37m 44s | eta 1h 35m | 2.0 draws/s | warmup | div 0
+  [side]  4,573/16,000 draws (28.6%) | elapsed 37m 59s | eta 1h 34m | 2.0 draws/s | warmup | div 0
+  [side]  4,604/16,000 draws (28.8%) | elapsed 38m 15s | eta 1h 34m | 2.0 draws/s | warmup | div 0
+  [side]  4,636/16,000 draws (29.0%) | elapsed 38m 31s | eta 1h 34m | 2.0 draws/s | warmup | div 0
+  [side]  4,673/16,000 draws (29.2%) | elapsed 38m 47s | eta 1h 34m | 2.0 draws/s | warmup | div 0
+  [side]  4,703/16,000 draws (29.4%) | elapsed 39m 02s | eta 1h 33m | 2.0 draws/s | warmup | div 0
+  [side]  4,732/16,000 draws (29.6%) | elapsed 39m 17s | eta 1h 33m | 2.0 draws/s | warmup | div 0
+  [side]  4,764/16,000 draws (29.8%) | elapsed 39m 33s | eta 1h 33m | 2.0 draws/s | warmup | div 0
+  [side]  4,801/16,000 draws (30.0%) | elapsed 39m 48s | eta 1h 32m | 2.0 draws/s | warmup | div 0
+  [side]  4,833/16,000 draws (30.2%) | elapsed 40m 04s | eta 1h 32m | 2.0 draws/s | warmup | div 0
+  [side]  4,862/16,000 draws (30.4%) | elapsed 40m 19s | eta 1h 32m | 2.0 draws/s | warmup | div 0
+  [side]  4,888/16,000 draws (30.6%) | elapsed 40m 34s | eta 1h 32m | 2.0 draws/s | warmup | div 0
+  [side]  4,916/16,000 draws (30.7%) | elapsed 40m 50s | eta 1h 32m | 2.0 draws/s | warmup | div 0
+  [side]  4,945/16,000 draws (30.9%) | elapsed 41m 06s | eta 1h 31m | 2.0 draws/s | warmup | div 0
+  [side]  4,973/16,000 draws (31.1%) | elapsed 41m 21s | eta 1h 31m | 2.0 draws/s | warmup | div 0
+  [side]  5,006/16,000 draws (31.3%) | elapsed 41m 37s | eta 1h 31m | 2.0 draws/s | warmup | div 0
+  [side]  5,039/16,000 draws (31.5%) | elapsed 41m 53s | eta 1h 31m | 2.0 draws/s | warmup | div 0
+  [side]  5,068/16,000 draws (31.7%) | elapsed 42m 09s | eta 1h 30m | 2.0 draws/s | warmup | div 0
+  [side]  5,092/16,000 draws (31.8%) | elapsed 42m 25s | eta 1h 30m | 2.0 draws/s | warmup | div 0
+  [side]  5,119/16,000 draws (32.0%) | elapsed 42m 41s | eta 1h 30m | 2.0 draws/s | warmup | div 0
+  [side]  5,149/16,000 draws (32.2%) | elapsed 42m 56s | eta 1h 30m | 2.0 draws/s | warmup | div 0
+  [side]  5,175/16,000 draws (32.3%) | elapsed 43m 12s | eta 1h 30m | 2.0 draws/s | warmup | div 0
+  [side]  5,203/16,000 draws (32.5%) | elapsed 43m 28s | eta 1h 30m | 2.0 draws/s | warmup | div 0
+  [side]  5,235/16,000 draws (32.7%) | elapsed 43m 44s | eta 1h 29m | 2.0 draws/s | warmup | div 0
+  [side]  5,261/16,000 draws (32.9%) | elapsed 44m 00s | eta 1h 29m | 2.0 draws/s | warmup | div 0
+  [side]  5,282/16,000 draws (33.0%) | elapsed 44m 15s | eta 1h 29m | 2.0 draws/s | warmup | div 0
+  [side]  5,313/16,000 draws (33.2%) | elapsed 44m 31s | eta 1h 29m | 2.0 draws/s | warmup | div 0
+  [side]  5,335/16,000 draws (33.3%) | elapsed 44m 46s | eta 1h 29m | 2.0 draws/s | warmup | div 0
+  [side]  5,366/16,000 draws (33.5%) | elapsed 45m 02s | eta 1h 29m | 2.0 draws/s | warmup | div 0
+  [side]  5,393/16,000 draws (33.7%) | elapsed 45m 17s | eta 1h 29m | 2.0 draws/s | warmup | div 0
+  [side]  5,419/16,000 draws (33.9%) | elapsed 45m 32s | eta 1h 28m | 2.0 draws/s | warmup | div 0
+  [side]  5,452/16,000 draws (34.1%) | elapsed 45m 48s | eta 1h 28m | 2.0 draws/s | warmup | div 0
+  [side]  5,473/16,000 draws (34.2%) | elapsed 46m 03s | eta 1h 28m | 2.0 draws/s | warmup | div 0
+  [side]  5,496/16,000 draws (34.4%) | elapsed 46m 18s | eta 1h 28m | 2.0 draws/s | warmup | div 0
+  [side]  5,520/16,000 draws (34.5%) | elapsed 46m 34s | eta 1h 28m | 2.0 draws/s | warmup | div 0
+  [side]  5,544/16,000 draws (34.6%) | elapsed 46m 49s | eta 1h 28m | 2.0 draws/s | warmup | div 0
+  [side]  5,566/16,000 draws (34.8%) | elapsed 47m 06s | eta 1h 28m | 2.0 draws/s | warmup | div 0
+  [side]  5,589/16,000 draws (34.9%) | elapsed 47m 21s | eta 1h 28m | 2.0 draws/s | warmup | div 0
+  [side]  5,609/16,000 draws (35.1%) | elapsed 47m 37s | eta 1h 28m | 2.0 draws/s | warmup | div 0
+  [side]  5,634/16,000 draws (35.2%) | elapsed 47m 52s | eta 1h 28m | 2.0 draws/s | warmup | div 0
+  [side]  5,658/16,000 draws (35.4%) | elapsed 48m 07s | eta 1h 27m | 2.0 draws/s | warmup | div 0
+  [side]  5,682/16,000 draws (35.5%) | elapsed 48m 23s | eta 1h 27m | 2.0 draws/s | warmup | div 0
+  [side]  5,709/16,000 draws (35.7%) | elapsed 48m 38s | eta 1h 27m | 2.0 draws/s | warmup | div 0
+  [side]  5,730/16,000 draws (35.8%) | elapsed 48m 54s | eta 1h 27m | 2.0 draws/s | warmup | div 0
+  [side]  5,755/16,000 draws (36.0%) | elapsed 49m 09s | eta 1h 27m | 2.0 draws/s | warmup | div 0
+  [side]  5,780/16,000 draws (36.1%) | elapsed 49m 25s | eta 1h 27m | 1.9 draws/s | warmup | div 0
+  [side]  5,808/16,000 draws (36.3%) | elapsed 49m 40s | eta 1h 27m | 1.9 draws/s | warmup | div 0
+  [side]  5,836/16,000 draws (36.5%) | elapsed 49m 56s | eta 1h 26m | 1.9 draws/s | warmup | div 0
+  [side]  5,865/16,000 draws (36.7%) | elapsed 50m 11s | eta 1h 26m | 1.9 draws/s | warmup | div 0
+  [side]  5,892/16,000 draws (36.8%) | elapsed 50m 27s | eta 1h 26m | 1.9 draws/s | warmup | div 0
+  [side]  5,917/16,000 draws (37.0%) | elapsed 50m 42s | eta 1h 26m | 1.9 draws/s | warmup | div 0
+  [side]  5,945/16,000 draws (37.2%) | elapsed 50m 57s | eta 1h 26m | 1.9 draws/s | warmup | div 0
+  [side]  5,968/16,000 draws (37.3%) | elapsed 51m 13s | eta 1h 26m | 1.9 draws/s | warmup | div 0
+  [side]  5,993/16,000 draws (37.5%) | elapsed 51m 28s | eta 1h 25m | 1.9 draws/s | warmup | div 0
+  [side]  6,018/16,000 draws (37.6%) | elapsed 51m 44s | eta 1h 25m | 1.9 draws/s | warmup | div 0
+  [side]  6,046/16,000 draws (37.8%) | elapsed 51m 59s | eta 1h 25m | 1.9 draws/s | warmup | div 0
+  [side]  6,068/16,000 draws (37.9%) | elapsed 52m 14s | eta 1h 25m | 1.9 draws/s | warmup | div 0
+  [side]  6,095/16,000 draws (38.1%) | elapsed 52m 29s | eta 1h 25m | 1.9 draws/s | warmup | div 0
+  [side]  6,122/16,000 draws (38.3%) | elapsed 52m 44s | eta 1h 25m | 1.9 draws/s | warmup | div 0
+  [side]  6,147/16,000 draws (38.4%) | elapsed 53m 00s | eta 1h 24m | 1.9 draws/s | warmup | div 0
+  [side]  6,175/16,000 draws (38.6%) | elapsed 53m 16s | eta 1h 24m | 1.9 draws/s | warmup | div 0
+  [side]  6,204/16,000 draws (38.8%) | elapsed 53m 32s | eta 1h 24m | 1.9 draws/s | warmup | div 0
+  [side]  6,229/16,000 draws (38.9%) | elapsed 53m 48s | eta 1h 24m | 1.9 draws/s | warmup | div 0
+  [side]  6,249/16,000 draws (39.1%) | elapsed 54m 04s | eta 1h 24m | 1.9 draws/s | warmup | div 0
+  [side]  6,274/16,000 draws (39.2%) | elapsed 54m 20s | eta 1h 24m | 1.9 draws/s | warmup | div 0
+  [side]  6,304/16,000 draws (39.4%) | elapsed 54m 36s | eta 1h 23m | 1.9 draws/s | warmup | div 0
+  [side]  6,335/16,000 draws (39.6%) | elapsed 54m 51s | eta 1h 23m | 1.9 draws/s | warmup | div 0
+  [side]  6,365/16,000 draws (39.8%) | elapsed 55m 07s | eta 1h 23m | 1.9 draws/s | warmup | div 0
+  [side]  6,394/16,000 draws (40.0%) | elapsed 55m 23s | eta 1h 23m | 1.9 draws/s | warmup | div 0
+  [side]  6,422/16,000 draws (40.1%) | elapsed 55m 39s | eta 1h 23m | 1.9 draws/s | warmup | div 0
+  [side]  6,449/16,000 draws (40.3%) | elapsed 55m 54s | eta 1h 22m | 1.9 draws/s | warmup | div 0
+  [side]  6,477/16,000 draws (40.5%) | elapsed 56m 10s | eta 1h 22m | 1.9 draws/s | warmup | div 0
+  [side]  6,504/16,000 draws (40.6%) | elapsed 56m 27s | eta 1h 22m | 1.9 draws/s | warmup | div 0
+  [side]  6,527/16,000 draws (40.8%) | elapsed 56m 43s | eta 1h 22m | 1.9 draws/s | warmup | div 0
+  [side]  6,555/16,000 draws (41.0%) | elapsed 56m 59s | eta 1h 22m | 1.9 draws/s | warmup | div 0
+  [side]  6,583/16,000 draws (41.1%) | elapsed 57m 14s | eta 1h 21m | 1.9 draws/s | warmup | div 0
+  [side]  6,614/16,000 draws (41.3%) | elapsed 57m 30s | eta 1h 21m | 1.9 draws/s | warmup | div 0
+  [side]  6,651/16,000 draws (41.6%) | elapsed 57m 46s | eta 1h 21m | 1.9 draws/s | warmup | div 0
+  [side]  6,684/16,000 draws (41.8%) | elapsed 58m 02s | eta 1h 20m | 1.9 draws/s | warmup | div 0
+  [side]  6,717/16,000 draws (42.0%) | elapsed 58m 18s | eta 1h 20m | 1.9 draws/s | warmup | div 0
+  [side]  6,750/16,000 draws (42.2%) | elapsed 58m 33s | eta 1h 20m | 1.9 draws/s | warmup | div 0
+  [side]  6,777/16,000 draws (42.4%) | elapsed 58m 48s | eta 1h 20m | 1.9 draws/s | warmup | div 0
+  [side]  6,806/16,000 draws (42.5%) | elapsed 59m 04s | eta 1h 19m | 1.9 draws/s | warmup | div 0
+  [side]  6,839/16,000 draws (42.7%) | elapsed 59m 19s | eta 1h 19m | 1.9 draws/s | warmup | div 0
+  [side]  6,866/16,000 draws (42.9%) | elapsed 59m 34s | eta 1h 19m | 1.9 draws/s | warmup | div 0
+  [side]  6,898/16,000 draws (43.1%) | elapsed 59m 49s | eta 1h 18m | 1.9 draws/s | warmup | div 0
+  [side]  6,929/16,000 draws (43.3%) | elapsed 1h 00m | eta 1h 18m | 1.9 draws/s | warmup | div 0
+  [side]  6,958/16,000 draws (43.5%) | elapsed 1h 00m | eta 1h 18m | 1.9 draws/s | warmup | div 0
+  [side]  6,990/16,000 draws (43.7%) | elapsed 1h 00m | eta 1h 18m | 1.9 draws/s | warmup | div 0
+  [side]  7,019/16,000 draws (43.9%) | elapsed 1h 00m | eta 1h 17m | 1.9 draws/s | warmup | div 0
+  [side]  7,048/16,000 draws (44.0%) | elapsed 1h 01m | eta 1h 17m | 1.9 draws/s | warmup | div 0
+  [side]  7,079/16,000 draws (44.2%) | elapsed 1h 01m | eta 1h 17m | 1.9 draws/s | warmup | div 0
+  [side]  7,110/16,000 draws (44.4%) | elapsed 1h 01m | eta 1h 17m | 1.9 draws/s | warmup | div 0
+  [side]  7,138/16,000 draws (44.6%) | elapsed 1h 01m | eta 1h 16m | 1.9 draws/s | warmup | div 0
+  [side]  7,166/16,000 draws (44.8%) | elapsed 1h 02m | eta 1h 16m | 1.9 draws/s | warmup | div 0
+  [side]  7,195/16,000 draws (45.0%) | elapsed 1h 02m | eta 1h 16m | 1.9 draws/s | warmup | div 0
+  [side]  7,224/16,000 draws (45.1%) | elapsed 1h 02m | eta 1h 16m | 1.9 draws/s | warmup | div 0
+  [side]  7,250/16,000 draws (45.3%) | elapsed 1h 02m | eta 1h 15m | 1.9 draws/s | warmup | div 0
+  [side]  7,280/16,000 draws (45.5%) | elapsed 1h 03m | eta 1h 15m | 1.9 draws/s | warmup | div 0
+  [side]  7,316/16,000 draws (45.7%) | elapsed 1h 03m | eta 1h 15m | 1.9 draws/s | warmup | div 0
+  [side]  7,344/16,000 draws (45.9%) | elapsed 1h 03m | eta 1h 15m | 1.9 draws/s | warmup | div 0
+  [side]  7,377/16,000 draws (46.1%) | elapsed 1h 03m | eta 1h 14m | 1.9 draws/s | warmup | div 0
+  [side]  7,412/16,000 draws (46.3%) | elapsed 1h 04m | eta 1h 14m | 1.9 draws/s | warmup | div 0
+  [side]  7,444/16,000 draws (46.5%) | elapsed 1h 04m | eta 1h 14m | 1.9 draws/s | warmup | div 0
+  [side]  7,472/16,000 draws (46.7%) | elapsed 1h 04m | eta 1h 13m | 1.9 draws/s | warmup | div 0
+  [side]  7,505/16,000 draws (46.9%) | elapsed 1h 04m | eta 1h 13m | 1.9 draws/s | warmup | div 0
+  [side]  7,537/16,000 draws (47.1%) | elapsed 1h 05m | eta 1h 13m | 1.9 draws/s | warmup | div 0
+  [side]  7,571/16,000 draws (47.3%) | elapsed 1h 05m | eta 1h 12m | 1.9 draws/s | warmup | div 0
+  [side]  7,606/16,000 draws (47.5%) | elapsed 1h 05m | eta 1h 12m | 1.9 draws/s | warmup | div 0
+  [side]  7,638/16,000 draws (47.7%) | elapsed 1h 06m | eta 1h 12m | 1.9 draws/s | warmup | div 0
+  [side]  7,667/16,000 draws (47.9%) | elapsed 1h 06m | eta 1h 12m | 1.9 draws/s | warmup | div 0
+  [side]  7,703/16,000 draws (48.1%) | elapsed 1h 06m | eta 1h 11m | 1.9 draws/s | warmup | div 0
+  [side]  7,736/16,000 draws (48.4%) | elapsed 1h 06m | eta 1h 11m | 1.9 draws/s | warmup | div 0
+  [side]  7,770/16,000 draws (48.6%) | elapsed 1h 07m | eta 1h 11m | 1.9 draws/s | warmup | div 0
+  [side]  7,806/16,000 draws (48.8%) | elapsed 1h 07m | eta 1h 10m | 1.9 draws/s | warmup | div 0
+  [side]  7,836/16,000 draws (49.0%) | elapsed 1h 07m | eta 1h 10m | 1.9 draws/s | warmup | div 0
+  [side]  7,864/16,000 draws (49.1%) | elapsed 1h 07m | eta 1h 10m | 1.9 draws/s | warmup | div 0
+  [side]  7,897/16,000 draws (49.4%) | elapsed 1h 08m | eta 1h 09m | 1.9 draws/s | warmup | div 0
+  [side]  7,924/16,000 draws (49.5%) | elapsed 1h 08m | eta 1h 09m | 1.9 draws/s | warmup | div 0
+  [side]  7,953/16,000 draws (49.7%) | elapsed 1h 08m | eta 1h 09m | 1.9 draws/s | warmup | div 0
+  [side]  7,976/16,000 draws (49.9%) | elapsed 1h 08m | eta 1h 09m | 1.9 draws/s | warmup | div 0
+  [side]  8,001/16,000 draws (50.0%) | elapsed 1h 09m | eta 1h 09m | 1.9 draws/s | warmup | div 0
+  [side]  8,033/16,000 draws (50.2%) | elapsed 1h 09m | eta 1h 08m | 1.9 draws/s | warmup | div 0
+  [side]  8,062/16,000 draws (50.4%) | elapsed 1h 09m | eta 1h 08m | 1.9 draws/s | warmup | div 0
+  [side]  8,091/16,000 draws (50.6%) | elapsed 1h 10m | eta 1h 08m | 1.9 draws/s | warmup | div 0
+  [side]  8,118/16,000 draws (50.7%) | elapsed 1h 10m | eta 1h 08m | 1.9 draws/s | warmup | div 0
+  [side]  8,144/16,000 draws (50.9%) | elapsed 1h 10m | eta 1h 08m | 1.9 draws/s | warmup | div 0
+  [side]  8,168/16,000 draws (51.0%) | elapsed 1h 10m | eta 1h 07m | 1.9 draws/s | warmup | div 0
+  [side]  8,197/16,000 draws (51.2%) | elapsed 1h 11m | eta 1h 07m | 1.9 draws/s | warmup | div 0
+  [side]  8,224/16,000 draws (51.4%) | elapsed 1h 11m | eta 1h 07m | 1.9 draws/s | warmup | div 0
+  [side]  8,259/16,000 draws (51.6%) | elapsed 1h 11m | eta 1h 07m | 1.9 draws/s | warmup | div 0
+  [side]  8,297/16,000 draws (51.9%) | elapsed 1h 11m | eta 1h 06m | 1.9 draws/s | warmup | div 0
+  [side]  8,330/16,000 draws (52.1%) | elapsed 1h 12m | eta 1h 06m | 1.9 draws/s | warmup | div 0
+  [side]  8,357/16,000 draws (52.2%) | elapsed 1h 12m | eta 1h 06m | 1.9 draws/s | warmup | div 0
+  [side]  8,383/16,000 draws (52.4%) | elapsed 1h 12m | eta 1h 05m | 1.9 draws/s | warmup | div 0
+  [side]  8,411/16,000 draws (52.6%) | elapsed 1h 12m | eta 1h 05m | 1.9 draws/s | warmup | div 0
+  [side]  8,438/16,000 draws (52.7%) | elapsed 1h 13m | eta 1h 05m | 1.9 draws/s | warmup | div 0
+  [side]  8,464/16,000 draws (52.9%) | elapsed 1h 13m | eta 1h 05m | 1.9 draws/s | warmup | div 0
+  [side]  8,495/16,000 draws (53.1%) | elapsed 1h 13m | eta 1h 05m | 1.9 draws/s | warmup | div 0
+  [side]  8,526/16,000 draws (53.3%) | elapsed 1h 13m | eta 1h 04m | 1.9 draws/s | warmup | div 0
+  [side]  8,558/16,000 draws (53.5%) | elapsed 1h 14m | eta 1h 04m | 1.9 draws/s | warmup | div 0
+  [side]  warmup complete on all 4 chains, sampling...
+  [side]  8,588/16,000 draws (53.7%) | elapsed 1h 14m | eta 1h 04m | 1.9 draws/s | sampling | div 0
+  [side]  8,618/16,000 draws (53.9%) | elapsed 1h 14m | eta 1h 04m | 1.9 draws/s | sampling | div 0
+  [side]  8,647/16,000 draws (54.0%) | elapsed 1h 14m | eta 1h 03m | 1.9 draws/s | sampling | div 0
+  [side]  8,672/16,000 draws (54.2%) | elapsed 1h 15m | eta 1h 03m | 1.9 draws/s | sampling | div 0
+  [side]  8,704/16,000 draws (54.4%) | elapsed 1h 15m | eta 1h 03m | 1.9 draws/s | sampling | div 0
+  [side]  8,732/16,000 draws (54.6%) | elapsed 1h 15m | eta 1h 03m | 1.9 draws/s | sampling | div 0
+  [side]  8,760/16,000 draws (54.8%) | elapsed 1h 15m | eta 1h 02m | 1.9 draws/s | sampling | div 0
+  [side]  8,789/16,000 draws (54.9%) | elapsed 1h 16m | eta 1h 02m | 1.9 draws/s | sampling | div 0
+  [side]  8,812/16,000 draws (55.1%) | elapsed 1h 16m | eta 1h 02m | 1.9 draws/s | sampling | div 0
+  [side]  8,843/16,000 draws (55.3%) | elapsed 1h 16m | eta 1h 02m | 1.9 draws/s | sampling | div 0
+  [side]  8,874/16,000 draws (55.5%) | elapsed 1h 17m | eta 1h 01m | 1.9 draws/s | sampling | div 0
+  [side]  8,899/16,000 draws (55.6%) | elapsed 1h 17m | eta 1h 01m | 1.9 draws/s | sampling | div 0
+  [side]  8,930/16,000 draws (55.8%) | elapsed 1h 17m | eta 1h 01m | 1.9 draws/s | sampling | div 0
+  [side]  8,960/16,000 draws (56.0%) | elapsed 1h 17m | eta 1h 01m | 1.9 draws/s | sampling | div 0
+  [side]  8,991/16,000 draws (56.2%) | elapsed 1h 18m | eta 1h 00m | 1.9 draws/s | sampling | div 0
+  [side]  9,024/16,000 draws (56.4%) | elapsed 1h 18m | eta 1h 00m | 1.9 draws/s | sampling | div 0
+  [side]  9,056/16,000 draws (56.6%) | elapsed 1h 18m | eta 1h 00m | 1.9 draws/s | sampling | div 0
+  [side]  9,087/16,000 draws (56.8%) | elapsed 1h 18m | eta 59m 59s | 1.9 draws/s | sampling | div 0
+  [side]  9,114/16,000 draws (57.0%) | elapsed 1h 19m | eta 59m 46s | 1.9 draws/s | sampling | div 0
+  [side]  9,143/16,000 draws (57.1%) | elapsed 1h 19m | eta 59m 31s | 1.9 draws/s | sampling | div 0
+  [side]  9,174/16,000 draws (57.3%) | elapsed 1h 19m | eta 59m 14s | 1.9 draws/s | sampling | div 0
+  [side]  9,203/16,000 draws (57.5%) | elapsed 1h 19m | eta 58m 59s | 1.9 draws/s | sampling | div 0
+  [side]  9,234/16,000 draws (57.7%) | elapsed 1h 20m | eta 58m 43s | 1.9 draws/s | sampling | div 0
+  [side]  9,270/16,000 draws (57.9%) | elapsed 1h 20m | eta 58m 21s | 1.9 draws/s | sampling | div 0
+  [side]  9,298/16,000 draws (58.1%) | elapsed 1h 20m | eta 58m 07s | 1.9 draws/s | sampling | div 0
+  [side]  9,324/16,000 draws (58.3%) | elapsed 1h 20m | eta 57m 55s | 1.9 draws/s | sampling | div 0
+  [side]  9,351/16,000 draws (58.4%) | elapsed 1h 21m | eta 57m 41s | 1.9 draws/s | sampling | div 0
+  [side]  9,379/16,000 draws (58.6%) | elapsed 1h 21m | eta 57m 27s | 1.9 draws/s | sampling | div 0
+  [side]  9,407/16,000 draws (58.8%) | elapsed 1h 21m | eta 57m 13s | 1.9 draws/s | sampling | div 0
+  [side]  9,438/16,000 draws (59.0%) | elapsed 1h 21m | eta 56m 57s | 1.9 draws/s | sampling | div 0
+  [side]  9,473/16,000 draws (59.2%) | elapsed 1h 22m | eta 56m 36s | 1.9 draws/s | sampling | div 0
+  [side]  9,507/16,000 draws (59.4%) | elapsed 1h 22m | eta 56m 17s | 1.9 draws/s | sampling | div 0
+  [side]  9,535/16,000 draws (59.6%) | elapsed 1h 22m | eta 56m 03s | 1.9 draws/s | sampling | div 0
+  [side]  9,562/16,000 draws (59.8%) | elapsed 1h 22m | eta 55m 50s | 1.9 draws/s | sampling | div 0
+  [side]  9,592/16,000 draws (60.0%) | elapsed 1h 23m | eta 55m 34s | 1.9 draws/s | sampling | div 0
+  [side]  9,624/16,000 draws (60.2%) | elapsed 1h 23m | eta 55m 17s | 1.9 draws/s | sampling | div 0
+  [side]  9,658/16,000 draws (60.4%) | elapsed 1h 23m | eta 54m 58s | 1.9 draws/s | sampling | div 0
+  [side]  9,693/16,000 draws (60.6%) | elapsed 1h 23m | eta 54m 37s | 1.9 draws/s | sampling | div 0
+  [side]  9,726/16,000 draws (60.8%) | elapsed 1h 24m | eta 54m 19s | 1.9 draws/s | sampling | div 0
+  [side]  9,754/16,000 draws (61.0%) | elapsed 1h 24m | eta 54m 05s | 1.9 draws/s | sampling | div 0
+  [side]  9,784/16,000 draws (61.2%) | elapsed 1h 24m | eta 53m 49s | 1.9 draws/s | sampling | div 0
+  [side]  9,811/16,000 draws (61.3%) | elapsed 1h 24m | eta 53m 36s | 1.9 draws/s | sampling | div 0
+  [side]  9,839/16,000 draws (61.5%) | elapsed 1h 25m | eta 53m 23s | 1.9 draws/s | sampling | div 0
+  [side]  9,869/16,000 draws (61.7%) | elapsed 1h 25m | eta 53m 07s | 1.9 draws/s | sampling | div 0
+  [side]  9,900/16,000 draws (61.9%) | elapsed 1h 25m | eta 52m 50s | 1.9 draws/s | sampling | div 0
+  [side]  9,927/16,000 draws (62.0%) | elapsed 1h 26m | eta 52m 37s | 1.9 draws/s | sampling | div 0
+  [side]  9,952/16,000 draws (62.2%) | elapsed 1h 26m | eta 52m 25s | 1.9 draws/s | sampling | div 0
+  [side]  9,984/16,000 draws (62.4%) | elapsed 1h 26m | eta 52m 08s | 1.9 draws/s | sampling | div 0
+  [side]  10,017/16,000 draws (62.6%) | elapsed 1h 26m | eta 51m 50s | 1.9 draws/s | sampling | div 0
+  [side]  10,046/16,000 draws (62.8%) | elapsed 1h 27m | eta 51m 35s | 1.9 draws/s | sampling | div 0
+  [side]  10,077/16,000 draws (63.0%) | elapsed 1h 27m | eta 51m 18s | 1.9 draws/s | sampling | div 0
+  [side]  10,111/16,000 draws (63.2%) | elapsed 1h 27m | eta 50m 59s | 1.9 draws/s | sampling | div 0
+  [side]  10,143/16,000 draws (63.4%) | elapsed 1h 27m | eta 50m 42s | 1.9 draws/s | sampling | div 0
+  [side]  10,168/16,000 draws (63.5%) | elapsed 1h 28m | eta 50m 31s | 1.9 draws/s | sampling | div 0
+  [side]  10,196/16,000 draws (63.7%) | elapsed 1h 28m | eta 50m 17s | 1.9 draws/s | sampling | div 0
+  [side]  10,221/16,000 draws (63.9%) | elapsed 1h 28m | eta 50m 06s | 1.9 draws/s | sampling | div 0
+  [side]  10,254/16,000 draws (64.1%) | elapsed 1h 28m | eta 49m 47s | 1.9 draws/s | sampling | div 0
+  [side]  10,280/16,000 draws (64.2%) | elapsed 1h 29m | eta 49m 35s | 1.9 draws/s | sampling | div 0
+  [side]  10,309/16,000 draws (64.4%) | elapsed 1h 29m | eta 49m 20s | 1.9 draws/s | sampling | div 0
+  [side]  10,338/16,000 draws (64.6%) | elapsed 1h 29m | eta 49m 05s | 1.9 draws/s | sampling | div 0
+  [side]  10,369/16,000 draws (64.8%) | elapsed 1h 29m | eta 48m 49s | 1.9 draws/s | sampling | div 0
+  [side]  10,395/16,000 draws (65.0%) | elapsed 1h 30m | eta 48m 36s | 1.9 draws/s | sampling | div 0
+  [side]  10,424/16,000 draws (65.1%) | elapsed 1h 30m | eta 48m 21s | 1.9 draws/s | sampling | div 0
+  [side]  10,460/16,000 draws (65.4%) | elapsed 1h 30m | eta 48m 01s | 1.9 draws/s | sampling | div 0
+  [side]  10,487/16,000 draws (65.5%) | elapsed 1h 30m | eta 47m 48s | 1.9 draws/s | sampling | div 0
+  [side]  10,510/16,000 draws (65.7%) | elapsed 1h 31m | eta 47m 38s | 1.9 draws/s | sampling | div 0
+  [side]  10,542/16,000 draws (65.9%) | elapsed 1h 31m | eta 47m 20s | 1.9 draws/s | sampling | div 0
+  [side]  10,574/16,000 draws (66.1%) | elapsed 1h 31m | eta 47m 03s | 1.9 draws/s | sampling | div 0
+  [side]  10,610/16,000 draws (66.3%) | elapsed 1h 31m | eta 46m 43s | 1.9 draws/s | sampling | div 0
+  [side]  10,641/16,000 draws (66.5%) | elapsed 1h 32m | eta 46m 26s | 1.9 draws/s | sampling | div 0
+  [side]  10,666/16,000 draws (66.7%) | elapsed 1h 32m | eta 46m 14s | 1.9 draws/s | sampling | div 0
+  [side]  10,695/16,000 draws (66.8%) | elapsed 1h 32m | eta 45m 59s | 1.9 draws/s | sampling | div 0
+  [side]  10,727/16,000 draws (67.0%) | elapsed 1h 32m | eta 45m 42s | 1.9 draws/s | sampling | div 0
+  [side]  10,757/16,000 draws (67.2%) | elapsed 1h 33m | eta 45m 27s | 1.9 draws/s | sampling | div 0
+  [side]  10,785/16,000 draws (67.4%) | elapsed 1h 33m | eta 45m 13s | 1.9 draws/s | sampling | div 0
+  [side]  10,809/16,000 draws (67.6%) | elapsed 1h 33m | eta 45m 02s | 1.9 draws/s | sampling | div 0
+  [side]  10,834/16,000 draws (67.7%) | elapsed 1h 34m | eta 44m 50s | 1.9 draws/s | sampling | div 0
+  [side]  10,862/16,000 draws (67.9%) | elapsed 1h 34m | eta 44m 36s | 1.9 draws/s | sampling | div 0
+  [side]  10,894/16,000 draws (68.1%) | elapsed 1h 34m | eta 44m 19s | 1.9 draws/s | sampling | div 0
+  [side]  10,924/16,000 draws (68.3%) | elapsed 1h 34m | eta 44m 03s | 1.9 draws/s | sampling | div 0
+  [side]  10,954/16,000 draws (68.5%) | elapsed 1h 35m | eta 43m 47s | 1.9 draws/s | sampling | div 0
+  [side]  10,982/16,000 draws (68.6%) | elapsed 1h 35m | eta 43m 33s | 1.9 draws/s | sampling | div 0
+  [side]  11,007/16,000 draws (68.8%) | elapsed 1h 35m | eta 43m 21s | 1.9 draws/s | sampling | div 0
+  [side]  11,039/16,000 draws (69.0%) | elapsed 1h 35m | eta 43m 03s | 1.9 draws/s | sampling | div 0
+  [side]  11,066/16,000 draws (69.2%) | elapsed 1h 36m | eta 42m 50s | 1.9 draws/s | sampling | div 0
+  [side]  11,098/16,000 draws (69.4%) | elapsed 1h 36m | eta 42m 32s | 1.9 draws/s | sampling | div 0
+  [side]  11,127/16,000 draws (69.5%) | elapsed 1h 36m | eta 42m 17s | 1.9 draws/s | sampling | div 0
+  [side]  11,161/16,000 draws (69.8%) | elapsed 1h 36m | eta 41m 59s | 1.9 draws/s | sampling | div 0
+  [side]  11,194/16,000 draws (70.0%) | elapsed 1h 37m | eta 41m 41s | 1.9 draws/s | sampling | div 0
+  [side]  11,224/16,000 draws (70.2%) | elapsed 1h 37m | eta 41m 26s | 1.9 draws/s | sampling | div 0
+  [side]  11,255/16,000 draws (70.3%) | elapsed 1h 37m | eta 41m 09s | 1.9 draws/s | sampling | div 0
+  [side]  11,280/16,000 draws (70.5%) | elapsed 1h 37m | eta 40m 57s | 1.9 draws/s | sampling | div 0
+  [side]  11,310/16,000 draws (70.7%) | elapsed 1h 38m | eta 40m 42s | 1.9 draws/s | sampling | div 0
+  [side]  11,339/16,000 draws (70.9%) | elapsed 1h 38m | eta 40m 27s | 1.9 draws/s | sampling | div 0
+  [side]  11,363/16,000 draws (71.0%) | elapsed 1h 38m | eta 40m 16s | 1.9 draws/s | sampling | div 0
+  [side]  11,392/16,000 draws (71.2%) | elapsed 1h 38m | eta 40m 01s | 1.9 draws/s | sampling | div 0
+  [side]  11,426/16,000 draws (71.4%) | elapsed 1h 39m | eta 39m 42s | 1.9 draws/s | sampling | div 0
+  [side]  11,455/16,000 draws (71.6%) | elapsed 1h 39m | eta 39m 27s | 1.9 draws/s | sampling | div 0
+  [side]  11,488/16,000 draws (71.8%) | elapsed 1h 39m | eta 39m 10s | 1.9 draws/s | sampling | div 0
+  [side]  11,515/16,000 draws (72.0%) | elapsed 1h 39m | eta 38m 56s | 1.9 draws/s | sampling | div 0
+  [side]  11,548/16,000 draws (72.2%) | elapsed 1h 40m | eta 38m 39s | 1.9 draws/s | sampling | div 0
+  [side]  11,574/16,000 draws (72.3%) | elapsed 1h 40m | eta 38m 26s | 1.9 draws/s | sampling | div 0
+  [side]  11,603/16,000 draws (72.5%) | elapsed 1h 40m | eta 38m 11s | 1.9 draws/s | sampling | div 0
+  [side]  11,628/16,000 draws (72.7%) | elapsed 1h 41m | eta 37m 59s | 1.9 draws/s | sampling | div 0
+  [side]  11,654/16,000 draws (72.8%) | elapsed 1h 41m | eta 37m 46s | 1.9 draws/s | sampling | div 0
+  [side]  11,684/16,000 draws (73.0%) | elapsed 1h 41m | eta 37m 30s | 1.9 draws/s | sampling | div 0
+  [side]  11,716/16,000 draws (73.2%) | elapsed 1h 41m | eta 37m 13s | 1.9 draws/s | sampling | div 0
+  [side]  11,747/16,000 draws (73.4%) | elapsed 1h 42m | eta 36m 57s | 1.9 draws/s | sampling | div 0
+  [side]  11,785/16,000 draws (73.7%) | elapsed 1h 42m | eta 36m 35s | 1.9 draws/s | sampling | div 0
+  [side]  11,809/16,000 draws (73.8%) | elapsed 1h 42m | eta 36m 24s | 1.9 draws/s | sampling | div 0
+  [side]  11,839/16,000 draws (74.0%) | elapsed 1h 42m | eta 36m 08s | 1.9 draws/s | sampling | div 0
+  [side]  11,871/16,000 draws (74.2%) | elapsed 1h 43m | eta 35m 51s | 1.9 draws/s | sampling | div 0
+  [side]  11,900/16,000 draws (74.4%) | elapsed 1h 43m | eta 35m 36s | 1.9 draws/s | sampling | div 0
+  [side]  11,926/16,000 draws (74.5%) | elapsed 1h 43m | eta 35m 23s | 1.9 draws/s | sampling | div 0
+  [side]  11,955/16,000 draws (74.7%) | elapsed 1h 43m | eta 35m 08s | 1.9 draws/s | sampling | div 0
+  [side]  11,984/16,000 draws (74.9%) | elapsed 1h 44m | eta 34m 53s | 1.9 draws/s | sampling | div 0
+  [side]  12,013/16,000 draws (75.1%) | elapsed 1h 44m | eta 34m 38s | 1.9 draws/s | sampling | div 0
+  [side]  12,045/16,000 draws (75.3%) | elapsed 1h 44m | eta 34m 20s | 1.9 draws/s | sampling | div 0
+  [side]  12,071/16,000 draws (75.4%) | elapsed 1h 44m | eta 34m 07s | 1.9 draws/s | sampling | div 0
+  [side]  12,104/16,000 draws (75.6%) | elapsed 1h 45m | eta 33m 50s | 1.9 draws/s | sampling | div 0
+  [side]  12,134/16,000 draws (75.8%) | elapsed 1h 45m | eta 33m 34s | 1.9 draws/s | sampling | div 0
+  [side]  12,162/16,000 draws (76.0%) | elapsed 1h 45m | eta 33m 20s | 1.9 draws/s | sampling | div 0
+  [side]  12,193/16,000 draws (76.2%) | elapsed 1h 45m | eta 33m 04s | 1.9 draws/s | sampling | div 0
+  [side]  12,226/16,000 draws (76.4%) | elapsed 1h 46m | eta 32m 46s | 1.9 draws/s | sampling | div 0
+  [side]  12,256/16,000 draws (76.6%) | elapsed 1h 46m | eta 32m 31s | 1.9 draws/s | sampling | div 0
+  [side]  12,284/16,000 draws (76.8%) | elapsed 1h 46m | eta 32m 16s | 1.9 draws/s | sampling | div 0
+  [side]  12,310/16,000 draws (76.9%) | elapsed 1h 46m | eta 32m 04s | 1.9 draws/s | sampling | div 0
+  [side]  12,339/16,000 draws (77.1%) | elapsed 1h 47m | eta 31m 49s | 1.9 draws/s | sampling | div 0
+  [side]  12,363/16,000 draws (77.3%) | elapsed 1h 47m | eta 31m 37s | 1.9 draws/s | sampling | div 0
+  [side]  12,396/16,000 draws (77.5%) | elapsed 1h 47m | eta 31m 19s | 1.9 draws/s | sampling | div 0
+  [side]  12,428/16,000 draws (77.7%) | elapsed 1h 48m | eta 31m 03s | 1.9 draws/s | sampling | div 0
+  [side]  12,462/16,000 draws (77.9%) | elapsed 1h 48m | eta 30m 44s | 1.9 draws/s | sampling | div 0
+  [side]  12,493/16,000 draws (78.1%) | elapsed 1h 48m | eta 30m 28s | 1.9 draws/s | sampling | div 0
+  [side]  12,522/16,000 draws (78.3%) | elapsed 1h 48m | eta 30m 13s | 1.9 draws/s | sampling | div 0
+  [side]  12,548/16,000 draws (78.4%) | elapsed 1h 49m | eta 30m 00s | 1.9 draws/s | sampling | div 0
+  [side]  12,585/16,000 draws (78.7%) | elapsed 1h 49m | eta 29m 40s | 1.9 draws/s | sampling | div 0
+  [side]  12,617/16,000 draws (78.9%) | elapsed 1h 49m | eta 29m 23s | 1.9 draws/s | sampling | div 0
+  [side]  12,646/16,000 draws (79.0%) | elapsed 1h 49m | eta 29m 08s | 1.9 draws/s | sampling | div 0
+  [side]  12,678/16,000 draws (79.2%) | elapsed 1h 50m | eta 28m 51s | 1.9 draws/s | sampling | div 0
+  [side]  12,708/16,000 draws (79.4%) | elapsed 1h 50m | eta 28m 35s | 1.9 draws/s | sampling | div 0
+  [side]  12,738/16,000 draws (79.6%) | elapsed 1h 50m | eta 28m 20s | 1.9 draws/s | sampling | div 0
+  [side]  12,768/16,000 draws (79.8%) | elapsed 1h 50m | eta 28m 04s | 1.9 draws/s | sampling | div 0
+  [side]  12,796/16,000 draws (80.0%) | elapsed 1h 51m | eta 27m 50s | 1.9 draws/s | sampling | div 0
+  [side]  12,829/16,000 draws (80.2%) | elapsed 1h 51m | eta 27m 32s | 1.9 draws/s | sampling | div 0
+  [side]  12,852/16,000 draws (80.3%) | elapsed 1h 51m | eta 27m 21s | 1.9 draws/s | sampling | div 0
+  [side]  12,884/16,000 draws (80.5%) | elapsed 1h 51m | eta 27m 04s | 1.9 draws/s | sampling | div 0
+  [side]  12,913/16,000 draws (80.7%) | elapsed 1h 52m | eta 26m 49s | 1.9 draws/s | sampling | div 0
+  [side]  12,943/16,000 draws (80.9%) | elapsed 1h 52m | eta 26m 33s | 1.9 draws/s | sampling | div 0
+  [side]  12,973/16,000 draws (81.1%) | elapsed 1h 52m | eta 26m 17s | 1.9 draws/s | sampling | div 0
+  [side]  13,002/16,000 draws (81.3%) | elapsed 1h 52m | eta 26m 03s | 1.9 draws/s | sampling | div 0
+  [side]  13,029/16,000 draws (81.4%) | elapsed 1h 53m | eta 25m 49s | 1.9 draws/s | sampling | div 0
+  [side]  13,055/16,000 draws (81.6%) | elapsed 1h 53m | eta 25m 36s | 1.9 draws/s | sampling | div 0
+  [side]  13,085/16,000 draws (81.8%) | elapsed 1h 53m | eta 25m 20s | 1.9 draws/s | sampling | div 0
+  [side]  13,111/16,000 draws (81.9%) | elapsed 1h 54m | eta 25m 07s | 1.9 draws/s | sampling | div 0
+  [side]  13,143/16,000 draws (82.1%) | elapsed 1h 54m | eta 24m 50s | 1.9 draws/s | sampling | div 0
+  [side]  13,173/16,000 draws (82.3%) | elapsed 1h 54m | eta 24m 34s | 1.9 draws/s | sampling | div 0
+  [side]  13,201/16,000 draws (82.5%) | elapsed 1h 54m | eta 24m 20s | 1.9 draws/s | sampling | div 0
+  [side]  13,229/16,000 draws (82.7%) | elapsed 1h 55m | eta 24m 05s | 1.9 draws/s | sampling | div 0
+  [side]  13,257/16,000 draws (82.9%) | elapsed 1h 55m | eta 23m 51s | 1.9 draws/s | sampling | div 0
+  [side]  13,283/16,000 draws (83.0%) | elapsed 1h 55m | eta 23m 38s | 1.9 draws/s | sampling | div 0
+  [side]  13,306/16,000 draws (83.2%) | elapsed 1h 55m | eta 23m 26s | 1.9 draws/s | sampling | div 0
+  [side]  13,333/16,000 draws (83.3%) | elapsed 1h 56m | eta 23m 13s | 1.9 draws/s | sampling | div 0
+  [side]  13,364/16,000 draws (83.5%) | elapsed 1h 56m | eta 22m 56s | 1.9 draws/s | sampling | div 0
+  [side]  13,399/16,000 draws (83.7%) | elapsed 1h 56m | eta 22m 37s | 1.9 draws/s | sampling | div 0
+  [side]  13,427/16,000 draws (83.9%) | elapsed 1h 56m | eta 22m 23s | 1.9 draws/s | sampling | div 0
+  [side]  13,459/16,000 draws (84.1%) | elapsed 1h 57m | eta 22m 06s | 1.9 draws/s | sampling | div 0
+  [side]  13,491/16,000 draws (84.3%) | elapsed 1h 57m | eta 21m 49s | 1.9 draws/s | sampling | div 0
+  [side]  13,522/16,000 draws (84.5%) | elapsed 1h 57m | eta 21m 33s | 1.9 draws/s | sampling | div 0
+  [side]  13,553/16,000 draws (84.7%) | elapsed 1h 57m | eta 21m 16s | 1.9 draws/s | sampling | div 0
+  [side]  13,582/16,000 draws (84.9%) | elapsed 1h 58m | eta 21m 01s | 1.9 draws/s | sampling | div 0
+  [side]  13,615/16,000 draws (85.1%) | elapsed 1h 58m | eta 20m 44s | 1.9 draws/s | sampling | div 0
+  [side]  13,647/16,000 draws (85.3%) | elapsed 1h 58m | eta 20m 27s | 1.9 draws/s | sampling | div 0
+  [side]  13,679/16,000 draws (85.5%) | elapsed 1h 58m | eta 20m 10s | 1.9 draws/s | sampling | div 0
+  [side]  13,710/16,000 draws (85.7%) | elapsed 1h 59m | eta 19m 54s | 1.9 draws/s | sampling | div 0
+  [side]  13,742/16,000 draws (85.9%) | elapsed 1h 59m | eta 19m 37s | 1.9 draws/s | sampling | div 0
+  [side]  13,773/16,000 draws (86.1%) | elapsed 1h 59m | eta 19m 20s | 1.9 draws/s | sampling | div 0
+  [side]  13,807/16,000 draws (86.3%) | elapsed 1h 59m | eta 19m 02s | 1.9 draws/s | sampling | div 0
+  [side]  13,837/16,000 draws (86.5%) | elapsed 2h 00m | eta 18m 47s | 1.9 draws/s | sampling | div 0
+  [side]  13,871/16,000 draws (86.7%) | elapsed 2h 00m | eta 18m 29s | 1.9 draws/s | sampling | div 0
+  [side]  13,903/16,000 draws (86.9%) | elapsed 2h 00m | eta 18m 12s | 1.9 draws/s | sampling | div 0
+  [side]  13,924/16,000 draws (87.0%) | elapsed 2h 00m | eta 18m 01s | 1.9 draws/s | sampling | div 0
+  [side]  13,956/16,000 draws (87.2%) | elapsed 2h 01m | eta 17m 45s | 1.9 draws/s | sampling | div 0
+  [side]  13,989/16,000 draws (87.4%) | elapsed 2h 01m | eta 17m 27s | 1.9 draws/s | sampling | div 0
+  [side]  14,023/16,000 draws (87.6%) | elapsed 2h 01m | eta 17m 09s | 1.9 draws/s | sampling | div 0
+  [side]  14,050/16,000 draws (87.8%) | elapsed 2h 01m | eta 16m 55s | 1.9 draws/s | sampling | div 0
+  [side]  14,084/16,000 draws (88.0%) | elapsed 2h 02m | eta 16m 37s | 1.9 draws/s | sampling | div 0
+  [side]  14,111/16,000 draws (88.2%) | elapsed 2h 02m | eta 16m 23s | 1.9 draws/s | sampling | div 0
+  [side]  14,143/16,000 draws (88.4%) | elapsed 2h 02m | eta 16m 06s | 1.9 draws/s | sampling | div 0
+  [side]  14,169/16,000 draws (88.6%) | elapsed 2h 03m | eta 15m 53s | 1.9 draws/s | sampling | div 0
+  [side]  14,201/16,000 draws (88.8%) | elapsed 2h 03m | eta 15m 36s | 1.9 draws/s | sampling | div 0
+  [side]  14,226/16,000 draws (88.9%) | elapsed 2h 03m | eta 15m 24s | 1.9 draws/s | sampling | div 0
+  [side]  14,254/16,000 draws (89.1%) | elapsed 2h 03m | eta 15m 09s | 1.9 draws/s | sampling | div 0
+  [side]  14,273/16,000 draws (89.2%) | elapsed 2h 04m | eta 15m 00s | 1.9 draws/s | sampling | div 0
+  [side]  14,301/16,000 draws (89.4%) | elapsed 2h 04m | eta 14m 46s | 1.9 draws/s | sampling | div 0
+  [side]  14,320/16,000 draws (89.5%) | elapsed 2h 04m | eta 14m 36s | 1.9 draws/s | sampling | div 0
+  [side]  14,343/16,000 draws (89.6%) | elapsed 2h 04m | eta 14m 25s | 1.9 draws/s | sampling | div 0
+  [side]  14,367/16,000 draws (89.8%) | elapsed 2h 05m | eta 14m 13s | 1.9 draws/s | sampling | div 0
+  [side]  14,391/16,000 draws (89.9%) | elapsed 2h 05m | eta 14m 00s | 1.9 draws/s | sampling | div 0
+  [side]  14,416/16,000 draws (90.1%) | elapsed 2h 05m | eta 13m 48s | 1.9 draws/s | sampling | div 0
+  [side]  14,438/16,000 draws (90.2%) | elapsed 2h 05m | eta 13m 37s | 1.9 draws/s | sampling | div 0
+  [side]  14,463/16,000 draws (90.4%) | elapsed 2h 06m | eta 13m 24s | 1.9 draws/s | sampling | div 0
+  [side]  14,486/16,000 draws (90.5%) | elapsed 2h 06m | eta 13m 12s | 1.9 draws/s | sampling | div 0
+  [side]  14,511/16,000 draws (90.7%) | elapsed 2h 06m | eta 12m 59s | 1.9 draws/s | sampling | div 0
+  [side]  14,535/16,000 draws (90.8%) | elapsed 2h 06m | eta 12m 47s | 1.9 draws/s | sampling | div 0
+  [side]  14,559/16,000 draws (91.0%) | elapsed 2h 07m | eta 12m 35s | 1.9 draws/s | sampling | div 0
+  [side]  14,583/16,000 draws (91.1%) | elapsed 2h 07m | eta 12m 23s | 1.9 draws/s | sampling | div 0
+  [side]  14,603/16,000 draws (91.3%) | elapsed 2h 07m | eta 12m 13s | 1.9 draws/s | sampling | div 0
+  [side]  14,629/16,000 draws (91.4%) | elapsed 2h 07m | eta 11m 59s | 1.9 draws/s | sampling | div 0
+  [side]  14,652/16,000 draws (91.6%) | elapsed 2h 08m | eta 11m 47s | 1.9 draws/s | sampling | div 0
+  [side]  14,681/16,000 draws (91.8%) | elapsed 2h 08m | eta 11m 32s | 1.9 draws/s | sampling | div 0
+  [side]  14,709/16,000 draws (91.9%) | elapsed 2h 08m | eta 11m 18s | 1.9 draws/s | sampling | div 0
+  [side]  14,733/16,000 draws (92.1%) | elapsed 2h 09m | eta 11m 05s | 1.9 draws/s | sampling | div 0
+  [side]  14,751/16,000 draws (92.2%) | elapsed 2h 09m | eta 10m 56s | 1.9 draws/s | sampling | div 0
+  [side]  14,778/16,000 draws (92.4%) | elapsed 2h 09m | eta 10m 42s | 1.9 draws/s | sampling | div 0
+  [side]  14,797/16,000 draws (92.5%) | elapsed 2h 09m | eta 10m 33s | 1.9 draws/s | sampling | div 0
+  [side]  14,814/16,000 draws (92.6%) | elapsed 2h 10m | eta 10m 25s | 1.9 draws/s | sampling | div 0
+  [side]  14,834/16,000 draws (92.7%) | elapsed 2h 10m | eta 10m 14s | 1.9 draws/s | sampling | div 0
+  [side]  14,851/16,000 draws (92.8%) | elapsed 2h 10m | eta 10m 06s | 1.9 draws/s | sampling | div 0
+  [side]  14,867/16,000 draws (92.9%) | elapsed 2h 10m | eta 9m 58s | 1.9 draws/s | sampling | div 0
+  [side]  14,883/16,000 draws (93.0%) | elapsed 2h 11m | eta 9m 50s | 1.9 draws/s | sampling | div 0
+  [side]  14,901/16,000 draws (93.1%) | elapsed 2h 11m | eta 9m 41s | 1.9 draws/s | sampling | div 0
+  [side]  14,917/16,000 draws (93.2%) | elapsed 2h 11m | eta 9m 33s | 1.9 draws/s | sampling | div 0
+  [side]  14,933/16,000 draws (93.3%) | elapsed 2h 11m | eta 9m 25s | 1.9 draws/s | sampling | div 0
+  [side]  14,947/16,000 draws (93.4%) | elapsed 2h 12m | eta 9m 18s | 1.9 draws/s | sampling | div 0
+  [side]  14,960/16,000 draws (93.5%) | elapsed 2h 12m | eta 9m 12s | 1.9 draws/s | sampling | div 0
+  [side]  14,977/16,000 draws (93.6%) | elapsed 2h 12m | eta 9m 03s | 1.9 draws/s | sampling | div 0
+  [side]  14,991/16,000 draws (93.7%) | elapsed 2h 12m | eta 8m 56s | 1.9 draws/s | sampling | div 0
+  [side]  15,006/16,000 draws (93.8%) | elapsed 2h 13m | eta 8m 49s | 1.9 draws/s | sampling | div 0
+  [side]  15,024/16,000 draws (93.9%) | elapsed 2h 13m | eta 8m 40s | 1.9 draws/s | sampling | div 0
+  [side]  15,041/16,000 draws (94.0%) | elapsed 2h 13m | eta 8m 31s | 1.9 draws/s | sampling | div 0
+  [side]  15,059/16,000 draws (94.1%) | elapsed 2h 13m | eta 8m 22s | 1.9 draws/s | sampling | div 0
+  [side]  15,074/16,000 draws (94.2%) | elapsed 2h 14m | eta 8m 14s | 1.9 draws/s | sampling | div 0
+  [side]  15,087/16,000 draws (94.3%) | elapsed 2h 14m | eta 8m 08s | 1.9 draws/s | sampling | div 0
+  [side]  15,100/16,000 draws (94.4%) | elapsed 2h 14m | eta 8m 01s | 1.9 draws/s | sampling | div 0
+  [side]  15,112/16,000 draws (94.5%) | elapsed 2h 14m | eta 7m 55s | 1.9 draws/s | sampling | div 0
+  [side]  15,122/16,000 draws (94.5%) | elapsed 2h 15m | eta 7m 51s | 1.9 draws/s | sampling | div 0
+  [side]  15,136/16,000 draws (94.6%) | elapsed 2h 15m | eta 7m 44s | 1.9 draws/s | sampling | div 0
+  [side]  15,153/16,000 draws (94.7%) | elapsed 2h 15m | eta 7m 35s | 1.9 draws/s | sampling | div 0
+  [side]  15,164/16,000 draws (94.8%) | elapsed 2h 15m | eta 7m 29s | 1.9 draws/s | sampling | div 0
+  [side]  15,176/16,000 draws (94.8%) | elapsed 2h 16m | eta 7m 23s | 1.9 draws/s | sampling | div 0
+  [side]  15,193/16,000 draws (95.0%) | elapsed 2h 16m | eta 7m 15s | 1.9 draws/s | sampling | div 0
+  [side]  15,213/16,000 draws (95.1%) | elapsed 2h 16m | eta 7m 04s | 1.9 draws/s | sampling | div 0
+  [side]  15,227/16,000 draws (95.2%) | elapsed 2h 17m | eta 6m 57s | 1.9 draws/s | sampling | div 0
+  [side]  15,242/16,000 draws (95.3%) | elapsed 2h 17m | eta 6m 49s | 1.9 draws/s | sampling | div 0
+  [side]  15,254/16,000 draws (95.3%) | elapsed 2h 17m | eta 6m 43s | 1.8 draws/s | sampling | div 0
+  [side]  15,266/16,000 draws (95.4%) | elapsed 2h 17m | eta 6m 37s | 1.8 draws/s | sampling | div 0
+  [side]  15,283/16,000 draws (95.5%) | elapsed 2h 18m | eta 6m 28s | 1.8 draws/s | sampling | div 0
+  [side]  15,296/16,000 draws (95.6%) | elapsed 2h 18m | eta 6m 21s | 1.8 draws/s | sampling | div 0
+  [side]  15,307/16,000 draws (95.7%) | elapsed 2h 18m | eta 6m 16s | 1.8 draws/s | sampling | div 0
+  [side]  15,324/16,000 draws (95.8%) | elapsed 2h 18m | eta 6m 07s | 1.8 draws/s | sampling | div 0
+  [side]  15,338/16,000 draws (95.9%) | elapsed 2h 19m | eta 6m 00s | 1.8 draws/s | sampling | div 0
+  [side]  15,356/16,000 draws (96.0%) | elapsed 2h 19m | eta 5m 50s | 1.8 draws/s | sampling | div 0
+  [side]  15,370/16,000 draws (96.1%) | elapsed 2h 19m | eta 5m 43s | 1.8 draws/s | sampling | div 0
+  [side]  15,388/16,000 draws (96.2%) | elapsed 2h 19m | eta 5m 33s | 1.8 draws/s | sampling | div 0
+  [side]  15,406/16,000 draws (96.3%) | elapsed 2h 20m | eta 5m 24s | 1.8 draws/s | sampling | div 0
+  [side]  15,417/16,000 draws (96.4%) | elapsed 2h 20m | eta 5m 18s | 1.8 draws/s | sampling | div 0
+  [side]  15,432/16,000 draws (96.5%) | elapsed 2h 20m | eta 5m 10s | 1.8 draws/s | sampling | div 0
+  [side]  15,449/16,000 draws (96.6%) | elapsed 2h 20m | eta 5m 01s | 1.8 draws/s | sampling | div 0
+  [side]  15,467/16,000 draws (96.7%) | elapsed 2h 21m | eta 4m 51s | 1.8 draws/s | sampling | div 0
+  [side]  15,484/16,000 draws (96.8%) | elapsed 2h 21m | eta 4m 42s | 1.8 draws/s | sampling | div 0
+  [side]  15,498/16,000 draws (96.9%) | elapsed 2h 21m | eta 4m 35s | 1.8 draws/s | sampling | div 0
+  [side]  15,511/16,000 draws (96.9%) | elapsed 2h 21m | eta 4m 28s | 1.8 draws/s | sampling | div 0
+  [side]  15,526/16,000 draws (97.0%) | elapsed 2h 22m | eta 4m 20s | 1.8 draws/s | sampling | div 0
+  [side]  15,545/16,000 draws (97.2%) | elapsed 2h 22m | eta 4m 10s | 1.8 draws/s | sampling | div 0
+  [side]  15,556/16,000 draws (97.2%) | elapsed 2h 22m | eta 4m 04s | 1.8 draws/s | sampling | div 0
+  [side]  15,568/16,000 draws (97.3%) | elapsed 2h 23m | eta 3m 58s | 1.8 draws/s | sampling | div 0
+  [side]  15,574/16,000 draws (97.3%) | elapsed 2h 23m | eta 3m 55s | 1.8 draws/s | sampling | div 0
+  [side]  15,582/16,000 draws (97.4%) | elapsed 2h 23m | eta 3m 51s | 1.8 draws/s | sampling | div 0
+  [side]  15,591/16,000 draws (97.4%) | elapsed 2h 23m | eta 3m 46s | 1.8 draws/s | sampling | div 0
+  [side]  15,598/16,000 draws (97.5%) | elapsed 2h 24m | eta 3m 42s | 1.8 draws/s | sampling | div 0
+  [side]  15,604/16,000 draws (97.5%) | elapsed 2h 24m | eta 3m 39s | 1.8 draws/s | sampling | div 0
+  [side]  15,611/16,000 draws (97.6%) | elapsed 2h 24m | eta 3m 36s | 1.8 draws/s | sampling | div 0
+  [side]  15,620/16,000 draws (97.6%) | elapsed 2h 24m | eta 3m 31s | 1.8 draws/s | sampling | div 0
+  [side]  15,629/16,000 draws (97.7%) | elapsed 2h 25m | eta 3m 26s | 1.8 draws/s | sampling | div 0
+  [side]  15,635/16,000 draws (97.7%) | elapsed 2h 25m | eta 3m 23s | 1.8 draws/s | sampling | div 0
+  [side]  15,644/16,000 draws (97.8%) | elapsed 2h 25m | eta 3m 18s | 1.8 draws/s | sampling | div 0
+  [side]  15,651/16,000 draws (97.8%) | elapsed 2h 25m | eta 3m 15s | 1.8 draws/s | sampling | div 0
+  [side]  15,659/16,000 draws (97.9%) | elapsed 2h 26m | eta 3m 10s | 1.8 draws/s | sampling | div 0
+  [side]  15,667/16,000 draws (97.9%) | elapsed 2h 26m | eta 3m 06s | 1.8 draws/s | sampling | div 0
+  [side]  15,673/16,000 draws (98.0%) | elapsed 2h 26m | eta 3m 03s | 1.8 draws/s | sampling | div 0
+  [side]  15,680/16,000 draws (98.0%) | elapsed 2h 26m | eta 2m 59s | 1.8 draws/s | sampling | div 0
+  [side]  15,687/16,000 draws (98.0%) | elapsed 2h 27m | eta 2m 56s | 1.8 draws/s | sampling | div 0
+  [side]  15,695/16,000 draws (98.1%) | elapsed 2h 27m | eta 2m 51s | 1.8 draws/s | sampling | div 0
+  [side]  15,702/16,000 draws (98.1%) | elapsed 2h 27m | eta 2m 48s | 1.8 draws/s | sampling | div 0
+  [side]  15,707/16,000 draws (98.2%) | elapsed 2h 28m | eta 2m 45s | 1.8 draws/s | sampling | div 0
+  [side]  15,716/16,000 draws (98.2%) | elapsed 2h 28m | eta 2m 40s | 1.8 draws/s | sampling | div 0
+  [side]  15,725/16,000 draws (98.3%) | elapsed 2h 28m | eta 2m 35s | 1.8 draws/s | sampling | div 0
+  [side]  15,734/16,000 draws (98.3%) | elapsed 2h 28m | eta 2m 30s | 1.8 draws/s | sampling | div 0
+  [side]  15,741/16,000 draws (98.4%) | elapsed 2h 29m | eta 2m 27s | 1.8 draws/s | sampling | div 0
+  [side]  15,746/16,000 draws (98.4%) | elapsed 2h 29m | eta 2m 24s | 1.8 draws/s | sampling | div 0
+  [side]  15,753/16,000 draws (98.5%) | elapsed 2h 29m | eta 2m 20s | 1.8 draws/s | sampling | div 0
+  [side]  15,759/16,000 draws (98.5%) | elapsed 2h 29m | eta 2m 17s | 1.8 draws/s | sampling | div 0
+  [side]  15,765/16,000 draws (98.5%) | elapsed 2h 30m | eta 2m 14s | 1.7 draws/s | sampling | div 0
+  [side]  15,773/16,000 draws (98.6%) | elapsed 2h 30m | eta 2m 09s | 1.7 draws/s | sampling | div 0
+  [side]  15,778/16,000 draws (98.6%) | elapsed 2h 30m | eta 2m 07s | 1.7 draws/s | sampling | div 0
+  [side]  15,784/16,000 draws (98.7%) | elapsed 2h 31m | eta 2m 03s | 1.7 draws/s | sampling | div 0
+  [side]  15,791/16,000 draws (98.7%) | elapsed 2h 31m | eta 2m 00s | 1.7 draws/s | sampling | div 0
+  [side]  15,799/16,000 draws (98.7%) | elapsed 2h 31m | eta 1m 55s | 1.7 draws/s | sampling | div 0
+  [side]  15,807/16,000 draws (98.8%) | elapsed 2h 31m | eta 1m 51s | 1.7 draws/s | sampling | div 0
+  [side]  15,816/16,000 draws (98.9%) | elapsed 2h 32m | eta 1m 46s | 1.7 draws/s | sampling | div 0
+  [side]  15,822/16,000 draws (98.9%) | elapsed 2h 32m | eta 1m 42s | 1.7 draws/s | sampling | div 0
+  [side]  15,830/16,000 draws (98.9%) | elapsed 2h 32m | eta 1m 38s | 1.7 draws/s | sampling | div 0
+  [side]  15,837/16,000 draws (99.0%) | elapsed 2h 32m | eta 1m 34s | 1.7 draws/s | sampling | div 0
+  [side]  15,842/16,000 draws (99.0%) | elapsed 2h 33m | eta 1m 31s | 1.7 draws/s | sampling | div 0
+  [side]  15,849/16,000 draws (99.1%) | elapsed 2h 33m | eta 1m 27s | 1.7 draws/s | sampling | div 0
+  [side]  15,856/16,000 draws (99.1%) | elapsed 2h 33m | eta 1m 23s | 1.7 draws/s | sampling | div 0
+  [side]  15,864/16,000 draws (99.2%) | elapsed 2h 33m | eta 1m 19s | 1.7 draws/s | sampling | div 0
+  [side]  15,872/16,000 draws (99.2%) | elapsed 2h 34m | eta 1m 14s | 1.7 draws/s | sampling | div 0
+  [side]  15,880/16,000 draws (99.2%) | elapsed 2h 34m | eta 1m 10s | 1.7 draws/s | sampling | div 0
+  [side]  15,888/16,000 draws (99.3%) | elapsed 2h 34m | eta 1m 05s | 1.7 draws/s | sampling | div 0
+  [side]  15,896/16,000 draws (99.4%) | elapsed 2h 35m | eta 1m 00s | 1.7 draws/s | sampling | div 0
+  [side]  15,903/16,000 draws (99.4%) | elapsed 2h 35m | eta 56s | 1.7 draws/s | sampling | div 0
+  [side]  15,911/16,000 draws (99.4%) | elapsed 2h 35m | eta 52s | 1.7 draws/s | sampling | div 0
+  [side]  15,917/16,000 draws (99.5%) | elapsed 2h 35m | eta 48s | 1.7 draws/s | sampling | div 0
+  [side]  15,925/16,000 draws (99.5%) | elapsed 2h 36m | eta 44s | 1.7 draws/s | sampling | div 0
+  [side]  15,931/16,000 draws (99.6%) | elapsed 2h 36m | eta 40s | 1.7 draws/s | sampling | div 0
+  [side]  15,938/16,000 draws (99.6%) | elapsed 2h 36m | eta 36s | 1.7 draws/s | sampling | div 0
+  [side]  15,945/16,000 draws (99.7%) | elapsed 2h 36m | eta 32s | 1.7 draws/s | sampling | div 0
+  [side]  15,951/16,000 draws (99.7%) | elapsed 2h 37m | eta 28s | 1.7 draws/s | sampling | div 0
+  [side]  15,956/16,000 draws (99.7%) | elapsed 2h 37m | eta 26s | 1.7 draws/s | sampling | div 0
+  [side]  15,964/16,000 draws (99.8%) | elapsed 2h 37m | eta 21s | 1.7 draws/s | sampling | div 0
+  [side]  15,971/16,000 draws (99.8%) | elapsed 2h 37m | eta 17s | 1.7 draws/s | sampling | div 0
+  [side]  15,978/16,000 draws (99.9%) | elapsed 2h 38m | eta 13s | 1.7 draws/s | sampling | div 0
+  [side]  15,987/16,000 draws (99.9%) | elapsed 2h 38m | eta 7s | 1.7 draws/s | sampling | div 0
+  [side]  15,994/16,000 draws (100.0%) | elapsed 2h 38m | eta 3s | 1.7 draws/s | sampling | div 0
+  [side]  16,000/16,000 draws (100.0%) | elapsed 2h 39m | eta 0s | 1.7 draws/s | sampling | div 0
+Sampling 4 chains for 2_000 tune and 2_000 draw iterations (8_000 + 8_000 draws total) took 9572 seconds.
+  [side]  done — 16,000 draws in 2h 39m | divergences: 0
+
+  [side] Divergences : 0  OK
+  [side] Max R-hat   : 1.0100  *** WARNING ***
+  [side] Min ESS     : 849  OK
+
+  [side] Saved -> C:\Users\aasmi\Costal Carolina\command_plus_26\output\stage1_side_2024.pkl  (nu=24.34)
+  [side] Surface SD=0.0545 ft  range=[-0.233, +0.680] ft
+  [side] Checkpoint -> C:\Users\aasmi\Costal Carolina\command_plus_26\output\checkpoints\stage1_side_2024.nc
+
+STEP 2/4 Stage 1 — population aim model: COMPLETED in 5h 35m
+
+========================================================================
+STEP 3/4  Stage 2 — batter x cluster adjust
+Started: 2026-08-23 18:25:02   (pipeline elapsed 5h 35m)
+Command: 'C:\Users\aasmi\Costal Carolina\command_plus_26\stage2\stage2.py' --year 2024
+========================================================================
+
+Stage 2 | year=2024
+  Sampler: draws=1000 tune=1000 chains=4 cores=auto target_accept=0.95 max_treedepth=10 init=adapt_diag seed=20260818
+  Total qualifying pitches: 134,895
+
+--- Stage 2 model 1/2: height ---
+  [height] Pitches in Stage 2: 134,895  |  Batter x pitch-type groups: 5018
+  [height] EV octiles x pitch type: 124 levels, median 44 batters/level, 0 singleton (563 / 5,018 groups in the sparse EV bin)
+  [height] Empirical tau_rate=3.586  (prior mean=0.279 ft)
+  [height] Empirical bin_rate=8.956  (prior mean=0.112 ft)
+Initializing NUTS using adapt_diag...
+C:\Users\aasmi\Costal Carolina\command_plus_26\.venv\Lib\site-packages\pytensor\link\c\cmodule.py:2968: UserWarning: PyTensor could not link to a BLAS installation. Operations that might benefit from BLAS will be severely degraded.
+This usually happens when PyTensor is installed via pip. We recommend it be installed via conda/mamba/pixi instead.
+Alternatively, you can use an experimental backend such as Numba or JAX that perform their own BLAS optimizations, by setting `pytensor.config.mode == 'NUMBA'` or passing `mode='NUMBA'` when compiling a PyTensor function.
+For more options and details see https://pytensor.readthedocs.io/en/latest/troubleshooting.html#how-do-i-configure-test-my-blas-library
+  warnings.warn(
+Multiprocess sampling (4 chains in 4 jobs)
+NUTS: [tau_bin, eta_raw, tau, omega_raw]
+  [height]  1/8,000 draws ( 0.0%) | elapsed 0s | eta -- | 0.0 draws/s | warmup | div 0
+  [height]  63/8,000 draws ( 0.8%) | elapsed 15s | eta 32m 39s | 4.1 draws/s | warmup | div 0
+  [height]  137/8,000 draws ( 1.7%) | elapsed 30s | eta 29m 22s | 4.5 draws/s | warmup | div 0
+  [height]  216/8,000 draws ( 2.7%) | elapsed 45s | eta 27m 30s | 4.7 draws/s | warmup | div 0
+  [height]  297/8,000 draws ( 3.7%) | elapsed 1m 00s | eta 26m 21s | 4.9 draws/s | warmup | div 0
+  [height]  378/8,000 draws ( 4.7%) | elapsed 1m 16s | eta 25m 34s | 5.0 draws/s | warmup | div 0
+  [height]  497/8,000 draws ( 6.2%) | elapsed 1m 31s | eta 22m 56s | 5.4 draws/s | warmup | div 0
+  [height]  815/8,000 draws (10.2%) | elapsed 1m 46s | eta 15m 36s | 7.7 draws/s | warmup | div 0
+  [height]  1,214/8,000 draws (15.2%) | elapsed 2m 01s | eta 11m 17s | 10.0 draws/s | warmup | div 0
+  [height]  1,628/8,000 draws (20.3%) | elapsed 2m 16s | eta 8m 53s | 11.9 draws/s | warmup | div 0
+  [height]  2,011/8,000 draws (25.1%) | elapsed 2m 31s | eta 7m 30s | 13.3 draws/s | warmup | div 0
+  [height]  2,380/8,000 draws (29.8%) | elapsed 2m 46s | eta 6m 32s | 14.3 draws/s | warmup | div 0
+  [height]  2,789/8,000 draws (34.9%) | elapsed 3m 01s | eta 5m 38s | 15.4 draws/s | warmup | div 0
+  [height]  3,186/8,000 draws (39.8%) | elapsed 3m 16s | eta 4m 56s | 16.2 draws/s | warmup | div 0
+  [height]  3,587/8,000 draws (44.8%) | elapsed 3m 31s | eta 4m 20s | 17.0 draws/s | warmup | div 0
+  [height]  4,001/8,000 draws (50.0%) | elapsed 3m 46s | eta 3m 46s | 17.7 draws/s | warmup | div 0
+  [height]  warmup complete on all 4 chains, sampling...
+  [height]  4,418/8,000 draws (55.2%) | elapsed 4m 01s | eta 3m 15s | 18.3 draws/s | sampling | div 0
+  [height]  4,838/8,000 draws (60.5%) | elapsed 4m 16s | eta 2m 47s | 18.9 draws/s | sampling | div 0
+  [height]  5,255/8,000 draws (65.7%) | elapsed 4m 31s | eta 2m 21s | 19.4 draws/s | sampling | div 0
+  [height]  5,671/8,000 draws (70.9%) | elapsed 4m 46s | eta 1m 57s | 19.8 draws/s | sampling | div 0
+  [height]  6,091/8,000 draws (76.1%) | elapsed 5m 01s | eta 1m 34s | 20.2 draws/s | sampling | div 0
+  [height]  6,514/8,000 draws (81.4%) | elapsed 5m 16s | eta 1m 12s | 20.6 draws/s | sampling | div 0
+  [height]  6,934/8,000 draws (86.7%) | elapsed 5m 31s | eta 50s | 20.9 draws/s | sampling | div 0
+  [height]  7,355/8,000 draws (91.9%) | elapsed 5m 46s | eta 30s | 21.2 draws/s | sampling | div 0
+  [height]  7,774/8,000 draws (97.2%) | elapsed 6m 01s | eta 10s | 21.5 draws/s | sampling | div 0
+  [height]  7,989/8,000 draws (99.9%) | elapsed 6m 16s | eta 0s | 21.2 draws/s | sampling | div 0
+Sampling 4 chains for 1_000 tune and 1_000 draw iterations (4_000 + 4_000 draws total) took 399 seconds.
+  [height]  done — 8,000 draws in 6m 32s | divergences: 0
+
+  [height] Divergences : 0  OK
+  [height] Max R-hat   : 1.0000  OK
+  [height] Min ESS     : 1533  OK
+
+  [height] Saved -> C:\Users\aasmi\Costal Carolina\command_plus_26\output\stage2_height_2024.parquet
+  [height] Checkpoint -> C:\Users\aasmi\Costal Carolina\command_plus_26\output\checkpoints\stage2_height_2024.nc
+  [height] omega SD=0.0483 ft  range=[-0.207, 0.249]
+
+--- Stage 2 model 2/2: side ---
+  [side] Pitches in Stage 2: 134,895  |  Batter x pitch-type groups: 5018
+  [side] EV octiles x pitch type: 124 levels, median 44 batters/level, 0 singleton (563 / 5,018 groups in the sparse EV bin)
+  [side] Empirical tau_rate=3.646  (prior mean=0.274 ft)
+  [side] Empirical bin_rate=7.549  (prior mean=0.132 ft)
+Initializing NUTS using adapt_diag...
+Multiprocess sampling (4 chains in 4 jobs)
+NUTS: [tau_bin, eta_raw, tau, omega_raw]
+  [side]  1/8,000 draws ( 0.0%) | elapsed 0s | eta -- | 0.0 draws/s | warmup | div 0
+  [side]  60/8,000 draws ( 0.8%) | elapsed 15s | eta 33m 21s | 4.0 draws/s | warmup | div 0
+  [side]  127/8,000 draws ( 1.6%) | elapsed 30s | eta 31m 10s | 4.2 draws/s | warmup | div 0
+  [side]  190/8,000 draws ( 2.4%) | elapsed 45s | eta 31m 04s | 4.2 draws/s | warmup | div 0
+  [side]  251/8,000 draws ( 3.1%) | elapsed 1m 00s | eta 31m 13s | 4.1 draws/s | warmup | div 0
+  [side]  318/8,000 draws ( 4.0%) | elapsed 1m 16s | eta 30m 36s | 4.2 draws/s | warmup | div 0
+  [side]  381/8,000 draws ( 4.8%) | elapsed 1m 31s | eta 30m 39s | 4.1 draws/s | warmup | div 0
+  [side]  467/8,000 draws ( 5.8%) | elapsed 1m 46s | eta 28m 45s | 4.4 draws/s | warmup | div 0
+  [side]  791/8,000 draws ( 9.9%) | elapsed 2m 01s | eta 18m 31s | 6.5 draws/s | warmup | div 0
+  [side]  1,138/8,000 draws (14.2%) | elapsed 2m 17s | eta 13m 46s | 8.3 draws/s | warmup | div 0
+  [side]  1,450/8,000 draws (18.1%) | elapsed 2m 32s | eta 11m 26s | 9.5 draws/s | warmup | div 0
+  [side]  1,790/8,000 draws (22.4%) | elapsed 2m 47s | eta 9m 39s | 10.7 draws/s | warmup | div 0
+  [side]  2,111/8,000 draws (26.4%) | elapsed 3m 02s | eta 8m 27s | 11.6 draws/s | warmup | div 0
+  [side]  2,419/8,000 draws (30.2%) | elapsed 3m 17s | eta 7m 34s | 12.3 draws/s | warmup | div 0
+  [side]  2,707/8,000 draws (33.8%) | elapsed 3m 32s | eta 6m 54s | 12.8 draws/s | warmup | div 0
+  [side]  3,087/8,000 draws (38.6%) | elapsed 3m 47s | eta 6m 01s | 13.6 draws/s | warmup | div 0
+  [side]  3,427/8,000 draws (42.8%) | elapsed 4m 02s | eta 5m 23s | 14.1 draws/s | warmup | div 0
+  [side]  3,768/8,000 draws (47.1%) | elapsed 4m 17s | eta 4m 48s | 14.6 draws/s | warmup | div 0
+  [side]  4,157/8,000 draws (52.0%) | elapsed 4m 32s | eta 4m 11s | 15.3 draws/s | warmup | div 0
+  [side]  warmup complete on all 4 chains, sampling...
+  [side]  4,575/8,000 draws (57.2%) | elapsed 4m 47s | eta 3m 35s | 15.9 draws/s | sampling | div 0
+  [side]  4,998/8,000 draws (62.5%) | elapsed 5m 02s | eta 3m 01s | 16.5 draws/s | sampling | div 0
+  [side]  5,422/8,000 draws (67.8%) | elapsed 5m 17s | eta 2m 30s | 17.1 draws/s | sampling | div 0
+  [side]  5,845/8,000 draws (73.1%) | elapsed 5m 32s | eta 2m 02s | 17.6 draws/s | sampling | div 0
+  [side]  6,265/8,000 draws (78.3%) | elapsed 5m 47s | eta 1m 36s | 18.0 draws/s | sampling | div 0
+  [side]  6,689/8,000 draws (83.6%) | elapsed 6m 02s | eta 1m 11s | 18.5 draws/s | sampling | div 0
+  [side]  7,112/8,000 draws (88.9%) | elapsed 6m 17s | eta 47s | 18.8 draws/s | sampling | div 0
+  [side]  7,507/8,000 draws (93.8%) | elapsed 6m 32s | eta 25s | 19.1 draws/s | sampling | div 0
+  [side]  7,870/8,000 draws (98.4%) | elapsed 6m 47s | eta 6s | 19.3 draws/s | sampling | div 0
+Sampling 4 chains for 1_000 tune and 1_000 draw iterations (4_000 + 4_000 draws total) took 437 seconds.
+The rhat statistic is larger than 1.01 for some parameters. This indicates problems during sampling. See https://arxiv.org/abs/1903.08008 for details
+The effective sample size per chain is smaller than 100 for some parameters.  A higher number is needed for reliable rhat and ess computation. See https://arxiv.org/abs/1903.08008 for details
+  [side]  done — 8,000 draws in 7m 11s | divergences: 0
+
+  [side] Divergences : 0  OK
+  [side] Max R-hat   : 1.0000  OK
+  [side] Min ESS     : 1259  OK
+
+  [side] Saved -> C:\Users\aasmi\Costal Carolina\command_plus_26\output\stage2_side_2024.parquet
+  [side] NOTE: omega_side is in the MIRRORED frame; multiply by mirror_sign before reporting.
+  [side] Checkpoint -> C:\Users\aasmi\Costal Carolina\command_plus_26\output\checkpoints\stage2_side_2024.nc
+  [side] omega SD=0.0531 ft  range=[-0.279, 0.231]
+
+STEP 3/4 Stage 2 — batter x cluster adjust: COMPLETED in 15m 17s
+
+========================================================================
+STEP 4/4  Stage 3 — pitcher aim (joint)
+Started: 2026-08-23 18:40:19   (pipeline elapsed 5h 50m)
+Command: 'C:\Users\aasmi\Costal Carolina\command_plus_26\stage3\stage3.py' --year 2024
+========================================================================
+
+Stage 3 | year=2024
+  Total pitches loaded: 134,895
+  Qualifying pitchers (>=0 pitches): 496
+  Pitches after pruning (>=1/combo): 134,895  |  pitcher x pitch-type combos: 3,850
+  FB-velo octiles: {0: 52, 1: 51, 2: 51, 3: 51, 4: 50, 5: 52, 6: 50, 7: 52, 8: 87}
+  Pooling groups (velo octile x pitch type x side): 124 levels, median 30 pitcher-cells/level, 1 singleton (0.8%)
+  Fixed nu=22.32 (height 20.29, side 24.34)  |  plug-in corr over 124 cells: mean +0.317, range [-0.054, +0.506]
+  Cells with own repertoire (>=30 pitches): 1,309 / 3,850  covering 82.2% of pitches
+  Intent surface: 9x9 = 81 knots at 0.30 ft spacing, bump width 0.30 ft, penalized rank 20
+    implied intent SD (height): 0.269 ft  vs execution SD 0.900 ft
+    implied intent SD (side): 0.217 ft  vs execution SD 0.834 ft
+  Fitting by penalized MLE (L-BFGS): 28,660 params, 121,406 train / 13,489 held-out pitches
+      lambda   train ll/pitch   held-out ll/pitch
+         1.0          -2.5307             -2.5449  <- best
+        10.0          -2.5804             -2.5881
+        50.0          -2.6395             -2.6449
+       200.0          -2.6978             -2.7018
+     uniform                              -2.7482  (no fitted intent)
+    held-out gain over a uniform intent surface: +0.2033 nats/pitch
+    Converged: True (CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH), 82 iterations, 92 evaluations
+  Saved fit -> C:\Users\aasmi\Costal Carolina\command_plus_26\output\stage3_params_2024.npz
+  Saved per-pitch intent posterior -> C:\Users\aasmi\Costal Carolina\command_plus_26\output\aim_distribution_2024.parquet  (134,895 rows x 81 basis coefficients)
+  Saved cell intent surfaces      -> C:\Users\aasmi\Costal Carolina\command_plus_26\output\intent_surface_2024.parquet  (3,850 cells on a 41x41 mesh)
+  Mean intent posterior spread: 0.435 ft
+  Within-cell SD of the posterior: 0.00521  (V9 was exactly 0.0 — its map ignored the individual pitch)
+  Surface entropy: mean 3.21 nats (uniform over 81 knots = 4.39)
+
+Scored 496 pitchers.
+  On leaderboard (>=300 scored pitches): 173 / 496
+
+Saved leaderboard -> C:\Users\aasmi\Costal Carolina\command_plus_26\output\leaderboard_2024.csv
+Saved all results  -> C:\Users\aasmi\Costal Carolina\command_plus_26\output\command_plus_2024.parquet
+
+Top 10 (Command+ Adj):
+              Pitcher PitcherTeam  velo_bin  n_pitches  avg_miss_raw  avg_miss_std  aim_spread  Command_Plus_Raw  Command_Plus_Adj
+        Crooks, Dylan     OKL_SOO         4        301      0.904317      1.047047    0.426482        125.934541        126.704360
+     Aschenbeck, Evan     TEX_AGG         3        778      0.911765      1.054639    0.404972        124.407542        125.276246
+       Rustad, Carter     MIZ_TIG         2        688      0.927932      1.073080    0.402378        121.092697        121.807212
+       Connell, Kirby     TEN_VOL         0        367      0.940878      1.091652    0.437325        118.438289        118.313684
+      Carlson, Parker     AUB_TIG         3        309      0.982244      1.098451    0.431031        109.956883        117.034690
+     Finley, Leighton     GEO_BUL         6        874      0.961467      1.101918    0.386481        114.216978        116.382653
+          Boehm, Gage     TEX_LON         4        643      0.965462      1.102750    0.419833        113.397785        116.226031
+       Holiday, Brian     OKL_COW         3       1282      0.961626      1.102795    0.383292        114.184342        116.217606
+Sosnowski, Kristopher     UCF_KNI         3        362      0.991865      1.104104    0.456141        107.984355        115.971452
+      Gainey, Garrett     SOU_GAM         7        486      0.938528      1.104756    0.406362        118.920233        115.848770
+
+STEP 4/4 Stage 3 — pitcher aim (joint): COMPLETED in 1m 53s
+
+========================================================================
+All stages complete in 5h 52m
+Finished: 2026-08-23 18:42:13
+
+  Stage 1 — population aim model       5h 35m  (95.1%)
+  Stage 2 — batter x cluster adjust   15m 17s  ( 4.3%)
+  Stage 3 — pitcher aim (joint)        1m 53s  ( 0.5%)
+
+Leaderboard  -> output/leaderboard_2024.csv
+Checkpoints  -> output/checkpoints/
+Log          -> run_2024_20260823_124943.txt
+========================================================================
+

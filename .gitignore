@@ -1,0 +1,44 @@
+# --- environment -----------------------------------------------------------
+.venv/
+__pycache__/
+*.py[cod]
+.python-version.local
+
+# --- editor / tooling local state ------------------------------------------
+.claude/settings.local.json
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# --- run artifacts ---------------------------------------------------------
+# Everything the pipeline writes stays local. These are large (the 2024 run
+# alone is ~900 MB across parquet + NetCDF checkpoints) and fully reproducible
+# from `run_pipeline.py`, so there is no reason to carry them in the repo.
+#
+# NOTE: this excludes output's CONTENTS (`output/*`) rather than the directory
+# itself (`output/`). Git never descends into an excluded directory, so with
+# `output/` the negations below would never be consulted and the README's
+# figure would be silently left out of the push.
+output/*
+
+# ...except the figures the README embeds, which must ship with it.
+!output/figures/
+!output/figures/**
+
+# --- run logs --------------------------------------------------------------
+# One reference log is tracked so a reader can see a full, real run — every
+# stage's diagnostics, timings and console output end to end. New runs write a
+# new timestamped file and are ignored automatically.
+run_*.txt
+!run_2024_20260823_124943.txt
+
+# --- backups and scratch ---------------------------------------------------
+*.bak
+*.v6bak
+*.orig
+CHAT_LOG.txt
+
+# Windows: redirecting to /dev/null creates a literal file named `nul`.
+nul
+nul.*
