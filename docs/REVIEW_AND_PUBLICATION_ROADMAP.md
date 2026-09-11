@@ -85,7 +85,209 @@ are no credible intervals on surfaces or on Command+.
 
 ---
 
-## 2. The field and where it stands
+## 2. Code review (whole repository)
+
+Read in full: `config.py`, `run_pipeline.py`, `pipeline/01_cluster_pitches.py`,
+`stage1/stage1.py`, `stage2/stage2.py`, `stage3/stage3.py`, every module in
+`utils/`, `diagnostics/diagnostics.py`, `plots/intent_zone.py`,
+`data/find_team_codes.py`, the three historical `.stan` files, and the
+committed run log. Findings are ordered by how much they change the science.
+
+### 2.1 Findings that change the results
+
+**R1. `sigma_pop` is a Student-t scale, and Stage 3 uses it as a Gaussian
+standard deviation.** Stage 1 fits `StudentT(nu, mu, sigma)` and stores the
+posterior mean of `sigma`. Stage 3's `density_logkernel` is a bivariate
+*normal* with that `sigma` as its SD. The SD of a Student-t with scale `s` is
+`s * sqrt(nu / (nu - 2))`, so Stage 3's execution kernel is narrower than the
+residuals it was fit to, by exactly the variance the intent surface then has
+to absorb. The size of that gap, from the run log's own numbers:
+
+| dim | nu | sigma (scale) | extra variance the t carries | sqrt | "implied intent SD" reported |
+|---|---|---|---|---|---|
+| height | 20.29 | 0.900 ft | 0.0886 ft² | **0.298 ft** | **0.269 ft** |
+| side | 24.34 | 0.834 ft | 0.0623 ft² | **0.250 ft** | **0.217 ft** |
+
+The intent spread the README presents as its substantive result ("intent
+0.27, execution 0.90") is within the range this bookkeeping gap alone
+produces. It is not proof the intent surfaces are empty, because a genuine
+mixture of targets also shows up as heavy tails that a Student-t absorbs into
+`nu`, but the decomposition as printed cannot be read as intent versus
+execution until the scale is corrected. Two fixes, both cheap: multiply
+`sigma` by `sqrt(nu/(nu-2))` before building the kernel, or drop the
+Student-t in Stage 1 (posterior `nu` of 20 to 24 is near-Gaussian anyway; see
+R9). Then re-read the "implied intent SD" line.
+
+**R2. Stage 1 has no pitcher term, so `sigma_pop` already contains pitcher
+intent.** The residual Stage 1 fits its scale to is `y - mu_pop`, which still
+holds every pitcher's intent deviation and the batter effect. The "execution
+spread" is therefore total residual spread given the population, and Stage 3
+then treats it as pure execution noise. Combined with R1, the model's
+intent/execution split is circular: the width it assigns to execution was
+estimated with intent inside it. The clean fix is a pitcher x pitch-type
+random intercept in Stage 1 (which also addresses R5), or fitting the sigma
+submodel on residuals after a first pass at pitcher means.
+
+**R3. The held-out baseline is a straw man.** `fit_map` compares against
+`theta = 0`, which is a *uniform* intent surface over a 2.4 ft x 2.4 ft
+square: per-axis SD 0.69 ft before convolution. No pitcher's intent is that
+wide, so any concentrated surface wins by construction, and the "+0.203
+nats/pitch" is mostly evidence that a 2.4 ft square is too wide. The null a
+referee will ask for is *point intent*: all weight on the centre knot (the
+model with zero intent spread), and a second baseline of one free Gaussian per
+cell (four parameters). The paper's claim only stands if the 81-knot surface
+beats those out of sample.
+
+**R4. Each pitch is scored against a posterior that it helped fit.** A free
+cell's surface is estimated from its own pitches, then each pitch's miss is
+the expectation under `p(knot | y_i)`, which conditions on that same pitch. A
+diffuse surface lets the posterior chase the pitch and is therefore
+*charitable*: the metric is not identified from "how spread out is his
+intent". `MIN_PITCHES_CELL_FREE = 30` bounds the influence of one pitch at
+about 3% per cell, but that bound is loosest exactly at the cells that just
+clear the gate. Cross-fitting fixes it: split by game into K folds, fit the
+surfaces on K-1, score the held-out fold, rotate. The `diagnostics.py`
+correlation between Command+ and `aim_spread` is the right check and should
+be in the README.
+
+**R5. The Stage 1 movement surface is evaluated at pitcher x pitch-type
+mean movement, so it is a pitcher-level covariate.** `combo_frame` collapses
+to 2,018 combos and the 56-column surface is fit to their means with no
+pitcher effect alongside it. In sparse regions of the movement plane a
+flexible surface can follow individual pitchers, moving their aim into
+`mu_pop` before Stage 3 sees it. The stage1 docstring concedes this ("the
+surface is still, functionally, partly indexed by the pitcher"). It is the
+same omission as R2 and has the same fix.
+
+**R6. The smoothing penalty grid did not bracket its optimum.** The grid is
+`[1, 10, 50, 200]` and the held-out likelihood is monotone increasing as
+lambda falls, with the best value at the boundary. Nothing below 1.0 was
+tried. Extend to `[0.01, 0.03, 0.1, 0.3, 1, 3, 10]` and, ideally, separate
+`lam_g` (group surfaces) from `lam_e` (cell deviations), which are currently
+forced equal.
+
+**R7. Serial correlation is acknowledged and then ignored in the split.** The
+Stage 3 docstring reports a lag-1 residual correlation of about 0.45 within
+games from the earlier design. If that holds, a random 10% pitch holdout
+leaks through neighbouring pitches, the held-out gain is optimistic, and the
+effective pitch count behind every cell is well under the nominal one. Split
+by game, and report the autocorrelation in the paper either way; a 0.45
+lag-1 correlation in *miss* is itself a finding (fatigue, sequencing, or
+count structure the model does not carry).
+
+### 2.2 Bugs and inconsistencies
+
+**B1. Stage 3 computes `nu_fixed` and never uses it.** `build_design` loads
+both Stage 1 `nu` values, averages them, prints "Fixed nu=22.32", and stores
+it in the design dict. The likelihood is Gaussian. The docstrings, the README
+("nu ... fixed downstream rather than re-estimated") and the log all say
+Stage 3 is Student-t. Either use it or delete it and correct the prose.
+
+**B2. `command_plus_{year}.parquet` never contains Command+.** In
+`stage3.main`, the columns are added to `results_q` (a `.copy()` of the
+qualifiers) and `results` is written without them. `plots/intent_zone.py::
+command_plus()` looks for `Command_Plus_Adj` in that file and always returns
+`None`, so the figure title never shows the score. The committed
+`intent_zone_hagen_smith_2024.png` confirms it: no Command+ in the title,
+while the README quotes 99.9 beside the figure. CODE_DOCUMENTATION also
+describes the parquet as carrying every scored pitcher's Command+.
+
+**B3. The "unpenalized null space" is penalized.** `build_density_basis` keeps
+the four null-space columns (constant, linear in each axis, and their
+product) at unit scale and says they are free; `_neg_log_post` then applies
+`0.5 * lam * ||g||^2` to all 20 coefficients, null space included. The
+constant column is also redundant under the softmax. Harmless at lambda = 1,
+but the docstring is wrong and the effect grows with lambda.
+
+**B4. Convergence is reported on five scalars.** `stage1.run_dim` summarises
+`alpha, nu, tau_move, (tau_velo), tau_tps, tau_tc`; `stage2` summarises
+`tau` only; `diagnostics.py` repeats the same lists. The vector parameters
+(`w_move_raw`, `u_tps_raw`, `u_tc_raw`, `omega_raw`, `eta_raw`) are never
+checked, and the Stage 2 side run printed PyMC's "effective sample size per
+chain is smaller than 100 for some parameters" while the pipeline reported
+min ESS 1,259 and "clean". The README's "unrounded maximum over all monitored
+parameters" is true only in the narrow sense. Report max R-hat and min ESS
+over *every* parameter, with `round_to="none"`, which also removes the
+1.01-rounding artifact the README spends a paragraph on.
+
+**B5. Miss is measured to knot centres, not to the intent.** The intent
+density is a mixture of 0.30 ft bumps, but `score()` uses `||y - knot_m||`,
+ignoring where inside the bump the intent sits. Under the model,
+`E||y - x||` for `x ~ bump_m` is smaller than the distance to the centre and
+shrinks toward `y`. The ranking is barely affected, but the reported feet
+are biased upward and the paper should say "distance to the nearest 0.3 ft
+basis centre, in expectation".
+
+**B6. The prior on `nu` fights the data.** `Gamma(alpha=5, beta=0.9)` has
+mean 5.6 and SD 2.5; the posteriors sit at 20 and 24, five to seven prior
+SDs out. The posterior `nu` is therefore pulled low, which widens the
+scale-to-SD gap in R1. Use a wide prior (`Gamma(2, 0.1)`) or a Gaussian
+likelihood.
+
+**B7. The sparse velocity bin is a pooling target for 87 of 496 pitchers.**
+`pitcher_fb_bins` needs 25 fastballs to place a pitcher; 17.5% fail and are
+pooled toward each other as if they were a skill group. `bins.py` warns that
+this bin "must not be read as one", and Stage 3 reads it as one.
+
+**B8. Stale documentation inside the code.** `stage3.py`'s module docstring
+describes the V8 per-pitcher NUTS design with `delta`, `u_game` and AR(1).
+`config.py` still carries `TAU_OFF_RATE`, `STAGE3_W_MIN/MAX`, `LKJ_ETA`,
+`STAGE3_*` sampler settings, `AIM_DIST_CHUNK`, and comments about 28-level
+`pitch_type x PitcherThrows x BatterSide`. `diagnostics.py` refers to a "5x5
+zone grid" and to aim SDs "measured in hundredths of a foot" (the current
+mean is 0.435 ft). `utils/scaling.build_sigma_design_matrix` is V8 code with
+no caller. The `.stan` files are labelled historical, correctly.
+
+**B9. Dead work in the pipeline.** Step 1 still runs the KMeans clustering
+(about two minutes) that no stage reads. `nutpie` and `numba` are declared
+dependencies and never used; `nutpie` would in fact be the cheapest way to
+cut the 5.5-hour Stage 1. `stage3.py` accepts and ignores sampler flags.
+
+**B10. No tests, no CI, and a machine-specific database path.** Nothing
+checks that `SplineSpec.transform` reproduces the training columns, that
+mirroring round-trips, or that `_neg_log_post`'s analytic gradient matches
+finite differences. For a released artifact all three are one afternoon.
+
+### 2.3 What is done well
+
+Worth saying plainly, because a referee will notice these too. The mirrored
+frame is applied to every flipping axis in one place and undone in one
+place. Duplicate TrackMan records (verified and unverified files) are removed
+and re-checked in diagnostics. Non-centred parameterisations are used
+everywhere a scale is learned, and stored coefficients are `E[w * tau]`, not
+`E[w] * E[tau]`, with the reason documented. The spline block is centred,
+group-swept, orthogonalised against the velocity smooth and rotated to
+principal axes, and the prior is calibrated on the function rather than the
+coefficients. Pickles are version-tagged and refused on mismatch. The
+orchestrator logs every resolved sampler setting. The plate-axis convention
+is fixed from hit-by-pitch locations rather than assumed. The code explains
+its decisions, including the ones that were tried and removed.
+
+### 2.4 What this does to the roadmap
+
+R1 to R4 mean the headline numbers may not survive contact with a referee, so
+**a correctness pass comes before any validation work**:
+
+1. Fix the scale (R1), drop or re-prior the Student-t (B6), and use or remove
+   `nu_fixed` (B1).
+2. Add a pitcher x pitch-type random intercept to Stage 1 so `sigma_pop` and
+   the surface are estimated net of pitcher aim (R2, R5). Runtime will rise;
+   this is where `nutpie` or NumPyro pays for itself.
+3. Replace the uniform null with point-intent and one-Gaussian-per-cell
+   baselines (R3), extend the lambda grid (R6), and split by game (R7).
+4. Cross-fit the intent surfaces so no pitch is scored against itself (R4).
+5. Report convergence over all parameters (B4), fix the Command+ parquet
+   (B2), and correct the docstrings (B8).
+
+Only then run the simulation study and the multi-season and outcome
+validation in section 5. If the intent surfaces still beat point intent out
+of sample after steps 1 to 4, the paper has its result. If they do not, the
+honest paper is "location-only intent inference is weakly identified, and
+here is what it takes to identify it", which is the release-angle paper (P2).
+
+---
+
+## 3. The field and where it stands
 
 ### Public command metrics and what each one actually measures
 
@@ -149,7 +351,7 @@ are no credible intervals on surfaces or on Command+.
 
 ---
 
-## 3. Your background and what it buys you
+## 4. Your background and what it buys you
 
 From your public GitHub (Boston University data science coursework; repos on
 offline RL and off-policy evaluation, A/B testing with peeking, linear mixed
@@ -171,7 +373,7 @@ arsenal clustering):
 
 ---
 
-## 4. Paper-level directions, ranked
+## 5. Paper-level directions, ranked
 
 ### P1. Flagship: the model as it stands, with a validation package (recommended first)
 
@@ -184,7 +386,7 @@ same data.
 1. **Simulation study for identifiability.** Draw intent surfaces and execution
    ellipses (including pitcher-specific execution scales the model does not
    have), simulate seasons, refit, and report recovery of Command+ rank and of
-   the intent/execution split. This answers the referee question in section 1.
+   the intent/execution split. This answers the referee questions in section 2.
 2. **Multi-season fits** (2022-2025 if the DB has them): year-over-year r and
    R^2 of Command+, split-half within season, and stabilization curve (how many
    pitches until r = 0.5). Compare against the same statistics for the
@@ -306,9 +508,9 @@ Statistics and Computing or a Bayesian analysis workshop.
 
 ---
 
-## 5. Recommended path
+## 6. Recommended path
 
-**Paper 1 = P1 + P5 (+ venue effect).** It converts the current report into
+**Paper 1 = correctness pass (section 2.4) + P1 + P5 (+ venue effect).** It converts the current report into
 a defensible metric paper with the one thing every competing metric lacks:
 external validation. Rough order of work:
 
@@ -332,7 +534,7 @@ the 32% Stage 1 subsample); tag a release.
 
 ---
 
-## 6. Sources
+## 7. Sources
 
 - Ludwig, Brill, Wyner. *Separating Intent from Execution: A Probabilistic
   Approach to Pitch Location Accuracy.* arXiv:2508.19184 (2025);
