@@ -1,17 +1,17 @@
 # Pitcher Command from Inferred Intent
 
 Estimates how well a pitcher commands the baseball by recovering, for every
-pitch, a probability distribution over where he was **trying** to throw it —
+pitch, a probability distribution over where he was trying to throw it —
 rather than assuming a single target. Fit in PyMC on one season (2024) of
 pitch-level TrackMan rows, 496 pitchers and 134,895 pitches.
 
 It is a three-stage hierarchical model. Each stage removes one component of a
-pitch's location that is *not* the pitcher's choice — what the league does with
+pitch's location that is not the pitcher's choice — what the league does with
 that pitch shape in that count, and how that particular hitter gets worked — and
 the last stage splits what remains into intent and miss, with per-pitcher effects
 pooled toward comparable pitchers by how much each one's own data supports them.
 
-The data carries the **count** on every pitch, and Stage 3 does not use it. Count
+The data carries the count on every pitch, and Stage 3 does not use it. Count
 is largely an indicator of how the league changes its target, and Stage 1's
 `u_tc` term already removes that directly, in feet, at 83 pitch-type × count
 levels. Giving the pitcher his own per-count target on top of that would let the
@@ -54,7 +54,7 @@ where the pitch went  =  what the league does with this shape, in this count   m
                       +  how far he missed                                     miss
 ```
 
-Height and side are fit as **two separate models** through Stages 1 and 2, and
+Height and side are fit as two separate models through Stages 1 and 2, and
 only rejoin in Stage 3, where the execution kernel is bivariate and carries a
 fitted height/side correlation. Everything is fit in a mirrored frame: plate
 side, horizontal break and release side are all reflected for left-handed
@@ -65,20 +65,14 @@ flipped back before it is reported.
 
 ### `mu_pop` — the population location
 
-Where the league puts *this pitch shape* in *this count* against *this hand*. It
+Where the league puts this pitch shape in this count against this hand. It
 is subtracted first, so nothing downstream has to re-learn that a slider to a
 same-handed hitter lives low and away.
 
-Movement enters as a **joint 2-D spline surface** over horizontal and induced
-vertical break — 56 basis columns, group-centered on pitch type. It replaced a
-KMeans clustering, and the reason is worth stating: 2.74% of 2024 pitches fell in
-clusters the stage never fit and silently inherited the alphabetically first
-cluster's spread, cluster membership ran from 1 to 86 pitchers, and a
-one-pitcher cluster meant that cluster's effect simply *was* that pitcher's aim —
-absorbed into the population term before Stage 3 could measure it. A surface
-interpolates instead, and has no singleton cells.
+Movement enters as a joint 2-D spline surface over horizontal and induced
+vertical break — 56 basis columns, group-centered on pitch type. 
 
-Release speed enters as an additive 1-D smooth, **for the height model only**,
+Release speed enters as an additive 1-D smooth, for the height model only,
 fit orthogonal to the movement surface so the two cannot trade the same variance.
 It is dropped from the side model. That is an empirical finding, not a
 simplification: with the smooth in, the side fit came back at R-hat 1.50 and ESS
@@ -86,7 +80,7 @@ simplification: with the smooth in, the side fit came back at R-hat 1.50 and ESS
 with chains splitting bimodally (0.08, 0.08, 4.40, and one wandering 0.006–5.95)
 and the disagreement confined to the top three basis coefficients over a velocity
 region holding 1,803 of 140,139 pitches. Once horizontal movement is in the
-surface, release speed carries no independent information about aim *side*, so
+surface, release speed carries no independent information about aim side, so
 the scale has nothing anchoring it. Height is the opposite case — speed governs
 drop, the data pin the smooth, and all four chains agree on the coefficients to
 three decimals.
@@ -102,12 +96,12 @@ it — so a fastball and a curveball are not held to the same standard of "close
 
 ### `omega` — the batter effect
 
-One value per **batter × pitch type**, three-level partial pooling: global →
+One value per batter × pitch type, three-level partial pooling: global →
 exit-velocity octile × pitch type → the batter cell itself. 5,018 batter ×
 pitch-type groups sit under 124 octile levels with a median of 44 batters each
 and no singletons.
 
-The pooling target is deliberately crossed on the *raw* pitch type rather than
+The pooling target is deliberately crossed on the raw pitch type rather than
 the movement sub-cluster. A sparse batter's `omega` on a slider should shrink
 toward what comparable hitters get on sliders, not toward his own average over
 every pitch — and against the sub-clusters this key produced 398 levels of which
@@ -118,10 +112,9 @@ Both levels are non-centered. Realized spread is 0.048 ft (height) and 0.053 ft
 
 ### the intent surface — where he was trying to throw
 
-This is what the project exists for, and it is the part that is *not* a point
-estimate.
 
-Each **pitcher × pitch type × batter side** cell gets a continuous density over
+
+Each pitcher × pitch type × batter side cell gets a continuous density over
 the plate: a mixture of 81 Gaussian bumps on a 9×9 grid at 0.30 ft spacing, with
 weights from a softmax so they sum to exactly 1. The bumps are basis centers, not
 zones and not targets — the surface is evaluable at any coordinate, and nothing
@@ -136,13 +129,13 @@ variances simply add:
 p(y) = sum_m w_m * N(y | knot_m, sigma^2 + bw^2)
 ```
 
-That closed form is why the basis is Gaussian. The integral over the plate never
+The integral over the plate never
 has to be computed numerically, the whole (N × 81) kernel matrix is constant, and
 the entire likelihood is a gather plus a `logsumexp`.
 
 Pooling is one rung: a cell shrinks toward its (fastball-velo octile × pitch type
 × batter side) group, 124 levels with a median of 30 pitcher-cells each. A cell
-with fewer than 30 pitches carries **no free deviation at all** — it *is* its
+with fewer than 30 pitches carries no free deviation at all — it is its
 group's surface, fully shrunk. 1,309 of 3,850 cells clear that bar, covering
 82.2% of pitches.
 
@@ -157,13 +150,13 @@ wanted.
 
 ### `miss` and Command+
 
-Miss is an **expectation over the intent posterior**, not a distance to a point:
+Miss is an expectation over the intent posterior, not a distance to a point:
 
 ```
 miss[i] = integral || y[i] - x || p(x | y[i]) dx  =  sum_m p[i,m] * || y[i] - knot_m ||
 ```
 
-The distinction is load-bearing. An earlier version scored each pitch against two
+An earlier version scored each pitch against two
 fitted targets using prior weights, which charged every pitch the distance to
 targets it was not going for — a pitch landing perfectly on the primary target
 still scored `(1-w) × separation`, that floor spanned 0.297 ft of a 0.390 ft
@@ -184,7 +177,7 @@ rather than set by hand.
 
 | Prior on | What it measures | How it's computed |
 |---|---|---|
-| `tau_move`, `tau_velo` | how much aim varies across the movement plane | calibrated on the **function**, not the coefficients: an i.i.d. prior over the basis gives a surface with pointwise SD ≈ `tau × basis_scale`, so the rate is divided by that scale |
+| `tau_move`, `tau_velo` | how much aim varies across the movement plane | calibrated on the function, not the coefficients: an i.i.d. prior over the basis gives a surface with pointwise SD ≈ `tau × basis_scale`, so the rate is divided by that scale |
 | `tau_tps`, `tau_tc` | spread of the categorical aim effects | carried forward from the per-cluster cell priors they replace, so the surface believes in the same amount of structure the cells did |
 | `tau` (Stage 2) | how far one batter's effect sits from the league | between-batter variance of the Stage 1 residual, net of within-batter noise |
 | `tau_bin` (Stage 2) | how far one exit-velo octile sits from global | the same estimator applied to the spread of octile means — far smaller, so the prior is correspondingly tighter |
@@ -208,32 +201,29 @@ reported in full below.
 
 ## Validation Design
 
-**One season, so there is no walk-forward.** Everything below is 2024, and the
+One season, so there is no walk-forward. Everything below is 2024, and the
 only out-of-sample number in the pipeline is Stage 3's held-out 10% of pitches
 (13,489 held out against 121,406 trained), used both to select `lambda` and to
 score the intent surface against a uniform one.
 
-Two structural facts that limit what the diagnostics can tell you, both stated
-here rather than buried:
+Two structural facts that limit what the diagnostics can tell you.
 
-**The stages pass point estimates, not distributions.** Stage 2 consumes Stage
+The stages pass point estimates, not distributions. Stage 2 consumes Stage
 1's fitted `mu_pop` as a fixed offset; Stage 3 consumes both. A stage cannot hand
 a distribution forward — there is no way to subtract a bimodal `mu_pop` — which
 is exactly why the intent mixture lives in Stage 3 and nowhere else. The
 consequence is that a downstream stage converges cleanly even when an upstream
 number is wrong: it simply absorbs the error into `omega` or into intent. Clean
 Stage 2 and Stage 3 diagnostics are evidence about Stage 2 and Stage 3 geometry,
-and are **not** a vote of confidence in the numbers they condition on. This is
-not hypothetical — it is how the broken side fit described above went undetected
-through two clean downstream stages.
+and are not a vote of confidence in the numbers they condition on. 
 
-**Mirroring assumes perfect left/right symmetry.** A left-handed batter facing a
+Mirroring assumes perfect left/right symmetry. A left-handed batter facing a
 righty and a right-handed batter facing a lefty are the same cell. If there is a
 real asymmetry that is not a platoon effect — an asymmetrically called zone, say
 — the frame cannot represent it, and it will be absorbed as pitcher deviation.
 That assumption has not been tested.
 
-**There is no external validation.** Nothing here is scored against outcomes.
+There is no external validation. Nothing here is scored against outcomes.
 Command+ has not been checked for year-over-year stability, for correlation with
 walk rate or contact quality, or against any independent measure of command. The
 model is internally coherent and its held-out likelihood beats the null, and that
@@ -259,7 +249,7 @@ optimization (1m 53s).
 
 R-hat is the unrounded maximum over all monitored parameters. The run log prints
 these as `1.0100` and flags them, which is an artifact: `az.summary` rounds to
-two decimals *before* the comparison against the 1.01 threshold, so a true
+two decimals before the comparison against the 1.01 threshold, so a true
 1.0071 is tested as 1.01 and fails a strict inequality. The fits are converged.
 
 That table is the second attempt. The first, with the velo smooth in the side
@@ -296,13 +286,13 @@ Every row in feet, so the four are directly comparable against each other:
 | execution error, `sigma_pop` | 0.900 | 0.834 | SD of the miss around that intent |
 
 None collapses, so each is finding variation the others do not explain. The
-ordering is the substantive result: **execution error is three to four times the
+ordering is the substantive result: execution error is three to four times the
 intent spread, and more than an order of magnitude larger than either the
-population or the batter term.** Most of where a pitch ends up is missing, not
+population or the batter term. Most of where a pitch ends up is missing, not
 choosing — which is the premise the metric depends on, and it is measured here
 rather than assumed.
 
-The side surface being *narrower* than the height surface (0.055 vs 0.074) is
+The side surface being narrower than the height surface (0.055 vs 0.074) is
 also the right ordering physically, and it was backwards before the velo fix, at
 0.184 with a spurious +1.81 ft tail.
 
@@ -314,13 +304,13 @@ preference within a pitch type: The 81 knots are the points of a 9×9 grid of lo
 
 | `lambda` | train ll/pitch | held-out ll/pitch |
 |---|---|---|
-| 1.0 | −2.5307 | **−2.5449** |
+| 1.0 | −2.5307 | −2.5449 |
 | 10.0 | −2.5804 | −2.5881 |
 | 50.0 | −2.6395 | −2.6449 |
 | 200.0 | −2.6978 | −2.7018 |
 | uniform | — | −2.7482 |
 
-**+0.2033 nats per pitch** over the null, out of sample. Train and held-out track
++0.2033 nats per pitch over the null, out of sample. Train and held-out track
 each other closely at every penalty level — 0.014 nats apart at the selected one —
 so the surface is not overfitting the 82.2% of pitches whose cells are free to
 move.
@@ -365,7 +355,7 @@ and that varies substantially across the population:
 
 `aim_spread` is the SD of the intent posterior in feet — how tightly the model
 can place where he was aiming on a given pitch. Across the leaderboard it runs
-0.372 to 0.524, a 41% spread. It is reported **beside** the metric rather than
+0.372 to 0.524, a 41% spread. It is reported beside the metric rather than
 folded into it, deliberately: it is an honesty measure, not a correction.
 
 It is not purely a sample-size story. A wide `aim_spread` also means a genuinely
@@ -379,7 +369,7 @@ them, which is worth knowing before leaning on it.
 ## Example: Hagen Smith
 
 Arkansas, left-handed, 1,054 pitches, Command+ 99.9 — 88th of 173, almost exactly
-league average. The metric alone says nothing about *how* he pitches. The intent
+league average. The metric alone says nothing about how he pitches. The intent
 surfaces do.
 
 Each panel is one pitcher × pitch type × batter side cell, rendered on a
@@ -406,7 +396,7 @@ top of the zone. The slider lives at 1.9–2.1 ft, working off the bottom. Again
 righties the splitter and changeup share essentially one location — 1.96/−0.89
 and 2.17/−0.89 — which is what you would want if they are meant to tunnel.
 
-He works *away* from both hands: +0.30 ft against lefties, −0.37 against righties.
+He works away from both hands: +0.30 ft against lefties, −0.37 against righties.
 The axis convention is not assumed — it is fixed empirically from hit-by-pitch
 locations across the full season, where left-handed batters are struck at −1.84
 (n=430) and right-handed batters at +1.85 (n=558).
