@@ -124,8 +124,10 @@ toward what comparable hitters get on sliders, not toward his own average over
 every pitch, and against the sub-clusters this key produced 398 levels of which
 28% held a single batter.
  
-Batter cells with fewer than `MIN_PITCHES_BATTER_CLUSTER` pitches are not fit.
-Stage 3 assigns them `omega = 0`: the global level, not their octile's mean.
+No batter cell is pruned (`MIN_PITCHES_BATTER_CLUSTER = 1`), so every batter
+seen gets an `omega`; a thin cell is simply shrunk hard toward its octile.
+Batters with fewer than 10 tracked batted balls cannot be placed in an
+exit-velocity octile and go in a separate sparse bin that shrinks to global.
  
 Both levels are non-centered. Realized spread is 0.048 ft (height) and 0.053 ft
 (side): real, and about two-thirds the size of the population surface itself.
@@ -168,10 +170,11 @@ surface, fully shrunk. 1,309 of 3,850 cells clear that bar, covering 82.2% of
 pitches. The group coefficients `g` and cell deviations `eps` share one penalty
 strength `lambda`.
  
-Not everything reaches Stage 3. Pitchers below `MIN_PITCHES_PITCHER` and
-pitcher cells below `MIN_PITCHES_PITCHER_CLUSTER` are removed before fitting.
-Pooling handles thin cells among those that remain; it does not rescue the ones
-pruned beforehand.
+Nothing is pruned before Stage 3 either: `MIN_PITCHES_PITCHER = 0` and
+`MIN_PITCHES_PITCHER_CLUSTER = 1`, so all 496 pitchers and every cell enter the
+fit. The only exclusion is the 300-pitch leaderboard gate, which applies after
+fitting. Pitchers with fewer than 25 fastballs or sinkers cannot be placed in a
+velocity octile and are pooled in a separate sparse group.
  
 Stage 3 is fit by penalized maximum likelihood (L-BFGS with an exact analytic
 gradient), not MCMC. The parameter posterior is not read by anything downstream:
@@ -467,12 +470,10 @@ not as a target he has. The n=13–19 pooled cells are on much firmer ground:
 enough pitches to place the surface, not enough to earn their own shape.
  
 That distinction (drawing every fitted cell, and saying plainly which ones are
-his and which are borrowed) is what the pooling was built for. Thin cells that
-survive the Stage 3 pruning are kept and shrunk rather than dropped.
- 
-```
-uv run python plots/intent_zone.py "Smith, Hagen"
-```
+his and which are borrowed) is what the pooling was built for. It is the reason
+nothing is dropped for having a thin sample.
  
 ---
-
+ 
+Claude Code was used to assist with coding.
+ 
